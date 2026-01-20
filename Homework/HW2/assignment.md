@@ -36,9 +36,11 @@ $$
 \end{aligned}
 $$
 
-Therefore the form is **exact**. The integral then takes the form,
+Therefore the form is **exact**. The integral takes the form,
 
 $$\int_A^B \mathbf{F} \cdot d\mathbf{r} = \int_A^B df = f(B) - f(A)$$
+
+Finding $f$,
 
 $$
 f 
@@ -58,7 +60,15 @@ $$
 
 $$f = \sin \frac{1}{2} x \cos 2y$$
 
-$$\int_{(\pi / 2, \pi)}^{(\pi, 0)} df = f(\pi, 0) - f(\pi / 2, \pi) = \boxed{1 - \frac{\sqrt 2}{2}}$$
+The integral is then,
+
+$$
+\begin{aligned}
+\int_{(\pi / 2, \pi)}^{(\pi, 0)} df 
+&= f(\pi, 0) - f(\pi / 2, \pi) \\ 
+&= \boxed{1 - \frac{\sqrt 2}{2}}
+\end{aligned}
+$$
 
 # Problem 10.2.5.
 Show that the form under the integral sign is exact in space and evaluate the integral. Show the details of your work.
@@ -90,9 +100,11 @@ F_1 & F_2 & F_3
 \end{aligned}
 $$
 
-Therefore the form is **exact**. The integral then takes the form,
+Therefore the form is **exact**. The integral takes the form,
 
 $$\int_A^B \mathbf{F} \cdot d\mathbf{r} = \int_A^B df = f(B) - f(A)$$
+
+Finding $f$,
 
 $$f = \int F_1 dx = \int e^{x y} y \sin z \ dx = e^{x y} \sin z + g(y, z)$$
 
@@ -116,11 +128,15 @@ $$
 
 $$f = e^{x y} \sin z$$
 
+The integral is then,
+
 $$
+\begin{aligned}
 \int_{(0,0, \pi)}^{(2,1 / 2, \pi / 2)} df 
-= f(2,1 / 2, \pi / 2) - f(0,0, \pi) 
-= e \sin (\pi / 2) - e^{0} \sin (\pi)
-= \boxed{e}
+&= f(2,1 / 2, \pi / 2) - f(0,0, \pi) \\
+&= e \sin (\pi / 2) - e^{0} \sin (\pi) \\
+&= \boxed{e}
+\end{aligned}
 $$
 
 # Problem 10.2.13.
@@ -129,6 +145,8 @@ Check, and if independent, integrate from $(0, 0, 0)$ to $(a, b, c)$.
 $$2e^{x^2} (x \cos 2y \ dx - \sin 2y \ dy)$$
 
 ## Solution.
+
+
 
 # Problem 10.2.16.
 Check, and if independent, integrate from $(0, 0, 0)$ to $(a, b, c)$.
