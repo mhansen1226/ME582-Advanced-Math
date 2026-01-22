@@ -209,6 +209,75 @@ $$e^y \ dx + (x e^y - e^z) \ dy - y e^z \ dz$$
 
 ## Solution.
 
+The integral is independent iff $\curl \mathbf{F} = \mathbf{0}$, where $\mathbf{F} = \brackets{e^y, (x e^y - e^z), -y e^z}$.
+
+$$
+\begin{aligned}
+\curl \mathbf{F} &= \left| \begin{matrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\pder{x} & \pder{y} & \pder{z} \\
+e^y & (xe^y - e^z) & -y e^z
+\end{matrix} \right| \\
+&= \brackets{
+    \parens{\pder{y} (-y e^z) - \pder{z} (x e^y - e^z)}, 
+    \parens{\pder{z} (e^y) - \pder{x} (-y e^z)},
+    \parens{\pder{x} (xe^y - e^z) - \pder{y} (e^y)}
+    } \\
+&= \brackets{
+    \parens{(-e^z) - (-e^y)}, 
+    \parens{0 - 0},
+    \parens{e^y - e^y}
+    } \\
+&= \mathbf{0}
+\end{aligned}
+$$
+
+Therefore the integral is **independent of path**. The integral takes the form,
+
+$$\int_A^B \mathbf{F} \cdot d\mathbf{r} = \int_A^B df = f(B) - f(A)$$
+
+Finding $f$, such that $\grad f = \mathbf{F}$,
+
+$$
+f
+= \int F_2 dy
+= \int (x e^y - e^z) dy
+= x e^y - y e^z + g(x, z)
+$$
+
+$$
+f_x 
+= e^y + g_x
+= F_1
+= e^y
+\implies g_x = 0 
+\implies g(x, z) = h(z)
+$$
+
+$$
+f_z
+= -y e^z + h_z
+= F_3
+= -y e^z
+\implies h_z = 0
+\implies h(z) = 0
+$$
+
+$$
+f
+= x e^y - y e^z
+$$
+
+The integral is then,
+
+$$
+\begin{aligned}
+\int_{(0,0,0)}^{(a,b,c)} df &= f(a,b,c) - f(0,0,0) \\
+&= (a e^b - b e^c) - (0 - 0) \\
+&= \boxed{a e^b - b e^c}
+\end{aligned}
+$$
+
 # Problem 10.3.5.
 
 Describe the region of integration and evaluate.
