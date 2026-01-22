@@ -5,7 +5,7 @@ header-includes: |
   \usepackage{fancyhdr}
   \pagestyle{fancy}
   \fancyhead[LO,LE]{ME 528}
-  \fancyhead[CO,CE]{\textbf{Homework ###}}
+  \fancyhead[CO,CE]{\textbf{Homework 1}}
   \fancyhead[RO,RE]{M. Hansen}
   \fancyfoot[CO,CE]{\thepage}
   
@@ -20,6 +20,7 @@ header-includes: |
 ---
 
 # Problem 9.7.3.
+
 Find $\grad f$. Graph some level curves $f = \text{const}$. Indicate $\grad f$ by arrows at some points of these curves.
 
 $$f = \frac{y}{x}$$
@@ -36,6 +37,7 @@ $$\boxed{y = cx}$$
 ![Gradient Field](images/gradient_field.svg){width=3.5in}\ 
 
 # Problem 9.7.8.
+
 Prove and illustrate by an example
 
 $$\grad (fg) = f \grad g + g \grad f$$
@@ -63,7 +65,31 @@ $$\grad (xy) = x \grad y + y \grad x$$
 
 $$\grad (xy) = x \brack{0, 1} + y \brack{1, 0} = [y, x]$$
 
+# Problem 9.7.12.
+
+The force in an electrostatic field given by $f(x,y,z)$ has the direction of the gradient. Find $\grad f$ and its value at $P$.
+
+$$f = \frac{x}{x^2 + y^2}, \quad P: (1, 1)$$
+
+## Solution.
+
+$$
+\begin{aligned}
+\grad f &= \brack{\pder{x}(f), \pder{y}(f)} \\
+&= \boxed{\brack{\frac{y^2 - x^2}{(x^2 + y^2)^2}, \frac{-2xy}{(x^2 + y^2)^2}}} \\
+\end{aligned}
+$$
+
+$$\grad f (P) = \boxed{\brack{0, -\frac{1}{2}}}$$
+
+# Problem 9.7.15.
+
+The force in an electrostatic field given by $f(x,y,z)$ has the direction of the gradient. Find $\grad f$ and its value at $P$.
+
+
+
 # Problem 9.7.21.
+
 Given the velocity potential $f$ of a flow, find the velocity $\mathbf{v} = \grad f$ of the field and its value $\mathbf{v}(P)$ at $P$. Sketch $\mathbf{v}(P)$ and the curve $f = \text{const}$ passing through $P$
 
 $$f = e^x \cos y, \quad P:(1,1)$$
@@ -80,6 +106,7 @@ $$
 $$\boxed{\mathbf{v}(P) = [e \cos 1, -e \sin 1]}$$
 
 # Problem 9.7.26.
+
 Experiments show that in a temperature field, heat flows in the direction of maximum decrease of temperature $T$. Find this direction in general and at the given point $P$. Sketch that direction at $P$ as an arrow.
 
 $$T = x^2 + y^2 + 4z^2, \quad P:(2,-1,2)$$
@@ -97,6 +124,7 @@ $$
 ![grad T(P)](images/T_P.svg){width=3.5in}\ 
 
 # Problem 9.8.3.
+
 Find $\diverg \mathbf{v}$ and its value at $P$:
 
 $$\mathbf{v} = (x^2 + y^2)^{-1}[x,y]$$
@@ -116,6 +144,7 @@ $$
 $$
 
 # Problem 9.8.5. 
+
 Find $\diverg \mathbf{v}$ and its value at $P$:
 
 $$\mathbf{v} = x^2 y^2 z^2 [x,y,z], \quad P:(3, -1, 4)$$
@@ -139,6 +168,7 @@ $$
 $$
 
 # Problem 9.8.9. PROJECT. Useful Formulas for the Divergence.
+
 
 ## Part a. 
 ### Prove $\diverg (k \mathbf{v}) = k \diverg \mathbf{v}, \quad (k \text{ constant})$
@@ -278,6 +308,7 @@ Therefore,
 $$\diverg (f \grad g) - \diverg (g \grad f) = f \laplacian g - g \laplacian f$$
 
 # Problem 9.8.17. 
+
 Calculate $\laplacian f$ by Eq. (3). Check by direct differentiation. Indicate when (3) is simpler. Show the details of your work.
 
 Eq. (3): $$\diverg (\grad f) = \laplacian f$$
@@ -306,6 +337,7 @@ $$
 $$
 
 # Problem 9.9.4.
+
 Find $\curl \mathbf{v}$ for $\mathbf{v}$ given with respect to right-handed Cartesian coordinates. Show the details of your work.
 
 $$\mathbf{v} = [2y^2, 5x, 0]$$
@@ -328,6 +360,7 @@ $$
 $$
 
 # Problem 9.9.9. 
+
 Let $\mathbf{v}$ be the velocity vector of a steady fluid flow. 
 
 $$\mathbf{v} = [0, 3z^2, 0]$$
@@ -382,6 +415,7 @@ $$
 Streamlines are in the form $\boxed{\mathbf{r}(t) = [x_0, y_0 + 3z_0^2 t, z_0]}$.
 
 # Problem 9.9.14. PROJECT. Useful Formulas for the Curl. 
+
 Assuming sufficient differentiability, show that
 
 ## Part a. 
@@ -582,6 +616,7 @@ $$
 $$
 
 # Problem 10.1.2. 
+
 Calculate $\int_C \mathbf{F} (\mathbf{r}) \cdot d\mathbf{r}$ for the given data. If $\mathbf{F}$ is a force, this gives the work done by the force in the displacement along $C$. Show the details.
 
 $$\mathbf{F} = [y^2, -x^2], \quad C: y=4x^2 \text{ from (0, 0) to (1, 4)}$$
@@ -602,6 +637,7 @@ $$
 $$
 
 # Problem 10.1.3. 
+
 Calculate $\int_C \mathbf{F} (\mathbf{r}) \cdot d\mathbf{r}$ for the given data. If $\mathbf{F}$ is a force, this gives the work done by the force in the displacement along $C$. Show the details.
 
 $$\mathbf{F} = [y^2, -x^2], \quad C \text{ from (0, 0)  straight to (1, 4)}$$
@@ -622,6 +658,7 @@ $$
 $$
 
 # Problem 10.1.5. 
+
 Calculate $\int_C \mathbf{F} (\mathbf{r}) \cdot d\mathbf{r}$ for the given data. If $\mathbf{F}$ is a force, this gives the work done by the force in the displacement along $C$. Show the details.
 
 $$\mathbf{F} = [xy, x^2y^2], \quad C \text{ the quarter-circle from (2, 0) to (0, 2) with center (0, 0)}$$
@@ -651,6 +688,7 @@ $$
 $$
 
 # Problem 10.1.6. 
+
 Calculate $\int_C \mathbf{F} (\mathbf{r}) \cdot d\mathbf{r}$ for the given data. If $\mathbf{F}$ is a force, this gives the work done by the force in the displacement along $C$. Show the details.
 
 $$\mathbf{F} = [x - y, y - z, z - x], \quad C: \mathbf{r} = [2 \cos t, t, 2 \sin t] \text{ from (2, 0, 0) to (2, 2$\pi$, 0)}$$
@@ -699,6 +737,7 @@ Adding all terms together:
 $$\int_C \mathbf{F} (\mathbf{r}) \cdot d\mathbf{r} = -4\pi + 2\pi^2 + 0 - 4\pi = \boxed{2\pi^2 - 8\pi}$$
 
 # Problem 10.1.10.
+
 Calculate $\int_C \mathbf{F} (\mathbf{r}) \cdot d\mathbf{r}$ for the given data. If $\mathbf{F}$ is a force, this gives the work done by the force in the displacement along $C$. Show the details.
 
 $$\mathbf{F} = [x, -z, 2y] \text{ from (0, 0, 0) straight to (1, 1, 0), then to (1, 1, 1), back to (0, 0, 0)}$$
