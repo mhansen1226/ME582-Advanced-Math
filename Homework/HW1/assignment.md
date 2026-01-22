@@ -86,7 +86,18 @@ $$\grad f (P) = \boxed{\brack{0, -\frac{1}{2}}}$$
 
 The force in an electrostatic field given by $f(x,y,z)$ has the direction of the gradient. Find $\grad f$ and its value at $P$.
 
+$$f = 4x^2 + 9y^2 + z^2, \quad P: (5, 1, 11)$$
 
+## Solution.
+
+$$
+\begin{aligned}
+\grad f &= \brack{\pder{x}(f), \pder{y}(f), \pder{z}(f)} \\
+&= \boxed{\brack{8x, 18y, 2z}} \\
+\end{aligned}
+$$
+
+$$\grad f (P) = \boxed{\brack{40, 18, 22}}$$
 
 # Problem 9.7.21.
 
