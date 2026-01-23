@@ -23,25 +23,24 @@ def surface(ax, X, Y, Z, color="#03A0D5", alpha=0.5):
     ax.plot_surface(X, Y, Z, linewidth=0, color=color, alpha=alpha)
 
 
-def plot_wireframe(ax, color="#03A0D5", width=1):
+def plot_wireframe(ax, color="#03A0D5", width=2):
     t = np.linspace(0, 1, 100)
     zero = 0 * t
     contour = 1 - t**2
-    # --- Edges on the Coordinate Axes ---
-    ax.plot(t, zero, zero, color=color, linewidth=width)
-    ax.plot(zero, t, zero, color=color, linewidth=width)
-    ax.plot(zero, zero, t, color=color, linewidth=width)
 
-    # --- Edges on the Coordinate Planes ---
-    ax.plot(t, contour, zero, color=color, linewidth=width)
-    ax.plot(t, zero, contour, color=color, linewidth=width)
+    lines = [
+        (t, zero, zero),
+        (zero, t, zero),
+        (zero, zero, t),
+        (t, contour, zero),
+        (t, zero, contour),
+        (zero, 1 + zero, t),
+        (zero, t, 1 + zero),
+        (t, contour, contour),
+    ]
 
-    # --- Edges on the Back Face (x=0) ---
-    ax.plot(zero, 1 + zero, t, color=color, linewidth=width)
-    ax.plot(zero, t, 1 + zero, color=color, linewidth=width)
-
-    # --- The Intersection Ridge ---
-    ax.plot(t, contour, contour, color=color, linewidth=width)
+    for x, y, z in lines:
+        ax.plot(x, y, z, color=color, linewidth=width)
 
 
 fig = plt.figure(figsize=(5, 5))
