@@ -19,7 +19,7 @@ def plot_volume(ax, N=500):
     surface(ax, X, np.where(mask2, Y2, np.nan), Z)
 
 
-def surface(ax, X, Y, Z, color="#03A0D5", alpha=0.5):
+def surface(ax, X, Y, Z, color="#03A0D5", alpha=0.2):
     ax.plot_surface(X, Y, Z, linewidth=0, color=color, alpha=alpha)
 
 
