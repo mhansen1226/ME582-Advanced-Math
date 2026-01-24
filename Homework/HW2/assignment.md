@@ -286,11 +286,43 @@ $$\int_0^1 \int_{x^2}^x \parens{1 - 2xy} \ dy \ dx$$
 
 ## Solution.
 
+The region of integration is the volume under the surface $z = 1 - 2xy$ for $y \in [x^2, x]$ and $x \in [0, 1]$. The region on the xy-plane looks like a slim leaf-like shape.
+
+![](images/10.3.5.svg){width=2in}\ 
+
+$$
+\begin{aligned}
+\int_0^1 \int_{x^2}^x (1 - 2xy) \ dy \ dx &= \int_0^1 \brackets{y - x y^2}_{x^2}^x \ dx \\
+&= \int_0^1 \brackets{x - x^2 - x^3 + x^5} \ dx \\
+&= \brackets{\frac{x^2}{2} - \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^6}{6}}_0^1 \\
+&= \frac{1}{2} - \frac{1}{3} - \frac{1}{4} + \frac{1}{6} \\
+&= \boxed{\frac{1}{12}}
+\end{aligned}
+$$
+
 # Problem 10.3.10.
 
 Find the volume of the first octant region bounded by the coordinate planes and the surfaces $y = 1 - x^2$ and $z = 1 - x^2$. Sketch it.
 
 ## Solution.
+
+$$
+\begin{aligned}
+V &= \int_0^1\int_0^{1-x^2}\int_0^{1-x^2} \ dz \ dy \ dx \\
+&= \int_0^1\int_0^{1-x^2} \brackets{z}_0^{1-x^2} \ dy \ dx \\
+&= \int_0^1\int_0^{1-x^2} (1-x^2) \ dy \ dx \\
+&= \int_0^1 \brackets{y(1-x^2)}_0^{1-x^2} \ dx \\
+&= \int_0^1 (1-x^2)(1-x^2) \ dx \\
+&= \int_0^1 (1 - 2x^2 + x^4) \ dx \\
+&= x - \frac{2}{3} x^3 + \frac{1}{5} x^5 \Big|_0^1 \\
+&= 1 - \frac{2}{3} + \frac{1}{5} \\
+&= \boxed{\frac{8}{15}}
+\end{aligned}
+$$
+
+![](images/10.3.10.svg){width=3in}\ 
+
+
 
 # Problem 10.3.12.
 
