@@ -354,26 +354,81 @@ $$
 \begin{aligned}
 \bar x &= \frac{2}{hb} \iint_R x \ dx \ dy \\
 &= \frac{2}{hb} \brackets{
-    \int_0^{b/2} \int_0^{(2h/b)x} x \ dy \ dx + \int_{b/2}^{b} \int_0^{2h - (2h/b)x} x \ dy \ dx
+    \int_0^{b/2} \int_0^{(2h/b)x} x \ dy \ dx 
+    + \int_{b/2}^{b} \int_0^{2h - (2h/b)x} x \ dy \ dx
+} \\
+&= \frac{2}{hb} \brackets{
+    \int_0^{b/2} \brackets{xy}_{y=0}^{y=(2h/b)x} \ dx 
+    + \int_{b/2}^{b} \brackets{xy}_{y=0}^{y=2h - (2h/b)x} \ dx
+} \\
+&= \frac{2}{hb} \brackets{
+    \int_0^{b/2} \parens{\frac{2h}{b}x^2} \ dx 
+    + \int_{b/2}^{b} \parens{2hx - \frac{2h}{b}x^2} \ dx
+} \\
+&= \frac{2}{hb} \brackets{
+    \brackets{\frac{2h}{3b}x^3}_0^{b/2} 
+    + \brackets{hx^2 - \frac{2h}{3b}x^3}_{b/2}^{b}
+} \\
+&= \frac{2}{hb} \brackets{
+    \brackets{
+        \frac{2h}{3b}\parens{\frac{b}{2}}^3} + 
+        \brackets{
+            hb^2 - \frac{2h}{3b}(b)^3 
+            - h\parens{\frac{b}{2}}^2 + \frac{2h}{3b}\parens{\frac{b}{2}}^3
+        }
     } \\
 &= \frac{2}{hb} \brackets{
-    \int_0^{b/2} \brackets{xy}_{y=0}^{y=(2h/b)x} \ dx + \int_{b/2}^{b} \brackets{xy}_{y=0}^{y=2h - (2h/b)x} \ dx
-    } \\
-&= \frac{2}{hb} \brackets{
-    \int_0^{b/2} \parens{\frac{2h}{b}x^2} \ dx + \int_{b/2}^{b} \parens{2hx - \frac{2h}{b}x^2} \ dx
-    } \\
-&= \frac{2}{hb} \brackets{
-    \brackets{\frac{2h}{3b}x^3}_0^{b/2} + \brackets{hx^2 - \frac{2h}{3b}x^3}_{b/2}^{b}
-    } \\
-&= \frac{2}{hb} \brackets{
-    \brackets{\frac{2h}{3b}\parens{\frac{b}{2}}^3} + 
-    \brackets{hb^2 - \frac{2h}{3b}(b)^3 - h\parens{\frac{b}{2}}^2 + \frac{2h}{3b}\parens{\frac{b}{2}}^3}
-    } \\
-&= \frac{2}{hb} \brackets{\frac{hb^2}{6} + hb^2 - \frac{2hb^2}{3} - \frac{hb^2}{4}} \\
+    \frac{hb^2}{6} + hb^2 - \frac{2hb^2}{3} - \frac{hb^2}{4}
+} \\
 &= b \brackets{\frac{1}{3} + 2 - \frac{4}{3} - \frac{1}{2}} \\
 \bar x &= \boxed{\frac{1}{2}b}
 \end{aligned}
 $$
+
+$$
+\begin{aligned}
+\bar y &= \frac{2}{hb} \iint_R y \ dx \ dy \\
+&= \frac{2}{hb} \brackets{
+    \int_0^{b/2} \int_0^{(2h/b)x} y \ dy \ dx 
+    + \int_{b/2}^{b} \int_0^{2h - (2h/b)x} y \ dy \ dx
+} \\
+&= \frac{2}{hb} \cdot \frac{1}{2} \brackets{
+    \int_0^{b/2} \brackets{y^2}_{y=0}^{y=(2h/b)x} \ dx 
+    + \int_{b/2}^{b} \brackets{y^2}_{y=0}^{y=2h - (2h/b)x} \ dx
+} \\
+&= \frac{1}{hb} \brackets{
+    \int_0^{b/2} \parens{\frac{2h}{b}x}^2 \ dx 
+    + \int_{b/2}^{b} \parens{2h - \frac{2h}{b}x}^2 \ dx
+} \\
+&= \frac{1}{hb} \brackets{
+    \int_0^{b/2} \parens{\frac{4h^2}{b^2}x^2} \ dx 
+    + \int_{b/2}^{b} \parens{4h^2 - \frac{8h^2}{b}x + \frac{4h^2}{b^2}x^2} \ dx
+} \\
+&= \frac{4h}{b} \brackets{
+    \int_0^{b/2} \parens{\frac{1}{b^2}x^2} \ dx 
+    + \int_{b/2}^{b} \parens{1 - \frac{2}{b}x + \frac{1}{b^2}x^2} \ dx
+} \\
+&= \frac{4h}{b} \brackets{
+    \brackets{\frac{1}{3b^2}x^3}_0^{b/2} 
+    + \brackets{x - \frac{1}{b}x^2 + \frac{1}{3b^2}x^3}_{b/2}^{b}
+} \\
+&= \frac{4h}{b} \brackets{
+    \brackets{\cancel{\frac{1}{3b^2} \parens{\frac{b}{2}}^3}}
+    + \brackets{
+        (b) - \frac{1}{b}(b)^2 + \frac{1}{3b^2}(b)^3 - 
+        \parens{\frac{b}{2}} + \frac{1}{b}\parens{\frac{b}{2}}^2 - \cancel{\frac{1}{3b^2} \parens{\frac{b}{2}}^3}
+    }
+} \\
+&= \frac{4h}{b} \brackets{
+    \frac{b}{3} - \frac{b}{2} + \frac{b}{4}
+} \\
+\bar y &= \boxed{\frac{h}{3}}
+\end{aligned}
+$$
+
+## Summary.
+
+$$\boxed{(\bar x, \bar y) = \parens{\frac{b}{2}, \frac{h}{3}}}$$
 
 # Problem 10.3.17.
 
