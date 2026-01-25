@@ -331,7 +331,7 @@ Find the center of gravity $\parens{\bar x, \bar y}$ of a mass of density $f(x, 
 
 ![](images/region_10.3.12.png){width=2in}\ 
 
-## Solution.
+## Equations.
 
 The center of gravity is found at the coordinates $(\bar x, \bar y)$ where,
 
@@ -343,10 +343,12 @@ $$
 M = \iint_R f(x, y) \ dx \ dy
 $$
 
+## Solution.
+
 $$
 \begin{aligned}
 M &= \iint_R (1) \ dx \ dy \\
-&= \frac{hb}{2}
+&= \boxed{\frac{hb}{2}}
 \end{aligned}
 $$
 
@@ -436,4 +438,46 @@ Find $I_x$, $I_y$, $I_0$ of a mass of density $f(x, y) = 1$ in the region $R$.
 
 ![](images/region_10.3.13.png){width=2in}\ 
 
+## Equations.
+
+The moments of inertia $I_x$ and $I_y$ of the mass in $R$ about the $x$- and $y$-axes, respectively, are
+
+$$
+I_x = \iint_R x^2 f(x, y) \ dx \ dy = 
+\qquad
+I_y = \iint_R y^2 f(x, y) \ dx \ dy
+\qquad
+$$
+and the polar moment of inertia $I_0$ about the origin of the mass in $R$ is
+
+$$I_0 = I_x + I_y = \iint_R (x^2 + y^2) f(x, y) \ dx \ dy$$
+
 ## Solution.
+
+$$
+\begin{aligned}
+I_x &= \iint_R x^2 \ dx \ dy \\
+&= \int_0^b \int_0^{(h/b)x} x^2 \ dy \ dx \\
+&= \int_0^b \brackets{x^2y}_{y=0}^{y=(h/b)x} \ dx \\
+&= \int_0^b x^2 \parens{\frac{h}{b}x} \ dx \\
+&= \frac{h}{b} \int_0^b x^3 \ dx \\
+&= \frac{h}{4b} x^4 \Big|_0^b \\
+I_x &= \boxed{\frac{1}{4}hb^3}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+I_y &= \iint_R y^2 \ dx \ dy \\
+&= \int_0^b \int_0^{(h/b)x} y^2 \ dy \ dx \\
+&= \frac{1}{3} \int_0^b \brackets{y^3}_{y=0}^{y=(h/b)x} \ dx \\
+&= \frac{1}{3} \int_0^b \parens{\frac{h}{b}x}^3 \ dx \\
+&= \frac{h^3}{3b^3} \int_0^b x^3 \ dx \\
+&= \frac{h^3}{12b^3} x^4 \Big|_0^b \\
+I_y &= \boxed{\frac{1}{12}h^3b}
+\end{aligned}
+$$
+
+$$
+I_0 = I_x + I_y = \frac{1}{4}hb^3 + \frac{1}{12}h^3b = \boxed{\frac{1}{3}hb^3 + \frac{1}{12}h^3b}
+$$
