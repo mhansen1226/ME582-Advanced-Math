@@ -2,6 +2,7 @@
 geometry: 
   - margin=1in
 header-includes: |
+  \usepackage{cancel}
   \usepackage{fancyhdr}
   \pagestyle{fancy}
   \fancyhead[LO,LE]{ME 528}
@@ -309,9 +310,9 @@ Find the volume of the first octant region bounded by the coordinate planes and 
 $$
 \begin{aligned}
 V &= \int_0^1\int_0^{1-x^2}\int_0^{1-x^2} \ dz \ dy \ dx \\
-&= \int_0^1\int_0^{1-x^2} \brackets{z}_0^{1-x^2} \ dy \ dx \\
+&= \int_0^1\int_0^{1-x^2} \brackets{z}_{z=0}^{z=1-x^2} \ dy \ dx \\
 &= \int_0^1\int_0^{1-x^2} (1-x^2) \ dy \ dx \\
-&= \int_0^1 \brackets{y(1-x^2)}_0^{1-x^2} \ dx \\
+&= \int_0^1 \brackets{y(1-x^2)}_{y=0}^{y=1-x^2} \ dx \\
 &= \int_0^1 (1-x^2)(1-x^2) \ dx \\
 &= \int_0^1 (1 - 2x^2 + x^4) \ dx \\
 &= x - \frac{2}{3} x^3 + \frac{1}{5} x^5 \Big|_0^1 \\
@@ -331,6 +332,48 @@ Find the center of gravity $\parens{\bar x, \bar y}$ of a mass of density $f(x, 
 ![](images/region_10.3.12.png){width=2in}\ 
 
 ## Solution.
+
+The center of gravity is found at the coordinates $(\bar x, \bar y)$ where,
+
+$$
+\bar x = \frac{1}{M} \iint_R x f(x, y) \ dx \ dy
+\qquad
+\bar y = \frac{1}{M} \iint_R y f(x, y) \ dx \ dy
+\qquad
+M = \iint_R f(x, y) \ dx \ dy
+$$
+
+$$
+\begin{aligned}
+M &= \iint_R (1) \ dx \ dy \\
+&= \frac{hb}{2}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\bar x &= \frac{2}{hb} \iint_R x \ dx \ dy \\
+&= \frac{2}{hb} \brackets{
+    \int_0^{b/2} \int_0^{(2h/b)x} x \ dy \ dx + \int_{b/2}^{b} \int_0^{2h - (2h/b)x} x \ dy \ dx
+    } \\
+&= \frac{2}{hb} \brackets{
+    \int_0^{b/2} \brackets{xy}_{y=0}^{y=(2h/b)x} \ dx + \int_{b/2}^{b} \brackets{xy}_{y=0}^{y=2h - (2h/b)x} \ dx
+    } \\
+&= \frac{2}{hb} \brackets{
+    \int_0^{b/2} \parens{\frac{2h}{b}x^2} \ dx + \int_{b/2}^{b} \parens{2hx - \frac{2h}{b}x^2} \ dx
+    } \\
+&= \frac{2}{hb} \brackets{
+    \brackets{\frac{2h}{3b}x^3}_0^{b/2} + \brackets{hx^2 - \frac{2h}{3b}x^3}_{b/2}^{b}
+    } \\
+&= \frac{2}{hb} \brackets{
+    \brackets{\frac{2h}{3b}\parens{\frac{b}{2}}^3} + 
+    \brackets{hb^2 - \frac{2h}{3b}(b)^3 - h\parens{\frac{b}{2}}^2 + \frac{2h}{3b}\parens{\frac{b}{2}}^3}
+    } \\
+&= \frac{2}{hb} \brackets{\frac{hb^2}{6} + hb^2 - \frac{2hb^2}{3} - \frac{hb^2}{4}} \\
+&= b \brackets{\frac{1}{3} + 2 - \frac{4}{3} - \frac{1}{2}} \\
+\bar x &= \boxed{\frac{1}{2}b}
+\end{aligned}
+$$
 
 # Problem 10.3.17.
 
