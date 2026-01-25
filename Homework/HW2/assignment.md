@@ -479,5 +479,19 @@ I_y &= \boxed{\frac{1}{12}h^3b}
 $$
 
 $$
-I_0 = I_x + I_y = \frac{1}{4}hb^3 + \frac{1}{12}h^3b = \boxed{\frac{1}{3}hb^3 + \frac{1}{12}h^3b}
+\begin{aligned}
+I_0 &= I_x + I_y \\
+&= \frac{1}{4}hb^3 + \frac{1}{12}h^3b \\
+I_0 &= \boxed{\frac{1}{3}hb^3 + \frac{1}{12}h^3b} \\
+\end{aligned}
+$$
+
+## Summary.
+
+$$
+\begin{aligned}
+I_x &= \frac{1}{4}hb^3 \\
+I_y &= \frac{1}{12}h^3b \\
+I_0 &= \frac{1}{3}hb^3 + \frac{1}{12}h^3b
+\end{aligned}
 $$
