@@ -21,7 +21,13 @@ header-includes: |
 ---
 # Problem 10.4.3.
 
-Evaluate $\int_C \mathbf{F}(\mathbf{r}) \cdot d\mathbf{r}$ counterclockwise around the boundary $C$ of the region $R$ by Green’s theorem, where
+Evaluate $\int_C \mathbf{F}(\mathbf{r}) \cdot d\mathbf{r}$ counterclockwise around the boundary $C$ of the region $R$ by Green’s theorem, 
+
+$$
+\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_R \curl \mathbf{F} \cdot \mathbf{k} \ dA
+$$
+
+where
 
 $$
 \mathbf{F} = \brackets{
@@ -32,6 +38,26 @@ R \text{ the rectangle with vertices (0, 0), (2, 0), (2, 3), (0, 3)}
 $$
 
 ## Solution.
+
+$$
+\begin{aligned}
+\oint_C \mathbf{F} \cdot d\mathbf{r} &= \iint_R \curl \mathbf{F} \cdot \mathbf{k} \ dA \\
+&= \int_0^3 \int_0^2 \parens{\pder[F_2]{x} - \pder[F_1]{y}} \ dx \ dy \\
+&= \int_0^3 \int_0^2 \parens{y^2 e^x - x^2 e^y} \ dx \ dy \\
+&= \int_0^3 \brackets{y^2 e^x - \frac{1}{3} x^3 e^y}_{x=0}^{x=2} \ dy \\
+&= \int_0^3 \brackets{
+    \parens{y^2 e^2 - \frac{1}{3} 2^3 e^y} - \parens{y^2 e^0 - \frac{1}{3} 0^3 e^y}
+} \ dy \\
+&= \int_0^3 \brackets{
+    \parens{y^2 e^2 - \frac{8}{3} e^y} - \parens{y^2}
+} \ dy \\
+&= \int_0^3 \parens{y^2 (e^2 - 1) - \frac{8}{3} e^y} \ dy \\
+&= \frac{1}{3} y^3 (e^2 - 1) - \frac{8}{3} e^y \Big|_0^3 \\
+&= \parens{\frac{1}{3} 3^3 (e^2 - 1) - \frac{8}{3} e^3} - \parens{\frac{1}{3} 0^3 (e^2 - 1) - \frac{8}{3} e^0} \\
+&= \parens{9 (e^2 - 1) - \frac{8}{3} e^3} - \parens{- \frac{8}{3}} \\
+\oint_C \mathbf{F} \cdot d\mathbf{r} &= \boxed{9 (e^2 - 1) - \frac{8}{3} (e^3 - 1)}
+\end{aligned}
+$$
 
 # Problem 10.4.7.
 
