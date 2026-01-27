@@ -70,6 +70,14 @@ $$
 
 ## Solution.
 
+$$
+\begin{aligned}
+\oint_C \mathbf{F} \cdot d\mathbf{r} &= \iint_R \curl \mathbf{F} \cdot \mathbf{k} \ dA \\
+&= \iint_R \cancelto{0}{\curl \parens{\grad f}} \cdot \mathbf{k} \ dA \\
+\oint_C \mathbf{F} \cdot d\mathbf{r} &= \boxed{0}
+\end{aligned}
+$$
+
 # Problem 10.4.15.
 
 Using the following equation, 
