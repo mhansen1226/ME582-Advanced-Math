@@ -83,7 +83,7 @@ $$
 Using the following equation, 
 
 $$
-\iint_R \laplacian w \ dx \ dy = \oint_C \pder[w]{n} ds
+\iint_R \laplacian w \ dA = \oint_C \pder[w]{n} \ ds
 $$
 
 Find the value of $\int_C \pder[w]{n} \ ds$ taken counterclockwise over the boundary $C$ of the region $R$.
@@ -96,6 +96,28 @@ $$
 
 ## Solution.
 
+$$
+\begin{aligned}
+\laplacian w &= \pdder[w]{x} + \pdder[w]{y} \\
+&= (e^x \cos y) + (-e^x \cos y + 6xy) \\
+&= 6xy
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\oint_C \pder[w]{n} \ ds &= \iint_R \laplacian w \ dA \\
+&= \int_0^{3} \int_1^{10 - x^2} 6xy \ dy \ dx \\
+&= \int_0^{3} \brackets{3xy^2}_{y=1}^{y=10 - x^2} \ dx \\
+&= \int_0^{3} \parens{3x(10 - x^2)^2 - 3x} \ dx \\
+&= \int_0^{3} \parens{3x(100 - 20x^2 + x^4) - 3x} \ dx \\
+&= \int_0^{3} \parens{297x - 60x^3 + 3x^5} \ dx \\
+&= \frac{297}{2}x^2 - 15x^4 + \frac{1}{2}x^6 \Big|_0^{3} \\
+&= 1336.5 - 1215 + 364.5 \\
+&= \boxed{486}
+\end{aligned}
+$$
+
 # Problem 10.4.16.
 
 Using the following equation, 
@@ -107,7 +129,7 @@ $$
 find the value of $\int_C \pder[w]{n} \ ds$ taken counterclockwise over the boundary $C$ of the region $R$.
 
 $$
-W = x^2 + y^2, \qquad 
+w = x^2 + y^2, \qquad 
 C: x^2 + y^2 = 4
 $$
 
