@@ -222,6 +222,34 @@ integrate $w \parens{\pder[w]{n}}$ counter-clockwise around the boundary curve $
 
 ## Solution.
 
+$$
+\grad w = [e^x \sin y, e^x \cos y]
+$$
+
+$$
+\begin{aligned}
+\laplacian w &= (e^x \sin y) + (-e^x \sin y) \\
+&= \boxed{0}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\oint_C w \parens{\pder[w]{n}} \ ds
+&= \iint_R \brackets{
+    \parens{\pder[w]{x}}^2 + \parens{\pder[w]{y}}^2
+} \ dx \ dy \\
+&= \iint_R \parens{e^x \sin y}^2 + \parens{e^x \cos y}^2 \ dx \ dy \\
+&= \iint_R \parens{e^2x [\sin^2 y + \cos^2 y} \ dx \ dy \\
+&= \iint_R \parens{e^2x} \ dx \ dy \\
+&= \int_0^5 \int_0^2 \parens{e^2x} \ dx \ dy \\
+&= \frac{1}{2} \int_0^5 \brackets{e^2x}_0^2 \ dy \\
+&= \frac{1}{2} (e^4 - 1) \int_0^5 \ dy \\
+&= \frac{1}{2} (e^4 - 1) \cdot 5 \\
+&= \boxed{\frac{5}{2} (e^4 - 1)}
+\end{aligned}
+$$
+
 # Problem 10.5.2.
 
 Derive a parametric representation, $z = f(x, y)$ or $g(x, y, z) = 0$, by finding the **parameter curves** (curves $u =$ const and $v =$ const) of the surface and a normal vector $\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$ of the surface.
