@@ -98,7 +98,7 @@ $$
 
 $$
 \begin{aligned}
-\laplacian w &= \pdder[w]{x} + \pdder[w]{y} \\
+\laplacian w &= w_{xx} + w_{yy} \\
 &= (e^x \cos y) + (-e^x \cos y + 6xy) \\
 &= 6xy
 \end{aligned}
@@ -133,9 +133,80 @@ w = x^2 + y^2, \qquad
 C: x^2 + y^2 = 4
 $$
 
-Confirm the answer by direct integration.
-
 ## Solution.
+
+$$
+\begin{aligned}
+\laplacian w &= w_{xx} + w_{yy} \\
+&= (2) + (2) \\
+&= 4
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\oint_C \pder[w]{n} \ ds &= \iint_R \laplacian w \ dA \\
+&= 4 \iint_R \ dA \\
+&= 4 \cdot \text{Area}(R) \\
+&= 4 \cdot \pi \cdot 2^2 \\
+&= \boxed{16\pi}
+\end{aligned}
+$$
+
+## Confirm the answer by direct integration.
+
+$$
+C \implies \mathbf{r}(t) = [2 \cos t, 2 \sin t], \quad t \in [0, 2 \pi]
+$$
+
+The arc length of $C$ is,
+
+$$
+\begin{aligned}
+ds 
+&= |\mathbf{r}'(t)| \ dt \\
+&= \sqrt{(-2 \sin t)^2 + (2 \cos t)^2} \ dt \\
+&= 2 \ dt
+\end{aligned}
+$$
+
+The normal vector is,
+
+$$
+\begin{aligned}
+\mathbf{n} &= \frac{\grad{x^2 + y^2}}{|\grad{x^2 + y^2}|} \\
+&= \frac{[2x, 2y]}{\sqrt{(2x)^2 + (2y)^2}} \\
+&= \frac{[x, y]}{\sqrt{x^2 + y^2}}
+\end{aligned}
+$$
+
+On C, $r=2$,
+
+$$
+\mathbf{n} = \frac{[x, y]}{2}
+$$
+
+The integral of the normal derivative is then,
+
+$$
+\begin{aligned}
+\oint_C \pder[w]{n} \ ds 
+&= \oint_C \grad w \cdot \mathbf{n} \ ds \\
+&= \frac{1}{2} \oint_C [2x, 2y] \cdot [x, y] \ ds \\
+&= \frac{1}{2} \oint_C 2x^2 + 2y^2 \ ds \\
+&= \oint_C x^2 + y^2 \ ds \\
+\end{aligned}
+$$
+
+On $C$, $x^2 + y^2 = 4$, and $ds=2 \ dt$ where $t \in [0, 2\pi]$,
+
+$$
+\begin{aligned}
+\oint_C \pder[w]{n} \ ds &= 8 \int_0^{2\pi} \ dt \\
+&= 8 \cdot 2\pi \\
+&= \boxed{16\pi}
+\end{aligned}
+$$
 
 # Problem 10.4.19.
 
