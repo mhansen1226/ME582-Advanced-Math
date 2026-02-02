@@ -180,7 +180,7 @@ $$
 \end{aligned}
 $$
 
-On C, $r=2$,
+On $C$, $r=2$,
 
 $$
 \mathbf{n} = \frac{[x, y]}{2}
@@ -202,7 +202,7 @@ On $C$, $x^2 + y^2 = 4$, and $ds=2 \ dt$ where $t \in [0, 2\pi]$,
 
 $$
 \begin{aligned}
-\oint_C \pder[w]{n} \ ds &= 8 \int_0^{2\pi} \ dt \\
+\oint_C x^2 + y^2 \ ds &= 8 \int_0^{2\pi} \ dt \\
 &= 8 \cdot 2\pi \\
 &= \boxed{16\pi}
 \end{aligned}
@@ -258,6 +258,36 @@ $$xy\text{-plane in polar coordinates } \mathbf{r}(u, v) = [u \cos v, u \sin v],
 
 ## Solution.
 
+$$\boxed{z = 0}$$
+
+The parameter curves are,
+
+- $u =$ const $\rightarrow$ concentric circles
+
+- $v =$ const $\rightarrow$ radial straight lines
+
+$$
+\begin{aligned}
+\mathbf{r}_u &= [\cos v, \sin v] \\
+\mathbf{r}_v &= [-u \sin v, u \cos v]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos v & \sin v & 0 \\
+-u \sin v & u \cos v & 0
+\end{vmatrix} \\
+&= \parens{\cos v \cdot u \cos v - \sin v \cdot (-u \sin v)} \mathbf{k} \\
+&= (u \cos^2 v + u \sin^2 v) \mathbf{k} \\
+&= u \mathbf{k} \\
+\mathbf{N} &= \boxed{[0, 0, u]}
+\end{aligned}
+$$
+
 # Problem 10.5.3.
 
 Derive a parametric representation by finding the parameter curves of the surface and a normal vector of the surface.
@@ -265,6 +295,67 @@ Derive a parametric representation by finding the parameter curves of the surfac
 $$\text{Cone } \mathbf{r}(u, v) = [u \cos v, u \sin v, cu]$$
 
 ## Solution.
+
+$$
+\begin{aligned}
+x &= u \cos v \\
+y &= u \sin v \\
+z &= cu
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+x^2 + y^2 + z^2 &= u^2 (\cos^2 v + \sin^2 v + c^2) \\
+x^2 + y^2 + z^2 &= u^2 (1 + c^2) \\
+\end{aligned}
+$$
+
+But $u = \frac{z}{c}$,
+
+$$
+\begin{aligned}
+x^2 + y^2 + z^2 &= \frac{z^2}{c^2} (1 + c^2) \\
+x^2 + y^2 + \cancel{z^2} &= \frac{z^2}{c^2} + \cancel{z^2} \\
+\end{aligned}
+$$
+
+$$\boxed{z = c \sqrt{x^2 + y^2}}$$
+
+The parameter curves are,
+
+- $u =$ const $\rightarrow$ concentric circles at a given height
+
+- $v =$ const $\rightarrow$ lines that extend straight along the edges of the cone and pass through the origin
+
+$$
+\begin{aligned}
+\mathbf{r}_u &= [\cos v, \sin v, c] \\
+\mathbf{r}_v &= [-u \sin v, u \cos v, 0]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos v & \sin v & c \\
+-u \sin v & u \cos v & 0
+\end{vmatrix} \\
+&= \brackets{
+    (0 - cu \cos v), 
+    -(0 + cu \sin v),
+    (u \cos^2 v + u \sin^2 v)
+} \\
+&= \brackets{
+    -cu \cos v, 
+    -cu \sin v,
+    u
+} \\
+&= \boxed{u [-c \cos v, -c \sin v, 1]}
+\end{aligned}
+$$
 
 # Problem 10.5.5.
 
