@@ -324,9 +324,9 @@ $$\boxed{z = c \sqrt{x^2 + y^2}}$$
 
 The parameter curves are,
 
-- $u =$ const $\rightarrow$ concentric circles at a given height
+- $u =$ const $\rightarrow$ concentric circles
 
-- $v =$ const $\rightarrow$ lines that extend straight along the edges of the cone and pass through the origin
+- $v =$ const $\rightarrow$ straight lines through the origin
 
 $$
 \begin{aligned}
@@ -365,7 +365,62 @@ $$\text{Paraboloid of revolution } \mathbf{r}(u, v) = [u \cos v, u \sin v, u^2]$
 
 ## Solution.
 
+$$
+\begin{aligned}
+x &= u \cos v \\
+y &= u \sin v \\
+z &= u^2
+\end{aligned}
+$$
 
+$$
+\begin{aligned}
+x^2 + y^2 + z &= u^2 \cos^2 v + u^2 \sin^2 v + u^2 \\
+&= u^2 (\cos^2 v + \sin^2 v + 1) \\
+&= u^2 (1 + 1) \\
+&= 2u^2
+\end{aligned}
+$$
+
+But $u^2 = z$,
+
+$$x^2 + y^2 + z = 2z$$
+
+$$\boxed{z = x^2 + y^2}$$
+
+The parameter curves are,
+
+- $u =$ const $\rightarrow$ concentric circles at a given height
+
+- $v =$ const $\rightarrow$ parabolas with vertex at the origin
+
+$$
+\begin{aligned}
+\mathbf{r}_u &= [\cos v, \sin v, 2u] \\
+\mathbf{r}_v &= [-u \sin v, u \cos v, 0]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos v & \sin v & 2u \\
+-u \sin v & u \cos v & 0
+\end{vmatrix} \\
+&= \brackets{
+    (0 - 2u^2 \cos v), 
+    -(0 + 2u^2 \sin v),
+    (u \cos^2 v + u \sin^2 v)
+} \\
+&= \boxed{\brackets{
+    -2u^2 \cos v, 
+    -2u^2 \sin v,
+    u
+}} \\
+\end{aligned}
+$$
 
 # Problem 10.5.7.
 
