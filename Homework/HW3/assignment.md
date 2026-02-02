@@ -365,6 +365,8 @@ $$\text{Paraboloid of revolution } \mathbf{r}(u, v) = [u \cos v, u \sin v, u^2]$
 
 ## Solution.
 
+
+
 # Problem 10.5.7.
 
 Derive a parametric representation by finding the parameter curves of the surface and a normal vector of the surface.
