@@ -588,6 +588,40 @@ $$\text{Elliptic cone } z = \sqrt{x^2 + 4y^2}$$
 
 ## Solution.
 
+$$
+\mathbf{r}(u,v) = u [\cos v, 0.5 \sin v, 1]
+$$
+
+$$
+\begin{aligned}
+\mathbf{r}_u &= [\cos v, 0.5 \sin v, 1] \\
+\mathbf{r}_v &= u [-\sin v, 0.5 \cos v, 0]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos v & 0.5 \sin v & 1 \\
+-u \sin v & 0.5 u \cos v & 0
+\end{vmatrix} \\
+&= \brackets{
+    (0 - 0.5 u \cos v),
+    -(0 + u \sin v),
+    (0.5 u \cos^2 v + 0.5 u \sin^2 v)
+} \\
+&= \boxed{u \brackets{
+    -0.5 \cos v,
+    -\sin v,
+    0.5 
+}}
+\end{aligned}
+$$
+
+![](images/10.5.18.svg){width=3.5in}
+
 # Problem 10.6.3.
 
 Evaluate the flux integral, $\int_S \mathbf{F} \cdot \mathbf{n} \ dA$, for the given data. Describe the kind of surface.
