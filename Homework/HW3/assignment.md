@@ -430,6 +430,64 @@ $$\text{Ellipsoid } \mathbf{r}(u, v) = [a \cos v \cos u, b \cos v \sin u, c \sin
 
 ## Solution.
 
+$$
+\begin{aligned}
+x &= a \cos v \cos u \\
+y &= b \cos v \sin u \\
+z &= c \sin v
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} &= \cos^2 v \cos^2 u + \cos^2 v \sin^2 u + \sin^2 v \\
+&= (\cos^2 u + \sin^2 u) \cos^2 v + \sin^2 v \\
+&= \cos^2 v + \sin^2 v \\
+&= 1 \\
+\end{aligned}
+$$
+
+$$\boxed{\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1}$$
+
+The parameter curves are,
+
+- $u =$ const $\rightarrow$ elipses
+
+- $v =$ const $\rightarrow$ elipses
+
+$$
+\begin{aligned}
+\mathbf{r}_u &= [-a \cos v \sin u, b \cos v \cos u, 0] \\
+\mathbf{r}_v &= [-a \sin v \cos u, -b \sin v \sin u, c \cos v]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+-a \cos v \sin u & b \cos v \cos u & 0 \\
+-a \sin v \cos u & -b \sin v \sin u & c \cos v
+\end{vmatrix} \\
+&= \brackets{
+    (b c \cos^2 v \cos u - 0),
+    -(-a c \cos^2 v \sin u - 0),
+    (a b \cos v \sin v \sin^2 u + a b \cos v \sin v \cos^2 u)
+} \\
+&= \brackets{
+    (b c \cos^2 v \cos u),
+    (a c \cos^2 v \sin u),
+    (a b \cos v \sin v (\sin^2 u + \cos^2 u))
+} \\
+&= \boxed{\brackets{
+    (b c \cos^2 v \cos u),
+    (a c \cos^2 v \sin u),
+    (a b \cos v \sin v)
+}} \\
+\end{aligned}
+$$
+
 # Problem 10.5.14.
 
 Find a normal vector. Sketch the surface and parameter curves.
