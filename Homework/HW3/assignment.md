@@ -547,9 +547,13 @@ $$\text{Cylinder of revolution } (x - 2)^2 + (y + 1)^2 = 25$$
 ## Solution.
 
 $$
+\mathbf{r}(u,v) = [2 + 5 \cos u, -1 + 5 \sin u, v]
+$$
+
+$$
 \begin{aligned}
-\mathbf{r}_u &=  \\
-\mathbf{r}_v &= 
+\mathbf{r}_u &= [-5 \sin u, 5 \cos u, 0] \\
+\mathbf{r}_v &= [0, 0, 1]
 \end{aligned}
 $$
 
@@ -558,9 +562,23 @@ $$
 \mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
 &= \begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+-5 \sin u & 5 \cos u & 0 \\
+0 & 0 & 1
 \end{vmatrix} \\
+&= \brackets{
+    (5 \cos u - 0),
+    -(-5 \sin u - 0),
+    (0 - 0)
+} \\
+&= \boxed{5 \brackets{
+    \cos u,
+    \sin u,
+    0
+}}
 \end{aligned}
 $$
+
+![](images/10.5.15.svg){width=3.5in}
 
 # Problem 10.5.18.
 
