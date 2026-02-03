@@ -496,6 +496,48 @@ $$\text{Plane } 4x + 3y + 2z = 12$$
 
 ## Solution.
 
+$$
+4x + 3y + 2z = 12 \implies z = \frac{12 - 4x - 3y}{2}
+$$
+
+$$
+\mathbf{r}(u,v) = \brackets{
+    u, 
+    v, 
+    6 - 2u - 1.5v
+}
+$$
+
+$$
+\begin{aligned}
+\mathbf{r}_u &= [1, 0, -2] \\
+\mathbf{r}_v &= \brackets{0, 1, -1.5}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 0 & -2 \\
+0 & 1 & -1.5
+\end{vmatrix} \\
+&= \brackets{
+    (0 + 2),
+    -(-1.5 - 0),
+    (1 - 0)
+} \\
+&= \boxed{\brackets{
+    2,
+    1.5,
+    1
+}}
+\end{aligned}
+$$
+
+![](images/10.5.14.svg){width=3.5in}
+
 # Problem 10.5.15.
 
 Find a normal vector. Sketch the surface and parameter curves.
@@ -503,6 +545,22 @@ Find a normal vector. Sketch the surface and parameter curves.
 $$\text{Cylinder of revolution } (x - 2)^2 + (y + 1)^2 = 25$$
 
 ## Solution.
+
+$$
+\begin{aligned}
+\mathbf{r}_u &=  \\
+\mathbf{r}_v &= 
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\end{vmatrix} \\
+\end{aligned}
+$$
 
 # Problem 10.5.18.
 
