@@ -787,6 +787,81 @@ $$
 
 ## Solution.
 
+$S$ is a parabolic cylinder that is sliced into a triangular shape,
+
+$$\mathbf{r}(u,v) = [u^2, u, v] \quad u \in [0, \pi/4], \quad v \in [0, u]$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+2u & 1 & 0 \\
+0 & 0 & 1 \\
+\end{vmatrix} \\
+&= [1, -2u, 0]
+\end{aligned}
+$$
+
+$$\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \iint_R \mathbf{F} \cdot \mathbf{N} \ du \ dv$$
+
+$$
+\begin{aligned}
+\mathbf{F} \cdot \mathbf{N} &= [0, \sin y, \cos z] \cdot [1, -2u, 0] \\
+&= [0, \sin u, \cos v] \cdot [1, -2u, 0]
+&= -2u \sin u
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S \mathbf{F} \cdot \mathbf{n} \ dA &= \int_{0}^{\pi/4} \int_{0}^{u} -2u \sin u \ dv \ du \\
+&= \int_{0}^{\pi/4} -2u \sin u \left[ v \right]_{0}^{u} \ du \\
+&= \int_{0}^{\pi/4} -2u^2 \sin u \ du \\
+\end{aligned}
+$$
+
+Integrating by parts ($\int x dy = xy - \int y dx$),
+
+$$
+\begin{array}{ll}
+x = u^2 & dx = 2u \ du \\
+dy = \sin u \ du & y = -\cos u \\
+\end{array}
+$$
+
+$$
+\begin{aligned}
+\int_{0}^{\pi/4} 2u^2 \sin u \ du &= -u^2 \cos u \Big|_{0}^{\pi/4} + \int_{0}^{\pi/4} 2u \cos u \ du \\
+&= -\frac{\pi^2}{16\sqrt{2}} + 2\int_{0}^{\pi/4} u \cos u \ du \\
+\end{aligned}
+$$
+
+And again,
+
+$$
+\begin{array}{ll}
+x = u & dx = du \\
+dy = \cos u \ du & y = \sin u \\
+\end{array}
+$$
+
+$$
+\begin{aligned}
+\int_{0}^{\pi/4} u \cos u \ du &= u \sin u \Big|_{0}^{\pi/4} - \int_{0}^{\pi/4} \sin u \ du \\
+&= \frac{\pi}{4\sqrt{2}} + \cos u \Big|_{0}^{\pi/4} \\
+&= \frac{\pi}{4\sqrt{2}} + \frac{1}{\sqrt{2}} - 1 \\
+\end{aligned}
+$$
+
+In all,
+
+$$\int_{0}^{\pi/4} 2u^2 \sin u \ du = -\frac{\pi^2}{16\sqrt{2}} + \frac{\pi}{2\sqrt{2}} + \frac{2}{\sqrt{2}} - 2$$
+
+Therefore,
+
+$$\boxed{\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \frac{\pi^2}{16\sqrt{2}} - \frac{\pi}{2\sqrt{2}} - \frac{2}{\sqrt{2}} + 2}$$
+
 # Problem 10.6.13.
 
 Evaluate the surface integral, $\iint_S G (\mathbf{r}) \ dA$, for the following data. Indicate the kind of surface.
