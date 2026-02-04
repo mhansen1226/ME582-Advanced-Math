@@ -159,7 +159,7 @@ $$
 C \implies \mathbf{r}(t) = [2 \cos t, 2 \sin t], \quad t \in [0, 2 \pi]
 $$
 
-The arc length of $C$ is,
+The arc length element of $C$ is,
 
 $$
 \begin{aligned}
@@ -633,6 +633,89 @@ x, y, z \geqq 0
 $$
 
 ## Solution.
+
+$S$ is $\frac{1}{8}$ of a sphere with radius 1,
+
+$$
+\mathbf{r}(u,v) = [\sin \phi \cos \theta, \sin \phi \sin \theta, \cos \phi]
+\quad
+u \in [0, \pi/2], \
+v \in [0, \pi/2]
+$$
+
+$$
+\begin{aligned}
+\mathbf{N} = \mathbf{r}_\phi \times \mathbf{r}_\theta = \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos \phi \cos \theta & \cos \phi \sin \theta & -\sin \phi \\
+-\sin \phi \sin \theta & \sin \phi \cos \theta, 0 \\
+\end{vmatrix} \\
+&= \brackets{
+    (0 + \sin^2 \phi \cos \theta),
+    -(0 - \sin^2 \phi \sin \theta),
+    (\cos \phi \sin \phi \cos^2 \theta + \cos \phi \sin \phi \sin^2 \theta)
+} \\
+&= \brackets{
+    (\sin^2 \phi \cos \theta),
+    -(\sin^2 \phi \sin \theta),
+    (\cos \phi \sin \phi)
+} \\
+\end{aligned}
+$$
+
+$$\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \iint_R \mathbf{F} \cdot \mathbf{N} \ d\phi \ d\theta$$
+
+$$
+\begin{aligned}
+\mathbf{F} \cdot \mathbf{N} &= 
+[0, x, 0] \cdot
+\brackets{
+    (\sin^2 \phi \cos \theta),
+    -(\sin^2 \phi \sin \theta),
+    (\cos \phi \sin \phi)
+} \\
+&= 0 + x \cdot (\sin^2 \phi \sin \theta) + 0 \\
+&= -(\sin \phi \cos \theta) (\sin^2 \phi \sin \theta) \\
+&= -\sin^3 \phi \cos \theta \sin \theta
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S \mathbf{F} \cdot \mathbf{n} \ dA 
+&= \int_0^{\pi/2} \int_0^{\pi/2} \brackets{
+    -\sin^3 \phi \cos \theta \sin \theta
+} \ d\phi \ d\theta \\
+&= \parens{-\int_0^{\pi/2} \sin^3 \phi\ d\phi} 
+\parens{\int_0^{\pi/2} \cos \theta \sin \theta \ d\theta}
+\end{aligned}
+$$
+
+First integral substitute $u = \cos \phi$, $du = -\sin \phi \ d\phi$:
+
+$$
+\begin{aligned}
+-\int_0^{\pi/2} \sin^3 \phi\ d\phi &= -\int_0^{\pi/2} (1 - \cos^2 \phi) \sin \phi\ d\phi \\
+&= \int_1^0 (1 - u^2) \ du \\
+&= \frac{u} - \frac{u^3}{3} \Bigg|_1^0 \\
+&= \frac{2}{3}
+\end{aligned}
+$$
+
+Second integral substitute $u = \sin \theta$, $du = \cos \theta \ d\theta$:
+
+$$
+\begin{aligned}
+\int_0^{\pi/2} \cos \theta \sin \theta \ d\theta &= \int_0^1 u \ du \\
+&= \frac{u^2}{2} \Bigg|_1^0 \\
+&= \frac{1}{2}
+\end{aligned}
+$$
+
+Therefore,
+
+$$\boxed{\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \frac{1}{3}}$$
 
 # Problem 10.6.5.
 
