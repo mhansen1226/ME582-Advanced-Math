@@ -741,11 +741,38 @@ $$
 -u \sin v & u \cos v & 0 \\
 \end{vmatrix} \\
 &= \brackets{
+    (0 - 2 u^2 \cos v),
+    -(0 + 2 u^2 \sin v),
+    (u \cos^2 v + u \sin^2 v)
+} \\
+&= \brackets{
+    (-2 u^2 \cos v),
+    (-2 u^2 \sin v),
+    (u)
 } \\
 \end{aligned}
 $$
 
-$$\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \iint_R \mathbf{F} \cdot \mathbf{N} \ d\phi \ d\theta$$
+$$\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \iint_R \mathbf{F} \cdot \mathbf{N} \ du \ dv$$
+
+$$
+\begin{aligned}
+\mathbf{F} \cdot \mathbf{N} &= [x, y, z] \cdot [-2 u^2 \cos v, -2 u^2 \sin v, u] \\
+&= [u \cos v, u \sin v, u^2] \cdot [-2 u^2 \cos v, -2 u^2 \sin v, u] \\
+&= -2 u^3 \cos^2 v - 2 u^3 \sin^2 v + u^3 \\
+&= -u^3 \\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S \mathbf{F} \cdot \mathbf{n} \ dA 
+&= \int_{-\pi}^{\pi} \int_0^4 -u^3 \ du \ dv \\
+&= \parens{\int_{-\pi}^{\pi} \ dv} \parens{\int_0^4 -u^3 \ du} \\
+&= 2\pi \brackets{-\frac{u^4}{4}}_0^4 \\
+&= \boxed{-128\pi} \\
+\end{aligned}
+$$
 
 # Problem 10.6.7.
 
