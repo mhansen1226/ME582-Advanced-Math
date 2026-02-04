@@ -698,7 +698,7 @@ $$
 \begin{aligned}
 -\int_0^{\pi/2} \sin^3 \phi\ d\phi &= -\int_0^{\pi/2} (1 - \cos^2 \phi) \sin \phi\ d\phi \\
 &= \int_1^0 (1 - u^2) \ du \\
-&= \frac{u} - \frac{u^3}{3} \Bigg|_1^0 \\
+&= u - \frac{u^3}{3} \Bigg|_1^0 \\
 &= \frac{2}{3}
 \end{aligned}
 $$
