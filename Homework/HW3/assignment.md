@@ -645,7 +645,7 @@ $$
 
 $$
 \begin{aligned}
-\mathbf{N} = \mathbf{r}_\phi \times \mathbf{r}_\theta = \\
+\mathbf{N} &= \mathbf{r}_\phi \times \mathbf{r}_\theta \\
 &= \begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
 \cos \phi \cos \theta & \cos \phi \sin \theta & -\sin \phi \\
@@ -658,7 +658,7 @@ $$
 } \\
 &= \brackets{
     (\sin^2 \phi \cos \theta),
-    -(\sin^2 \phi \sin \theta),
+    (\sin^2 \phi \sin \theta),
     (\cos \phi \sin \phi)
 } \\
 \end{aligned}
@@ -672,7 +672,7 @@ $$
 [0, x, 0] \cdot
 \brackets{
     (\sin^2 \phi \cos \theta),
-    -(\sin^2 \phi \sin \theta),
+    (\sin^2 \phi \sin \theta),
     (\cos \phi \sin \phi)
 } \\
 &= 0 + x \cdot (\sin^2 \phi \sin \theta) + 0 \\
@@ -729,6 +729,23 @@ S: \mathbf{r} = [u \cos v, u \sin v, u^2], \quad
 $$
 
 ## Solution.
+
+$S$ is a parabaloid of revolution bounded by $z = 16$.
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos v & \sin v & 2u \\
+-u \sin v & u \cos v & 0 \\
+\end{vmatrix} \\
+&= \brackets{
+} \\
+\end{aligned}
+$$
+
+$$\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \iint_R \mathbf{F} \cdot \mathbf{N} \ d\phi \ d\theta$$
 
 # Problem 10.6.7.
 
