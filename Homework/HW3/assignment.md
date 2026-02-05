@@ -875,6 +875,42 @@ $$
 
 ## Solution.
 
+The surface is a plane,
+
+$$\mathbf{r}(u,v) = [u, v, u + 2v] \quad u \in [0, \pi], \quad v \in [0, u]$$
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 0 & 1 \\
+0 & 1 & 2
+\end{vmatrix} \\
+&= [-1, -2, 1]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+|\mathbf{N}| &= \sqrt{(-1)^2 + (-2)^2 + 1^2} \\
+&= \sqrt{6}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S G (\mathbf{r}) \ dA &= \iint_R G |\mathbf{N}| \ du \ dv \\
+&= \sqrt{6} \int_{0}^{\pi} \int_{0}^{u} (u + v + u + 2v) \ dv \ du \\
+&= \sqrt{6} \int_{0}^{\pi} \int_{0}^{u} (2u + 3v) \ dv \ du \\
+&= \sqrt{6} \int_{0}^{\pi} \brackets{2uv + \frac{3}{2}v^2}_{0}^{u} \ du \\
+&= \sqrt{6} \int_{0}^{\pi} \parens{2u^2 + \frac{3}{2}u^2} \ du \\
+&= \frac{7\sqrt{6}}{2} \int_{0}^{\pi} u^2 \ du \\
+&= \frac{7\sqrt{6}}{6} u^3 \Bigg|_{0}^{\pi}\\
+&= \boxed{\frac{7\sqrt{6}\pi^3}{6}}
+\end{aligned}
+$$
+
 # Problem 10.6.15.
 
 Evaluate the surface integral for the following data. Indicate the kind of surface.
