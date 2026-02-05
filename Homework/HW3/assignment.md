@@ -923,3 +923,36 @@ S: \mathbf{r} = [u, v, u^3],
 $$
 
 ## Solution.
+
+The surface is a cubic cylinder,
+
+$$
+\begin{aligned}
+\mathbf{N} &= \mathbf{r}_u \times \mathbf{r}_v \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 0 & 3u^2 \\
+0 & 1 & 0
+\end{vmatrix} \\
+&= [-3u^2, 0, 1]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+|\mathbf{N}| &= \sqrt{(-3u^2)^2 + 0^2 + 1^2} \\
+&= \sqrt{9u^4 + 1}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S G (\mathbf{r}) \ dA &= \iint_R G |\mathbf{N}| \ du \ dv \\
+&= \int_{-2}^2 \int_0^1 (1 + 9u^4)^{3/2} \sqrt{9u^4 + 1} \ du \ dv \\
+&= \int_{-2}^2 \ dv \cdot \int_0^1 (1 + 9u^4)^2 \ du \\
+&= \int_{-2}^2 \ dv \cdot \int_0^1 \parens{81u^8 + 18u^4 + 1} \ du \\
+&= \brackets{v}_{-2}^2 \cdot \brackets{9u^9 + \frac{18u^5}{5} + u}_0^1 \\
+&= \parens{4} \parens{9 + \frac{18}{5} + 1} \\
+&= \boxed{54.4}
+\end{aligned}
+$$
