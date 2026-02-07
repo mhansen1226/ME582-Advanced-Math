@@ -24,11 +24,29 @@ header-includes: |
 
 Evaluate the surface integral $\iint_S \mathbf{F} \cdot \mathbf{n} \ dA$ by the divergence theorem:
 
-$$\boxed{\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \iiint_T \diverg \mathbf{F} \ dVR}$$
+$$\boxed{\iint_S \mathbf{F} \cdot \mathbf{n} \ dA = \iiint_T \diverg \mathbf{F} \ dV}$$
 
 $$\mathbf{F} =  \brackets{e^x, e^y, e^z}, \quad S \text{ the surface of the cube } |x| \leqq 1, \ |y| \leqq 1, \ |z| \leqq 1$$
 
 ## Solution
+
+$$
+\diverg \mathbf{F} = e^x + e^y + e^z
+$$
+
+$$
+\begin{aligned}
+\iint_S \mathbf{F} \cdot \mathbf{n} \ dA &= \iiint_T \diverg \mathbf{F} \ dV \\
+&= \int_{-1}^{1} \int_{-1}^{1} \int_{-1}^{1} (e^x + e^y + e^z) \ dx \ dy \ dz \\
+&= \int_{-1}^{1} \int_{-1}^{1} \int_{-1}^{1} e^x \ dx \ dy \ dz 
+    + \int_{-1}^{1} \int_{-1}^{1} \int_{-1}^{1} e^y \ dx \ dy \ dz 
+    + \int_{-1}^{1} \int_{-1}^{1} \int_{-1}^{1} e^z \ dx \ dy \ dz \\
+&= 3 \int_{-1}^{1} \int_{-1}^{1} \int_{-1}^{1} e^x \ dx \ dy \ dz \\
+&= 12 \int_{-1}^{1} e^x \ dx \\
+&= 12 e^x \Big|_{-1}^{1} \\
+&= \boxed{12 (e - e^{-1})}
+\end{aligned}
+$$
 
 # Problem 10.7.13
 
