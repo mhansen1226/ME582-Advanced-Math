@@ -90,7 +90,7 @@ $$
 \diverg \mathbf{F} = 2x + 2y + 2z
 $$
 
-In polar coordinates,
+In cylindrical coordinates,
 
 $$
 \diverg \mathbf{F} = 2(r \cos \theta + r \sin \theta + z)
@@ -118,6 +118,23 @@ $$I_x = \iiint_T \parens{y^2 + z^2} \ dV$$
 $$T: \text{The paraboloid } y^2 + z^2 \leqq x, \ 0 \leqq x \leqq h$$
 
 ## Solution
+
+In cylindrical coordinates along the $x$-axis, the integrand becomes $r^2$ and
+
+$$T: \text{The paraboloid } r^2 \leqq x, \ 0 \leqq x \leqq h$$
+
+$$
+\begin{aligned}
+I_x &= \iiint_T \parens{y^2 + z^2} \ dV \\
+&= \iiint_T \parens{r^2} r \ dr \ d\theta \ dx \\
+&= \int_0^h \int_0^{2\pi} \int_0^{\sqrt{x}} \parens{r^2} r \ dr \ d\theta \ dx \\
+&= \int_0^h \int_0^{2\pi} \int_0^{\sqrt{x}} \parens{r^3} \ dr \ d\theta \ dx \\
+&= \frac{1}{4} \int_0^h \int_0^{2\pi} \parens{x^2} \ d\theta \ dx \\
+&= \frac{1}{4} \int_0^h \parens{x^2} \ dx \cdot \int_0^{2\pi} \ d\theta \\
+&= \frac{\pi}{6} x^3 \Big|_0^h \\
+&= \boxed{\frac{\pi h^3}{6}}
+\end{aligned}
+$$
 
 # Problem 10.8.1. Harmonic functions. 
 
