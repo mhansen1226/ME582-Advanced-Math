@@ -86,8 +86,28 @@ $$\mathbf{F} =  \brackets{x^2, y^2, z^2}, \quad S \text{ the surface of the cone
 
 ## Solution
 
+$$
+\diverg \mathbf{F} = 2x + 2y + 2z
+$$
 
+In polar coordinates,
 
+$$
+\diverg \mathbf{F} = 2(r \cos \theta + r \sin \theta + z)
+$$
+
+$$
+\begin{aligned}
+\iint_S \mathbf{F} \cdot \mathbf{n} \ dA &= \iiint_T \diverg \mathbf{F} \ dV \\
+&= 2 \int_{0}^{h} \int_{0}^{2\pi} \int_{0}^{z} (r \cos \theta + r \sin \theta + z) r \ dr \ d\theta \ dz \\
+&= 2 \int_{0}^{h} \int_{0}^{2\pi} \int_{0}^{z} (r^2 \cos \theta + r^2 \sin \theta + rz \ dr \ d\theta \ dz \\
+&= 2 \int_{0}^{h} \int_{0}^{2\pi} \brackets{\frac{r^3}{3} \cos \theta + \frac{r^3}{3} \sin \theta + \frac{r^2}{2}z}_{r=0}^{r=z} \ d\theta \ dz \\
+&= 2 \int_{0}^{h} \int_{0}^{2\pi} z^3\parens{\frac{1}{3} \cos \theta + \frac{1}{3} \sin \theta + \frac{1}{2}} \ d\theta \ dz \\
+&= 2 \int_{0}^{h} z^3 \ dz \cdot \int_{0}^{2\pi}\parens{\frac{1}{3} \cos \theta + \frac{1}{3} \sin \theta + \frac{1}{2}} \ d\theta \\
+&= \frac{1}{2} \brackets{z^4}_{0}^{h} \cdot \brackets{\frac{1}{3} \sin \theta - \frac{1}{3} \cos \theta + \frac{1}{2} \theta}_{0}^{2\pi} \\
+&= \boxed{\frac{\pi h^4}{2}} \\
+\end{aligned}
+$$
 
 # Problem 10.7.22
 
