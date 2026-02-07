@@ -56,6 +56,28 @@ $$\mathbf{F} =  \brackets{\sin y, \cos x, \cos z}, \quad S \text{ the surface of
 
 ## Solution
 
+$$
+\begin{aligned}
+\diverg \mathbf{F} &= 0 + 0 - \sin z \\
+&= - \sin z
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S \mathbf{F} \cdot \mathbf{n} \ dA &= \iiint_T \diverg \mathbf{F} \ dV \\
+&= \int_{-2}^{2} \int_{0}^{2\pi} \int_{0}^{2} (- \sin z) r \ dr \ d\theta \ dz \\
+&= \int_{0}^{2} r \ dr
+\cdot \int_{0}^{2\pi} \ d\theta
+\cdot \int_{-2}^{2} (-\sin z) \ dz \\
+&= \brackets{\frac{r^2}{2}}_{0}^{2} 
+\cdot (2 \pi)  
+\cdot [\cos z]_{-2}^2 \\
+&= 4 \pi (\cos(2) - \cos(-2)) \\
+&= \boxed{0}
+\end{aligned}
+$$
+
 # Problem 10.7.17
 
 Evaluate the surface integral $\iint_S \mathbf{F} \cdot \mathbf{n} \ dA$ by the divergence theorem.
@@ -63,6 +85,9 @@ Evaluate the surface integral $\iint_S \mathbf{F} \cdot \mathbf{n} \ dA$ by the 
 $$\mathbf{F} =  \brackets{x^2, y^2, z^2}, \quad S \text{ the surface of the cone } x^2 + y^2 \leqq z^2, \ 0 \leqq z \leqq h$$
 
 ## Solution
+
+
+
 
 # Problem 10.7.22
 
