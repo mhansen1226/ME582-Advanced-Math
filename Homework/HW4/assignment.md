@@ -138,8 +138,6 @@ $$
 
 # Problem 10.8.1. Harmonic functions. 
 
-Verify Theorem 1 for $f = 2z^2 - x^2 - y^2$ and $S$ the surface of the box $0 \leqq x \leqq a, \ 0 \leqq y \leqq b, \ 0 \leqq z \leqq c$.
-
 ---
 
 **Theorem 1. A Basic Property of Harmonic Functions**
@@ -148,7 +146,24 @@ Let $f(x, y, z)$ be a harmonic function in some domain $D$ is space. Let $S$ be 
 
 ---
 
+Verify Theorem 1 for $f = 2z^2 - x^2 - y^2$ and $S$ the surface of the box $0 \leqq x \leqq a, \ 0 \leqq y \leqq b, \ 0 \leqq z \leqq c$.
+
 ## Solution
+
+$$
+\begin{aligned}
+\laplacian f &= f_{xx} + f_{yy} + f_{zz} \\
+&= (-2) + (-2) + (4) \\
+&= 0 
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S \pder[f]{n} \ dA &= \iiint_T \cancelto{0}{\laplacian f} \ dV \\
+&= \boxed{0}
+\end{aligned}
+$$
 
 # Problem 10.8.3. Green's First Identity
 
