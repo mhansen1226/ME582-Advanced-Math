@@ -385,6 +385,42 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+\curl \mathbf{F} &= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\pder{x} & \pder{y} & \pder{z} \\
+z^2 & \frac{3}{2}x & 0
+\end{vmatrix} \\
+&= \brackets{
+    \parens{0 - 0},
+    -\parens{0 - 2z},
+    \parens{\frac{3}{2} - 0}
+} \\
+&= \brackets{
+    0,
+    2z,
+    \frac{3}{2}
+}
+\end{aligned}
+$$
+
+The surface is a flat plane and therefore $\mathbf{n} \ dA = [0, 0, 1] \ dx \ dy$.
+
+$$
+\begin{aligned}
+\iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA 
+&= \iint_S \brackets{
+    0,
+    2z,
+    \frac{3}{2}
+} \cdot [0, 0, 1] \ dx \ dy \\
+&= \iint_S \frac{3}{2} \ dx \ dy \\
+&= \frac{3}{2} \int_{0}^{a} \ dx \cdot \int_{0}^{a} \ dy \\
+&= \boxed{\frac{3a^2}{2}}
+\end{aligned}
+$$
+
 # Problem 10.9.13
 
 Calculate $\oint_C \mathbf{F} \cdot \mathbf{r}'(s) \ ds$ by Stokes’s theorem,
