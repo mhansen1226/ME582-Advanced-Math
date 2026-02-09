@@ -318,15 +318,65 @@ $$
 
 # Problem 10.9.3
 
-Evaluate the surface integral $\iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA$ for the given $\mathbf{F}$ and $S$.
+Evaluate the surface integral $\iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA$ directly for the given $\mathbf{F}$ and $S$.
 
 $$\mathbf{F} = [e^{-z}, e^{-z} \cos y, e^{-z} \sin y], \quad S: z = \frac{y^2}{2}, \ -1 \leqq x \leqq 1, \ 0 \leqq y \leqq 1$$
 
 ## Solution
 
+$$
+\begin{aligned}
+\curl \mathbf{F} &= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\pder{x} & \pder{y} & \pder{z} \\
+e^{-z} & e^{-z} \cos y & e^{-z} \sin y
+\end{vmatrix} \\
+&= \brackets{
+    \parens{e^{-z} \cos y + e^{-z} \cos y},
+    -\parens{0 + e^{-z}},
+    \parens{0 - 0}
+} \\
+&= \brackets{
+    2e^{-z} \cos y,
+    -e^{-z},
+    0
+}
+\end{aligned}
+$$
+
+$$S: \mathbf{r}(x,y) = [x, y, \frac{y^2}{2}]$$
+
+$$
+\begin{aligned}
+\mathbf{n} \ dA &= \mathbf{r}_x \times \mathbf{r}_y \ dx \ dy \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 0 & 0 \\
+0 & 1 & y
+\end{vmatrix} \ dx \ dy \\
+&= [0, -y, 1] \ dx \ dy
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA 
+&= \iint_S \brackets{
+    2e^{-z} \cos y,
+    -e^{-z},
+    0
+} \cdot [0, -y, 1] \ dx \ dy \\
+&= \iint_S \parens{ye^{-z} + 0} \ dx \ dy \\
+&= \int_{-1}^{1} \ dx \cdot \int_{0}^{1} ye^{-\frac{y^2}{2}} \ dy \\
+&= 2 \int_{0}^{1} ye^{-\frac{y^2}{2}} \ dy \\
+&= -2 e^{-\frac{y^2}{2}} \Big|_{0}^{1} \\
+&= \boxed{2(1 - e^{-\frac{1}{2}})}
+\end{aligned}
+$$
+
 # Problem 10.9.5
 
-Evaluate the surface integral $\iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA$ for the given $\mathbf{F}$ and $S$.
+Evaluate the surface integral $\iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA$ directly for the given $\mathbf{F}$ and $S$.
 
 $$
 \mathbf{F} = [z^2, \frac{3}{2}x, 0], 
