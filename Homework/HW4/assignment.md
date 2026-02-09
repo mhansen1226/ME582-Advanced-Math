@@ -252,7 +252,7 @@ $$
 \iint_S \parens{f \pder[g]{n} - g \pder[f]{n}} \ dA = \iint_S f \parens{\grad g \cdot \mathbf{n}} - g \parens{\grad f \cdot \mathbf{n}}\ dA 
 $$
 
-Integrating over the cube surface, only the $x=1$ face is non-zero for the first term and $y=1$ face for the second,
+Integrating over the cube surface, only the $x=1$ face (first term) and $y=1$ face (second term) are non-zero,
 
 $$
 \begin{aligned}
@@ -279,6 +279,42 @@ V
 $$
 
 ## Solution
+
+Take $\mathbf{F} = [x, 0, 0]$, therefore $\diverg \mathbf{F} = 1$ and
+
+$$
+\begin{aligned}
+V = \iiint_T \diverg \mathbf{F} \ dV &= \iint_S \mathbf{F} \cdot \mathbf{n} \ dA \\
+V &= \iint_S x \ dy \ dz \\
+\end{aligned}
+$$
+
+Take $\mathbf{F} = [0, y, 0]$, therefore $\diverg \mathbf{F} = 1$ and
+
+$$
+\begin{aligned}
+V = \iiint_T \diverg \mathbf{F} \ dV &= \iint_S \mathbf{F} \cdot \mathbf{n} \ dA \\
+V &= \iint_S y \ dx \ dz \\
+\end{aligned}
+$$
+
+Take $\mathbf{F} = [0, 0, z]$,
+
+$$
+\begin{aligned}
+V = \iiint_T \diverg \mathbf{F} \ dV &= \iint_S \mathbf{F} \cdot \mathbf{n} \ dA \\
+V &= \iint_S z \ dx \ dy \\
+\end{aligned}
+$$
+
+Summing the above,
+
+$$
+\begin{aligned}
+3V &= \iint_S \parens{x \ dy \ dz + y \ dx \ dz + z \ dx \ dy} \\
+V &= \frac{1}{3} \iint_S \parens{x \ dy \ dz + y \ dz \ dx + z \ dx \ dy}
+\end{aligned}
+$$
 
 # Problem 10.9.3
 
