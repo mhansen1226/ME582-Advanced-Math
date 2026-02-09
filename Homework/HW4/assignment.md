@@ -517,3 +517,67 @@ $$
 $$
 
 ## Solution
+
+$$
+\begin{aligned}
+\curl \mathbf{F} &= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\pder{x} & \pder{y} & \pder{z} \\
+z & e^z & 0
+\end{vmatrix} \\
+&= \brackets{
+    \parens{0 - e^z},
+    -\parens{0 - 1},
+    \parens{0 - 0},
+} \\
+&= [-e^z, 1, 0]
+\end{aligned}
+$$
+
+$$
+S: \mathbf{r}(r, \theta) = r [\cos \theta, \sin \theta, 1] \quad r \in [0, 1], \ \theta \in \brackets{0, \frac{\pi}{2}}
+$$
+
+$$
+\begin{aligned}
+\mathbf{n} &= \mathbf{r}_r \times \mathbf{r}_\theta \\
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos \theta & \sin \theta & 1 \\
+-r \sin \theta & r \cos \theta & 0 \\
+\end{vmatrix} \\
+&= \brackets{
+    \parens{0 - r \cos \theta},
+    -\parens{0 + r \sin \theta},
+    \parens{r \cos^2 \theta + r \sin^2 \theta}
+} \\
+&= r \brackets{
+    -\cos \theta,
+    -\sin \theta,
+    1
+} \\
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+\oint_C \mathbf{F} \cdot \mathbf{r}'(s) \ ds
+&= \iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA \\
+&= \int_0^{\frac{\pi}{2}} \int_0^1  [-e^r, 1, 0] \cdot r[-\cos \theta, -\sin \theta, 1] \ dr \ d\theta \\
+&= \int_0^{\frac{\pi}{2}} \int_0^1 r \parens{e^r \cos \theta - \sin \theta} \ dr \ d\theta \\
+\end{aligned}
+$$
+
+$\int_0^1 re^r \ dr = re^r - e^r\big|_0^1 = 1$
+
+$\int_0^1 r \ dr = \frac{r}{2}\big|_0^1 = \frac{1}{2}$
+
+$$
+\begin{aligned}
+\oint_C \mathbf{F} \cdot \mathbf{r}'(s) \ ds
+&= \int_0^{\frac{\pi}{2}} \cos \theta - \frac{1}{2} \sin \theta \ d\theta \\
+&= \sin \theta + \frac{1}{2} \cos \theta \Big|_0^{\frac{\pi}{2}} \\
+&= \boxed{\frac{1}{2}}
+\end{aligned}
+$$
