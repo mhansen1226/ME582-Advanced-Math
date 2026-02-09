@@ -348,13 +348,13 @@ $$S: \mathbf{r}(x,y) = [x, y, \frac{y^2}{2}]$$
 
 $$
 \begin{aligned}
-\mathbf{n} \ dA &= \mathbf{r}_x \times \mathbf{r}_y \ dx \ dy \\
+\mathbf{n}&= \mathbf{r}_x \times \mathbf{r}_y \\
 &= \begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
 1 & 0 & 0 \\
 0 & 1 & y
-\end{vmatrix} \ dx \ dy \\
-&= [0, -y, 1] \ dx \ dy
+\end{vmatrix} \\
+&= [0, -y, 1]
 \end{aligned}
 $$
 
@@ -405,7 +405,7 @@ z^2 & \frac{3}{2}x & 0
 \end{aligned}
 $$
 
-The surface is a flat plane and therefore $\mathbf{n} \ dA = [0, 0, 1] \ dx \ dy$.
+The surface is a flat plane and therefore $\mathbf{n} = [0, 0, 1]$.
 
 $$
 \begin{aligned}
@@ -440,6 +440,35 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+\curl \mathbf{F} &= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\pder{x} & \pder{y} & \pder{z} \\
+-5y & 4x & z
+\end{vmatrix} \\
+&= \brackets{
+    \parens{0 - 0},
+    -\parens{0 - 0},
+    \parens{4 + 5},
+}
+&= [0,0,9]
+\end{aligned}
+$$
+
+$C$ is the boundary of a flat disc and therefore $\mathbf{n} = [0, 0, 1]$.
+
+$$
+\begin{aligned}
+\oint_C \mathbf{F} \cdot \mathbf{r}'(s) \ ds
+&= \iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA \\
+&= 9 \iint_S dA \\
+&= 9 \cdot \text{Area}(S) \\
+&= 9 \cdot 16\pi \\
+&= \boxed{144\pi}
+\end{aligned}
+$$
+
 # Problem 10.9.15
 
 Calculate $\oint_C \mathbf{F} \cdot \mathbf{r}'(s) \ ds$ by Stokes’s theorem for the given $\mathbf{F}$ and $C$. Assume the Cartesian coordinates to be right-handed and the $z$-component of the surface normal to be nonnegative.
@@ -449,6 +478,35 @@ $$
 $$
 
 ## Solution
+
+$$
+\begin{aligned}
+\curl \mathbf{F} &= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\pder{x} & \pder{y} & \pder{z} \\
+z^3 & x^3 & y^3
+\end{vmatrix} \\
+&= \brackets{
+    \parens{3y^2 - 0},
+    -\parens{0 - 3z^2},
+    \parens{3x^2 - 0},
+} \\
+&= 3[y^2, z^2, x^2]
+\end{aligned}
+$$
+
+$C$ is the boundary of a flat triangle and therefore $\mathbf{n} = [0, 0, 1]$.
+
+$$
+\begin{aligned}
+\oint_C \mathbf{F} \cdot \mathbf{r}'(s) \ ds
+&= \iint_S \parens{\curl \mathbf{F}} \cdot \mathbf{n} \ dA \\
+&= 3 \int_0^1 \int_0^x [y^2, z^2, x^2] \cdot [0, 0, 1] \ dy \ dx \\
+&= 3 \int_0^1 \int_0^x x^2 \ dy \ dx \\
+&= 3 \int_0^1 x^3 \ dx \\
+&= \boxed{\frac{3}{4}}
+\end{aligned}
+$$
 
 # Problem 10.9.19
 
