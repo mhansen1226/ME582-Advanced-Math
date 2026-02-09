@@ -5,7 +5,7 @@ header-includes: |
   \usepackage{cancel}
   \usepackage{fancyhdr}
   \pagestyle{fancy}
-  \fancyhead[LO,LE]{ME 528 - Spring 2026}
+  \fancyhead[LO,LE]{MA 528 - Spring 2026}
   \fancyhead[CO,CE]{\textbf{Homework 4}}
   \fancyhead[RO,RE]{M. Hansen}
   \fancyfoot[CO,CE]{\thepage}
