@@ -178,6 +178,44 @@ Verify for $f = 4y^2$, $g = x^2$, $S$ the surface of the "unit cube" $0 \leqq x 
 
 ## Solution
 
+$$
+\begin{array}{l|cc}
+& f & g \\
+\hline
+\grad & [0, 8y] & [2x, 0] \\
+\laplacian & 8 & 2 \\
+\end{array}
+$$
+
+$$
+\begin{aligned}
+\iiint_T \parens{f \laplacian g + \grad f \cdot \grad g} \ dV
+&= \int_0^1 \int_0^1 \int_0^1 \parens{8y^2} \ dx \ dy \ dz \\
+&= \frac{8y^3}{3} \Big|_0^1 \\
+&= \boxed{\frac{8}{3}} \\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\iint_S f \pder[g]{n} \ dA &= \iint_S f \parens{\grad g \cdot \mathbf{n}} \ dA 
+\end{aligned}
+$$
+
+Integrating over the cube surface, only the $x=1$ face is non-zero,
+
+$$
+\begin{aligned}
+\iint_S f \parens{\grad g \cdot \mathbf{n}} \ dA &= \int_0^1 f g_x(x=1) \ dy \\
+&= \int_0^1 (4y^2) (2) \ dy \\
+&= 8 \int_0^1 y^2 \ dy \\
+&= 8 \brackets{\frac{y^3}{3}}_0^1 \\
+&= \boxed{\frac{8}{3}} \\
+\end{aligned}
+$$
+
+The functions do not need to be harmonic, but the divergence theorem assumptions must hold. The functions need to be twice differentiable and $S$ must be piecewise smooth.
+
 # Problem 10.8.5. Green's Second Identity
 
 $$
@@ -190,6 +228,8 @@ $$
 Verify for $f = 6y^2$, $g = 2x^2$, $S$ the surface of the "unit cube" $0 \leqq x \leqq 1$, $0 \leqq y \leqq 1$, $0 \leqq z \leqq 1$.
 
 ## Solution
+
+
 
 # Problem 10.8.7
 
