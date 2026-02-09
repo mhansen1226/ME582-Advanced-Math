@@ -182,6 +182,7 @@ $$
 \begin{array}{l|cc}
 & f & g \\
 \hline
+& 4y^2 & x^2 \\
 \grad & [0, 8y] & [2x, 0] \\
 \laplacian & 8 & 2 \\
 \end{array}
@@ -197,9 +198,7 @@ $$
 $$
 
 $$
-\begin{aligned}
-\iint_S f \pder[g]{n} \ dA &= \iint_S f \parens{\grad g \cdot \mathbf{n}} \ dA 
-\end{aligned}
+\iint_S f \pder[g]{n} \ dA = \iint_S f \parens{\grad g \cdot \mathbf{n}} \ dA 
 $$
 
 Integrating over the cube surface, only the $x=1$ face is non-zero,
@@ -229,7 +228,41 @@ Verify for $f = 6y^2$, $g = 2x^2$, $S$ the surface of the "unit cube" $0 \leqq x
 
 ## Solution
 
+$$
+\begin{array}{l|cc}
+& f & g \\
+\hline
+& 6y^2 & 2x^2 \\
+\grad & [0, 12y] & [4x, 0] \\
+\laplacian & 12 & 4 \\
+\end{array}
+$$
 
+$$
+\begin{aligned}
+\iiint_T \parens{f \laplacian g - g \laplacian f} \ dV 
+&= 24 \int_0^1 \int_0^1 \int_0^1 \parens{y^2 - x^2} \ dx \ dy \ dz \\
+&= 24 \parens{\int_0^1 y^2 \ dy - \int_0^1 x^2 \ dx} \cdot \int_0^1 \ dz \\
+&= 8 \parens{y^3 \Big|_0^1 - x^3 \Big|_0^1} \\
+&= \boxed{0}
+\end{aligned}
+$$
+
+$$
+\iint_S \parens{f \pder[g]{n} - g \pder[f]{n}} \ dA = \iint_S f \parens{\grad g \cdot \mathbf{n}} - g \parens{\grad f \cdot \mathbf{n}}\ dA 
+$$
+
+Integrating over the cube surface, only the $x=1$ face is non-zero for the first term and $y=1$ face for the second,
+
+$$
+\begin{aligned}
+\iint_S f \parens{\grad g \cdot \mathbf{n}} \ dA &= \int_0^1 f g_x(x=1) \ dy - \int_0^1 g f_y(y=1) \ dx \\
+&= \int_0^1 (6y^2) (4) \ dy - \int_0^1 (2x^2) (12) \ dx \\
+&= 24 \int_0^1 y^2 \ dy - 24 \int_0^1 x^2 \ dx \\
+&= 8 \parens{y^3 \Big|_0^1 - x^3 \Big|_0^1} \\
+&= \boxed{0}
+\end{aligned}
+$$
 
 # Problem 10.8.7
 
