@@ -268,3 +268,35 @@ $$
 \iiint_T \parens{f \laplacian g - g \laplacian f} \ dV
 = \iint_S \parens{f \pder[g]{n} - g \pder[f]{n}} \ dA
 $$
+
+# Trigonometry
+
+## Identities
+
+$\sin^2 \theta = \frac{1}{2} - \frac{1}{2}\cos 2\theta$
+
+$\cos^2 \theta = \frac{1}{2} + \frac{1}{2}\cos 2\theta$
+
+$\sin \theta \cos \theta = \frac{1}{2} \sin 2\theta$
+
+$\sin(\alpha + \beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta$
+
+$\sin(\alpha - \beta) = \sin \alpha \cos \beta - \cos \alpha \sin \beta$
+
+$\cos(\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta$
+
+$\cos(\alpha - \beta) = \cos \alpha \cos \beta + \sin \alpha \sin \beta$
+
+## Values
+
+$$
+\begin{array}{|c|ccccc|}
+  \hline
+	& 0 & \pi/6 & \pi/4 & \pi / 3 & \pi / 2 \\
+  \hline
+	\sin \theta & 0 & 1/2 & \sqrt{2} / 2 & \sqrt{3} / 2 & 1 \\
+	\cos \theta & 1 & \sqrt{3} / 2 & \sqrt{2} / 2 & 1 / 2 & 0 \\
+	\tan \theta & 0 & 1 / \sqrt{3} & 1 & \sqrt{3} & - \\
+  \hline
+\end{array}
+$$
