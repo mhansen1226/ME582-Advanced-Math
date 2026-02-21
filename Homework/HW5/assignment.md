@@ -310,7 +310,6 @@ e^z
 &= e^{-2 \pi + 2 \pi i} \\
 &= e^{-2 \pi} e^{2 \pi i} \\
 &= e^{-2 \pi} \parens{\cos 2 \pi + i \sin 2 \pi} \\
-&= e^{-2 \pi} (1 + 0i) \\
 &= e^{-2 \pi}
 \end{aligned}
 $$
@@ -341,11 +340,30 @@ $$\boxed{z = 5e^{i \tan^{-1} (3/4)}}$$
 
 # Problem 13.5.15
 
-Fine $\Re$ and $\Im$ of
+Find $\Re$ and $\Im$ of
 
-$$\exp (z^2)$$
+$$\exp(z^2)$$
 
 ## Solution
+
+$$z^2 = x^2 - y^2 + i2xy$$
+
+$$
+\begin{aligned}
+\exp(z^2)
+&= \exp(x^2 - y^2 + i2xy) \\
+&= \exp(x^2 - y^2) \parens{\cos 2xy + i \sin 2xy} \\
+\end{aligned}
+$$
+
+$$
+\boxed{
+\begin{aligned}
+\Re \exp(z^2) &= \exp(x^2 - y^2) \cos 2xy \\
+\Im \exp(z^2) &= \exp(x^2 - y^2) \sin 2xy
+\end{aligned}
+}
+$$
 
 # Problem 13.5.17
 
