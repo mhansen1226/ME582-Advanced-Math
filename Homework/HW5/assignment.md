@@ -237,6 +237,23 @@ $$v = (2x + 1)y$$
 
 ## Solution
 
+$\laplacian v = 0$, and therefore the function is **harmonic**.
+
+$$
+v_x = -2y = -u_y
+\quad \implies \quad
+u = y^2 + h(x)
+$$
+
+$$
+u_x = h'(x) = v_y = 2x + 1
+\quad \implies \quad
+h(x) = x^2 + x + c$$
+
+Therefore,
+
+$$f(z) = x^2 + x + y^2 + c + i(2xy + y)$$
+
 # Problem 13.4.23
 
 Determine $a$ and $b$ so that the given function is harmonic and find a harmonic conjugate.
