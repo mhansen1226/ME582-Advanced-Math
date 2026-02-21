@@ -331,6 +331,14 @@ $$4 + 3i$$
 
 ## Solution
 
+$$z = re^{i\theta}$$
+
+$$r = \sqrt{4^2 + 3^2} = 5$$
+
+$$\theta = \tan^{-1} \parens{\frac{3}{4}}$$
+
+$$\boxed{z = 5e^{i \tan^{-1} (3/4)}}$$
+
 # Problem 13.5.15
 
 Fine $\Re$ and $\Im$ of
