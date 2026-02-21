@@ -221,13 +221,13 @@ v = \frac{1}{2}y^2 + h(x)
 $$
 
 $$
-v_x = h'(x) = -u_y = x 
+v_x = h'(x) = -u_y = -x 
 \quad \implies \quad
-h(x) = \frac{1}{2}x^2 + c$$
+h(x) = -\frac{1}{2}x^2 + c$$
 
 Therefore,
 
-$$f(z) = xy + i\frac{1}{2}(y^2 + x^2 + c)$$
+$$f(z) = xy + i\frac{1}{2}(y^2 - x^2 + c)$$
 
 # Problem 13.4.17
 
@@ -240,9 +240,9 @@ $$v = (2x + 1)y$$
 $\laplacian v = 0$, and therefore the function is **harmonic**.
 
 $$
-v_x = -2y = -u_y
+v_x = 2y = -u_y
 \quad \implies \quad
-u = y^2 + h(x)
+u = -y^2 + h(x)
 $$
 
 $$
@@ -252,15 +252,40 @@ h(x) = x^2 + x + c$$
 
 Therefore,
 
-$$f(z) = x^2 + x + y^2 + c + i(2xy + y)$$
+$$f(z) = x^2 + x - y^2 + c + i(2xy + y)$$
 
 # Problem 13.4.23
 
 Determine $a$ and $b$ so that the given function is harmonic and find a harmonic conjugate.
 
-$$u = \cosh ax \cos y$$
+$$u = ax^3 + bxy$$
 
 ## Solution
+
+$$
+\begin{aligned}
+\laplacian u &= u_{xx} + u_{yy} \\
+&= 6ax + 0 = 0 \implies a = 0, \ b \text{ is free}
+\end{aligned}
+$$
+
+$$u = bxy$$
+
+$$
+u_x = by = v_y 
+\quad \implies \quad
+v = \frac{b}{2}y^2 + h(x)
+$$
+
+$$
+v_x = h'(x) = -u_y = -bx 
+\quad \implies \quad
+h(x) = -\frac{b}{2}x^2 + c
+$$
+
+$$
+v(x,y) = \frac{b}{2}(y^2 - x^2 + c)
+$$
 
 # Problem 13.5.3
 
