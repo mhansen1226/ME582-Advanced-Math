@@ -367,11 +367,30 @@ $$
 
 # Problem 13.5.17
 
-Fine $\Re$ and $\Im$ of
+Find $\Re$ and $\Im$ of
 
 $$\exp (z^3)$$
 
 ## Solution
+
+$$z^3 = (x^3 + 3xy^2) + i(3x^2y - y^3)$$
+
+$$
+\begin{aligned}
+\exp(z^3)
+&= \exp((x^3 + 3xy^2) + i(3x^2y - y^3)) \\
+&= \exp(x^3 + 3xy^2) \parens{\cos (3x^2y - y^3) + i \sin (3x^2y - y^3)} \\
+\end{aligned}
+$$
+
+$$
+\boxed{
+\begin{aligned}
+\Re \exp(z^3) &= \exp(x^3 + 3xy^2) \cos (3x^2y - y^3) \\
+\Im \exp(z^3) &= \exp(x^3 + 3xy^2) \sin (3x^2y - y^3)
+\end{aligned}
+}
+$$
 
 # Problem 13.5.19
 
