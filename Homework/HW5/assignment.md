@@ -166,6 +166,30 @@ $$f(z) = \Re (z^2) - i \Im (z^2)$$
 
 ## Solution
 
+$$
+z^2 = (x + iy)^2 = x^2 - y^2 + i2xy
+$$
+
+$$
+f(z) = u(x,y) + iv(x,y)
+$$
+
+$$
+\begin{aligned}
+u &= x^2 - y^2  \\
+u_x &= 2x \\
+u_y &= -2y
+\end{aligned}
+\quad
+\begin{aligned}
+v &= 2xy \\
+v_x &= 2y \\
+v_y &= 2z
+\end{aligned}
+$$
+
+Since $u_x = v_y$ and $u_y = -v_x$, $f$ is **analytic**.
+
 # Problem 13.4.7
 
 Is $f$ analytic?
