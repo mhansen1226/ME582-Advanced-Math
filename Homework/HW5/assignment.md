@@ -227,7 +227,7 @@ h(x) = -\frac{1}{2}x^2 + c$$
 
 Therefore,
 
-$$f(z) = xy + i\frac{1}{2}(y^2 - x^2 + c)$$
+$$\boxed{f(z) = xy + i\frac{1}{2}(y^2 - x^2 + c)}$$
 
 # Problem 13.4.17
 
@@ -252,7 +252,7 @@ h(x) = x^2 + x + c$$
 
 Therefore,
 
-$$f(z) = x^2 + x - y^2 + c + i(2xy + y)$$
+$$\boxed{f(z) = x^2 + x - y^2 + c + i(2xy + y)}$$
 
 # Problem 13.4.23
 
@@ -284,7 +284,7 @@ h(x) = -\frac{b}{2}x^2 + c
 $$
 
 $$
-v(x,y) = \frac{b}{2}(y^2 - x^2 + c)
+\boxed{v(x,y) = \frac{b}{2}(y^2 - x^2 + c)}
 $$
 
 # Problem 13.5.3
@@ -294,6 +294,34 @@ Find $e^z$ in the form $u + iv$ and $|e^z|$ if
 $$z = 2 \pi i (1 + i)$$
 
 ## Solution
+
+$$
+\begin{aligned}
+z 
+&= 2 \pi i (1 + i) \\
+&= 2 \pi i + 2 \pi i^2 \\
+&= -2 \pi + 2 \pi i
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+e^z 
+&= e^{-2 \pi + 2 \pi i} \\
+&= e^{-2 \pi} e^{2 \pi i} \\
+&= e^{-2 \pi} \parens{\cos 2 \pi + i \sin 2 \pi} \\
+&= e^{-2 \pi} (1 + 0i) \\
+&= e^{-2 \pi}
+\end{aligned}
+$$
+
+$$
+\boxed{u = e^{-2 \pi} \quad v = 0}
+$$
+
+$$
+\boxed{|e^z| = e^{-2 \pi}}
+$$
 
 # Problem 13.5.9
 
