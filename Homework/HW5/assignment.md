@@ -85,6 +85,30 @@ $$f(z) = \frac{1}{1-z} \text{ at } 1 - i$$
 
 ## Solution
 
+$z = x+iy$
+
+$$
+\begin{aligned}
+f(z)
+&= \frac{1}{1 - (x+iy)} \\
+&= \frac{1}{(1-x) - iy} \\
+&= \frac{1}{(1-x) - iy} \cdot \frac{(1-x) + iy}{(1-x) + iy} \\
+&= \frac{(1-x) + iy}{(1-x)^2 + y^2} \\
+\end{aligned}
+$$
+
+$$
+\boxed{\Re f(z) = \frac{1-x}{(1-x)^2 + y^2}}
+\quad
+\boxed{\Im f(z) = \frac{y}{(1-x)^2 + y^2}}
+$$
+
+$$
+\boxed{\Re f(1 - i) = 0}
+\quad
+\boxed{\Im f(1 - i) = -1}
+$$
+
 # Problem 13.3.23
 
 Find the value of the derivative of
