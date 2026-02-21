@@ -138,6 +138,26 @@ $$f(z) = e^{-2x} (\cos 2y - i \sin 2y)$$
 
 ## Solution
 
+$$
+f(z) = u(x,y) + iv(x,y)
+$$
+
+$$
+\begin{aligned}
+u &= e^{-2x} \cos 2y \\
+u_x &= -2e^{-2x} \cos 2y \\
+u_y &= -2e^{-2x} \sin 2y
+\end{aligned}
+\quad
+\begin{aligned}
+v &= -e^{-2x} \sin 2y \\
+v_x &= 2e^{-2x} \sin 2y \\
+v_y &= -2e^{-2x} \cos 2y
+\end{aligned}
+$$
+
+Since $u_x = v_y$ and $u_y = -v_x$, $f$ is **analytic**.
+
 # Problem 13.4.5
 
 Is $f$ analytic?
