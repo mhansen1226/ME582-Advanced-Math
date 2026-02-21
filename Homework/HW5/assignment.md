@@ -198,6 +198,12 @@ $$f(z) = \frac{i}{z^8}$$
 
 ## Solution
 
+$$
+f'(z) = -8\frac{i}{z^9}
+$$
+
+Since $f$ is differentiable everywhere (except $z=0$), $f$ is **analytic**.
+
 # Problem 13.4.13
 
 Is the function harmonic? If yes, find a corresponding analytic function $f(z) = u(x, y) + iv(x, y)$.
