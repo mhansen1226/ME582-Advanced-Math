@@ -18,6 +18,8 @@ header-includes: |
   \newcommand{\pdder}[2][]{\frac{\partial^2 #1}{\partial #2^2}}
   \newcommand{\parens}[1]{\left( #1 \right)}
   \newcommand{\brackets}[1]{\left[ #1 \right]}
+  \newcommand{\mat}[1]{\mathbf{#1}}
+  \renewcommand{\vec}[1]{\mathbf{#1}}
 ---
 
 # Problem X.X.X
