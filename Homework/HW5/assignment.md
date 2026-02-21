@@ -212,6 +212,23 @@ $$u = xy$$
 
 ## Solution
 
+$\laplacian u = 0$, and therefore the function is **harmonic**.
+
+$$
+u_x = y = v_y 
+\quad \implies \quad
+v = \frac{1}{2}y^2 + h(x)
+$$
+
+$$
+v_x = h'(x) = -u_y = x 
+\quad \implies \quad
+h(x) = \frac{1}{2}x^2 + c$$
+
+Therefore,
+
+$$f(z) = xy + i\frac{1}{2}(y^2 + x^2 + c)$$
+
 # Problem 13.4.17
 
 Is the function harmonic? If yes, find a corresponding analytic function $f(z) = u(x, y) + iv(x, y)$.
