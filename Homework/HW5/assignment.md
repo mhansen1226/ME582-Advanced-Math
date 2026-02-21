@@ -32,6 +32,12 @@ $$|z + 1 - 5i| \leqq \frac{3}{2}$$
 
 ## Solution
 
+$$|z - (-1 + 5i)| \leqq \frac{3}{2}$$
+
+This is a closed disc centered at $(-1 + 5i)$ with radius $1.5$
+
+![](images/13.3.1.svg){width=2.5in}
+
 # Problem 13.3.3
 
 Determine and sketch or graph the sets in the complex plane given by
@@ -39,6 +45,11 @@ Determine and sketch or graph the sets in the complex plane given by
 $$\pi < |z - 4 + 2i| < 3\pi$$
 
 ## Solution
+
+$$\pi < |z - (4 - 2i)| < 3\pi$$
+This is an open disc centered at $(4 - 2i)$ with outer radius $3\pi$, and inner radius $\pi$
+
+![](images/13.3.3.svg){width=2.5in}
 
 # Problem 13.3.5
 
@@ -48,6 +59,12 @@ $$|\arg z| < \frac{1}{4}\pi$$
 
 ## Solution
 
+$$-\frac{1}{4}\pi < \arg z < \frac{1}{4}\pi$$
+
+This is a wedge from $-\frac{1}{4}\pi$ to $\frac{1}{4}\pi$. There is no bound to the radius of the wedge.
+
+![](images/13.3.5.svg){width=2.5in}
+
 # Problem 13.3.7
 
 Determine and sketch or graph the sets in the complex plane given by
@@ -55,6 +72,10 @@ Determine and sketch or graph the sets in the complex plane given by
 $$\Re z \geqq -1$$
 
 ## Solution
+
+This covers the right half of plane bounded at the left by $x=-1$.
+
+![](images/13.3.7.svg){width=2.5in}
 
 # Problem 13.3.11
 
