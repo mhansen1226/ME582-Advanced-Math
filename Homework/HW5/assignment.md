@@ -117,6 +117,19 @@ $$\frac{z^3}{(z + 1)^3} \text{ at } i$$
 
 ## Solution
 
+$$
+\begin{aligned}
+f(z) &= \parens{\frac{z}{z + 1}}^3 \\
+\\
+f'(z) 
+&= 3\parens{\frac{z}{z + 1}}^2\parens{\frac{(z + 1) - z}{(z + 1)^2}} \\
+&= \frac{3z^2}{(z + 1)^4} \\
+\\
+f'(i) &= \frac{3i^2}{(i + 1)^4} \\
+&= \boxed{\frac{3}{4}}
+\end{aligned}
+$$
+
 # Problem 13.4.3
 
 Is $f$ analytic?
