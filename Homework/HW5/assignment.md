@@ -399,3 +399,31 @@ Find all solutions and graph some of them in the complex plane.
 $$e^z = 1$$
 
 ## Solution
+
+$$
+\begin{aligned}
+e^z 
+&= e^{x + iy} \\
+&= e^x (\cos y + i \sin y) \\
+\end{aligned}
+$$
+
+$$
+c (\cos y + i \sin y) = 1
+$$
+
+$$
+|e^x| = 1 \quad \implies \quad x = 0
+$$
+
+$$
+\arg 1 = 2n\pi 
+\quad \implies \quad
+y = 2n\pi \quad n \in \mathbb{Z}
+$$
+
+$$
+z = 2n\pi i \quad n \in \mathbb{Z}
+$$
+
+![](images/13.5.19.svg){width=3.5in}
