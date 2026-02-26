@@ -16,6 +16,9 @@ header-includes: |
   \DeclareMathOperator{\diverg}{\nabla \cdot}
   \DeclareMathOperator{\curl}{\nabla \times}
   \DeclareMathOperator{\laplacian}{\Delta}
+  \DeclareMathOperator{\Ln}{\operatorname{Ln}}
+  \renewcommand{\Re}{\operatorname{Re}}
+  \renewcommand{\Im}{\operatorname{Im}}
   \newcommand{\pder}[2][]{\frac{\partial #1}{\partial #2}}
   \newcommand{\pdder}[2][]{\frac{\partial^2 #1}{\partial #2^2}}
   \newcommand{\parens}[1]{\left( #1 \right)}
