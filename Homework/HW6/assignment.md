@@ -17,6 +17,7 @@ header-includes: |
   \DeclareMathOperator{\curl}{\nabla \times}
   \DeclareMathOperator{\laplacian}{\Delta}
   \DeclareMathOperator{\Ln}{\operatorname{Ln}}
+  \DeclareMathOperator{\Arg}{\operatorname{Arg}}
   \renewcommand{\Re}{\operatorname{Re}}
   \renewcommand{\Im}{\operatorname{Im}}
   \newcommand{\pder}[2][]{\frac{\partial #1}{\partial #2}}
@@ -162,6 +163,35 @@ Find all solutions
 $$\sin z = 100$$
 
 ## Solution
+
+$$
+\sin z = \frac{1}{2i} \parens{e^{iz} - e^{-iz}} = 100
+$$
+
+Let $w = e^{iz}$. Then $w - w^{-1} = 100i$
+
+$$
+w^2 - 200iw - 1 = 0 \quad \implies \quad w = i(100 \pm \sqrt{9999})
+$$
+
+Thus $e^{iz} = i(100 \pm \sqrt{9999})$, so
+
+$$
+\begin{aligned}
+iz &= \ln(i(100 \pm \sqrt{9999})) \\
+&= \ln|i(100 \pm \sqrt{9999})| + i \Arg(i(100 \pm \sqrt{9999})) + i 2 \pi n \\
+&= \ln(100 \pm \sqrt{9999}) + i \frac{\pi}{2} + i 2 \pi n \\
+&= \pm \ln(100 + \sqrt{9999}) + i \pi \parens{2 n + \frac{1}{2}}\\
+\end{aligned}
+$$
+
+Dividing by $i$,
+
+$$
+\boxed{
+z =  \pi \parens{2 n + \frac{1}{2}} \pm \ln(100 + \sqrt{9999})
+}
+$$
 
 # Problem 13.7.5
 
