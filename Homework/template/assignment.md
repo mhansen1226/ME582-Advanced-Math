@@ -2,6 +2,8 @@
 geometry: 
   - margin=1in
 header-includes: |
+  \usepackage{float}
+  \floatplacement{figure}{H}
   \usepackage{cancel}
   \usepackage{fancyhdr}
   \pagestyle{fancy}
@@ -24,4 +26,4 @@ header-includes: |
 
 # Problem X.X.X
 
-## Solution.
+## Solution
