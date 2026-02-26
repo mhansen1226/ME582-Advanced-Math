@@ -116,22 +116,13 @@ b) $\sin i$
 ### a)
 
 $$
-\begin{aligned}
-\cos i &= \frac{1}{2} \parens{e^{i \cdot i} + e^{-i \cdot i}} \\
-&= \frac{1}{2} \parens{e^{-1} + e^{1}} \\
-&= \boxed{\cosh 1}
-\end{aligned}
+\cos i = \boxed{\cosh 1}
 $$
 
 ### b)
 
 $$
-\begin{aligned}
-\sin i &= \frac{1}{2i} \parens{e^{i \cdot i} - e^{-i \cdot i}} \\
-&= \frac{1}{2i} \parens{e^{-1} - e^{1}} \\
-&= -\frac{1}{i} \sinh 1 \\
-&= \boxed{i \sinh 1}
-\end{aligned}
+\sin i = \boxed{i \sinh 1}
 $$
 
 # Problem 13.6.13
@@ -139,9 +130,30 @@ $$
 Using the definitions, prove
 
 a) $\cos z$ is even, $\cos(-z) = \cos z$
-a) $\sin z$ is odd, $\sin(-z) = -\sin z$
+
+b) $\sin z$ is odd, $\sin(-z) = -\sin z$
 
 ## Solution
+
+### a)
+
+$$
+\begin{aligned}
+\cos(-z) &= \frac{1}{2} \parens{e^{i \cdot (-z)} + e^{-i \cdot (-z)}} \\
+&= \frac{1}{2} \parens{e^{-iz} + e^{iz}} \\
+&= \boxed{\cos z}
+\end{aligned}
+$$
+
+### b)
+
+$$
+\begin{aligned}
+\sin(-z) &= \frac{1}{2i} \parens{e^{i \cdot (-z)} - e^{-i \cdot (-z)}} \\
+&= \frac{1}{2i} \parens{e^{-iz} - e^{iz}} \\
+&= \boxed{-\sin z}
+\end{aligned}
+$$
 
 # Problem 13.6.16
 
