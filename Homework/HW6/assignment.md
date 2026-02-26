@@ -32,15 +32,45 @@ header-includes: |
 Show that
 
 a) $\sinh z = \sinh x \cos y + i \cosh x \sin y$
+
 b) $\cosh z = \cosh x \cos y + i \sinh x \sin y$
 
 ## Solution
+
+### a)
+
+$$
+\begin{aligned}
+\sinh z &= \frac{1}{2} (e^{z} - e^{-z}) \\
+&= \frac{1}{2} (e^{x+iy} - e^{-x-iy}) \\
+&= \frac{1}{2} (e^x e^{iy} - e^{-x} e^{-iy}) \\
+&= \frac{1}{2} (e^x (\cos y + i \sin y) - e^{-x} (\cos y - i \sin y)) \\
+&= \frac{1}{2} (e^x \cos y + i e^x \sin y - e^{-x} \cos y + i e^{-x} \sin y) \\
+&= \frac{1}{2} ((e^x - e^{-x}) \cos y + i (e^x + e^{-x}) \sin y) \\
+&= \boxed{\sinh x \cos y + i \cosh x \sin y}
+\end{aligned}
+$$
+
+### b)
+
+$$
+\begin{aligned}
+\cosh z &= \frac{1}{2} (e^{z} + e^{-z}) \\
+&= \frac{1}{2} (e^{x+iy} + e^{-x-iy}) \\
+&= \frac{1}{2} (e^x e^{iy} + e^{-x} e^{-iy}) \\
+&= \frac{1}{2} (e^x (\cos y + i \sin y) + e^{-x} (\cos y - i \sin y)) \\
+&= \frac{1}{2} (e^x \cos y + i e^x \sin y + e^{-x} \cos y - i e^{-x} \sin y) \\
+&= \frac{1}{2} ((e^x + e^{-x}) \cos y + i (e^x - e^{-x}) \sin y) \\
+&= \boxed{\cosh x \cos y + i \sinh x \sin y}
+\end{aligned}
+$$
 
 # Problem 13.6.3
 
 Show that
 
 a) $\cosh^2 z - \sinh^2 z = 1$
+
 b) $\cosh^2 z + \sinh^2 z = \cosh 2z$
 
 ## Solution
@@ -50,6 +80,7 @@ b) $\cosh^2 z + \sinh^2 z = \cosh 2z$
 Find, in the form $u + iv$
 
 a) $\cos i$
+
 b) $\sin i$
 
 ## Solution
