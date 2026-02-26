@@ -75,6 +75,34 @@ b) $\cosh^2 z + \sinh^2 z = \cosh 2z$
 
 ## Solution
 
+### a)
+
+$$
+\begin{aligned}
+\cosh^2 z - \sinh^2 z &= \frac{1}{4} (e^{z} + e^{-z})^2 - \frac{1}{4} (e^{z} - e^{-z})^2 \\
+&= \frac{1}{4} \brackets{
+    \parens{e^{2z} + 2 + e^{-2z}} 
+    - \parens{e^{2z} - 2 + e^{-2z}}
+} \\
+&= \boxed{1}
+\end{aligned}
+$$
+
+### b)
+
+$$
+\begin{aligned}
+\cosh^2 z + \sinh^2 z &=  \frac{1}{4} (e^{z} + e^{-z})^2 + \frac{1}{4} (e^{z} - e^{-z})^2 \\
+&= \frac{1}{4} \brackets{
+    \parens{e^{2z} + 2 + e^{-2z}} 
+    + \parens{e^{2z} - 2 + e^{-2z}}
+} \\
+&= \frac{1}{4} (2e^{2z} + 2e^{-2z}) \\
+&= \frac{1}{2} (e^{2z} + e^{-2z}) \\
+&= \boxed{\cosh 2z}
+\end{aligned}
+$$
+
 # Problem 13.6.7
 
 Find, in the form $u + iv$
