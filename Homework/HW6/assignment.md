@@ -221,7 +221,7 @@ $$
 \Ln (4 - 4i) &= \ln|4 - 4i| + i \Arg(4 - 4i) \\
 &= \ln \sqrt{4^2 + 4^2} + i \tan^{-1} \parens{\frac{-4}{4}} \\
 &= \ln \sqrt{32} + i \tan^{-1} (-1) \\
-&= \boxed{\ln 4\sqrt{2} - i\frac{\pi}{4}}
+&= \boxed{\frac{1}{2} \ln 32 - i\frac{\pi}{4}}
 \end{aligned}
 $$
 
@@ -232,6 +232,15 @@ Find
 $$\Ln (1 \pm i)$$
 
 ## Solution
+
+$$
+\begin{aligned}
+\Ln (1 \pm i) &= \ln|1 \pm i| + i \Arg(1 \pm i) \\
+&= \ln \sqrt{2} + i \tan^{-1} \parens{\frac{\pm 1}{1}} \\
+&= \ln \sqrt{2} + i \tan^{-1} (\pm 1) \\
+&= \boxed{\frac{1}{2} \ln 2 \pm i \frac{\pi}{4}} \\
+\end{aligned}
+$$
 
 # Problem 13.7.15
 
