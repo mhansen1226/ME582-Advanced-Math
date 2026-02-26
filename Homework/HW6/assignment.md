@@ -201,6 +201,13 @@ $$\Ln (-11)$$
 
 ## Solution
 
+$$
+\begin{aligned}
+\Ln (-11) &= \ln|-11| + i \Arg(-11) \\
+= \boxed{\ln 11 + i \pi}
+\end{aligned}
+$$
+
 # Problem 13.7.7
 
 Find
@@ -208,6 +215,15 @@ Find
 $$\Ln (4 - 4i)$$
 
 ## Solution
+
+$$
+\begin{aligned}
+\Ln (4 - 4i) &= \ln|4 - 4i| + i \Arg(4 - 4i) \\
+&= \ln \sqrt{4^2 + 4^2} + i \tan^{-1} \parens{\frac{-4}{4}} \\
+&= \ln \sqrt{32} + i \tan^{-1} (-1) \\
+&= \boxed{\ln 4\sqrt{2} - i\frac{\pi}{4}}
+\end{aligned}
+$$
 
 # Problem 13.7.8
 
