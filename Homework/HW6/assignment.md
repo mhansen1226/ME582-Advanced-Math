@@ -113,6 +113,27 @@ b) $\sin i$
 
 ## Solution
 
+### a)
+
+$$
+\begin{aligned}
+\cos i &= \frac{1}{2} \parens{e^{i \cdot i} + e^{-i \cdot i}} \\
+&= \frac{1}{2} \parens{e^{-1} + e^{1}} \\
+&= \boxed{\cosh 1}
+\end{aligned}
+$$
+
+### b)
+
+$$
+\begin{aligned}
+\sin i &= \frac{1}{2i} \parens{e^{i \cdot i} - e^{-i \cdot i}} \\
+&= \frac{1}{2i} \parens{e^{-1} - e^{1}} \\
+&= -\frac{1}{i} \sinh 1 \\
+&= \boxed{i \sinh 1}
+\end{aligned}
+$$
+
 # Problem 13.6.13
 
 Using the definitions, prove
