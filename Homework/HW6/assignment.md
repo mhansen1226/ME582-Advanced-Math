@@ -268,6 +268,15 @@ $$\ln z = 4 - 3i$$
 
 ## Solution
 
+$$
+\begin{aligned}
+e^{\ln z} &= e^{4 - 3i} \\
+z &= e^{4 - 3i} \\
+&= e^4 \parens{\cos(-3) + i \sin(-3)} \\
+&= \boxed{e^4 \parens{\cos 3 - i \sin 3}} \\
+\end{aligned}
+$$
+
 # Problem 13.7.23
 
 Find the principal value.
