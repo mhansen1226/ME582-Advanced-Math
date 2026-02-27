@@ -307,6 +307,8 @@ $$z(t) = (1 + \frac{1}{2}i)t \quad (2 \leqq t \leqq 5)$$
 
 ## Solution
 
+![$z(t)$](images/14.1.1.svg){width=3.5in}
+
 # Problem 14.1.11
 
 Find a parametric representation and sketch the path
@@ -314,6 +316,12 @@ Find a parametric representation and sketch the path
 $$\text{Segment from } (-1, 1) \text{ to } (1, 3)$$
 
 ## Solution
+
+$$
+z(t) = (t - 1) + i(t + 1) \quad (0 \leq t \leq 2)
+$$
+
+![$z(t)$](images/14.1.11.svg){width=3.5in}
 
 # Problem 14.1.19
 
