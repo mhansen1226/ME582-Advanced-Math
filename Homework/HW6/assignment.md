@@ -204,7 +204,7 @@ $$\Ln (-11)$$
 $$
 \begin{aligned}
 \Ln (-11) &= \ln|-11| + i \Arg(-11) \\
-= \boxed{\ln 11 + i \pi}
+&= \boxed{\ln 11 + i \pi}
 \end{aligned}
 $$
 
@@ -284,6 +284,20 @@ Find the principal value.
 $$(1 + i)^{1-i}$$
 
 ## Solution
+
+$$
+\begin{aligned}
+(1 + i)^{1-i} &= \exp \parens{(1 - i) \Ln(1 + i)} \\
+&= \exp \parens{(1 - i) \parens{\frac{1}{2} \ln 2 + i \frac{\pi}{4}}} & \text{(from 13.7.8)} \\
+&= \exp \parens{(1 - i) \parens{\frac{1}{2} \ln 2 + i \frac{\pi}{4}}} \\
+&= \exp \parens{\frac{1}{2} \ln 2 + i \frac{\pi}{4} - i \frac{1}{2} \ln 2 + \frac{\pi}{4}} \\
+&= \exp \parens{\frac{\pi}{4} + \frac{1}{2} \ln 2} \exp \parens{i\parens{\frac{\pi}{4} - \frac{1}{2} \ln 2}} \\
+&= \boxed{
+\exp \parens{\frac{\pi}{4} + \frac{1}{2} \ln 2} 
+\brackets{\cos \parens{\frac{\pi}{4} - \frac{1}{2} \ln 2} + i \sin \parens{\frac{\pi}{4} - \frac{1}{2} \ln 2}}
+}
+\end{aligned}
+$$
 
 # Problem 14.1.1
 
