@@ -189,7 +189,7 @@ Dividing by $i$,
 
 $$
 \boxed{
-z =  \pi \parens{2 n + \frac{1}{2}} \pm \ln(100 + \sqrt{9999})
+z =  \pi \parens{2 n + \frac{1}{2}} \pm \ln(100 + \sqrt{9999}) \quad n \in \mathbb{Z}
 }
 $$
 
@@ -249,6 +249,16 @@ Find all values and graph some in the complex plane
 $$\ln (e^i)$$
 
 ## Solution
+
+$$
+\begin{aligned}
+\ln (e^i) &= \ln |e^i| + i \Arg (e^i) + i 2 \pi n \\
+&= \ln 1 + i + i 2 \pi n \\
+&= \boxed{i (1 + 2 \pi n) \quad n \in \mathbb{Z}}
+\end{aligned}
+$$
+
+![Solutions of $\ln (e^i)$](images/13.7.15.svg){width=3.5in}
 
 # Problem 13.7.19
 
