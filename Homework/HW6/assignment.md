@@ -331,6 +331,12 @@ $$\text{Parabola } y = 1 - \frac{1}{4} x^2 \quad (-2 \leq x \leq 2)$$
 
 ## Solution
 
+$$
+z(t) = t + i \parens{1 - \frac{1}{4} t^2} \quad (-2 \leq t \leq 2)
+$$
+
+![$z(t)$](images/14.1.19.svg){width=3.5in}
+
 # Problem 14.1.21
 
 Integrate by the first method or state why it does not apply and use the second method. Show the details.
