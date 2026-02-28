@@ -361,7 +361,7 @@ v_y &= 0
 \end{aligned}
 $$
 
-$u_x \neq v_y$ therefore $f$ is not analytic and the first method is invalid.
+$u_x \neq v_y$ therefore $f$ is not analytic and the first method does not apply.
 
 $$
 \int_{C} f(z) \ dz = \int_{a}^{b} f[z(t)] \dot z(t) \ dt
@@ -388,6 +388,31 @@ $$
 $$\int_C z \exp(z^2) \ dz, \quad \text{C from } 1 \text{ along the axes to } i$$
 
 ## Solution
+
+$$
+\begin{aligned}
+f(z) &= z \exp(z^2) \\
+f'(z) &= \exp(z^2) + 2z^2 \exp(z^2)
+\end{aligned}
+$$
+
+$f'(z)$ is defined everywhere and is therefore entire. The first method applies.
+
+$$
+\int_C z \exp(z^2) \ dz = \int_{1}^{i} z \exp(z^2) \ dz
+$$
+
+Substituting $u = z^2$, $du = 2z \ dz$,
+
+$$
+\begin{aligned}
+\int_{1}^{i} z \exp(z^2) \ dz
+&= \frac{1}{2} \int_{1}^{-1} \exp(u) \ dz \\
+&= \frac{1}{2} \exp(u) \Big|_{1}^{-1} \\
+&= \frac{1}{2} (\exp(-1) - \exp(1)) \\
+&= \boxed{-\sinh(1)} \\
+\end{aligned}
+$$
 
 # Problem 14.1.29
 
