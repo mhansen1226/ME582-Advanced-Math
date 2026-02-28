@@ -385,6 +385,8 @@ $$
 
 # Problem 14.1.25
 
+Integrate by the first method or state why it does not apply and use the second method. Show the details.
+
 $$\int_C z \exp(z^2) \ dz, \quad \text{C from } 1 \text{ along the axes to } i$$
 
 ## Solution
@@ -416,6 +418,62 @@ $$
 
 # Problem 14.1.29
 
+Integrate by the first method or state why it does not apply and use the second method. Show the details.
+
 $$\int_C \Im z^2 \ dz \quad \text{counterclockwise around the triangle with vertices } 0, \ 1, \ i$$
 
 ## Solution
+
+$$
+\begin{aligned}
+f(z) = u(x,y) + i v(x,y) &= \Im z^2 \\
+&= \Im x^2 - y^2 + 2ixy \\
+&= 2xy
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+u &= 0 \\
+u_x &= 0 \\
+u_y &= 0
+\end{aligned}
+\quad
+\begin{aligned}
+v &= 2xy \\
+v_x &= 2y \\
+v_y &= 2x
+\end{aligned}
+$$
+
+$u_x \neq v_y$ and $u_y \neq -v_x$ therefore $f$ is not analytic and the first method does not apply.
+
+$$
+\int_{C} f(z) \ dz = \int_{a}^{b} f[z(t)] \dot z(t) \ dt
+$$
+
+$$
+\begin{aligned}
+z_1(t) &= t & \dot z_1(t) &= 1 & t \in [0, 1] \\
+z_2(t) &= (1-t) + it & \dot z_2(t) &= -1 + i & t \in [0, 1] \\
+z_3(t) &= i(1 - t) & \dot z_3(t) &= -i & t \in [0, 1]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\int_C \Im z^2 \ dz 
+&= \int_{0}^{1} f(z_1) \dot z_1 \ dt 
+    + \int_{0}^{1} f(z_2) \dot z_2 \ dt 
+    + \int_{0}^{1} f(z_3) \dot z_3 \ dt \\
+&= \int_{0}^{1} \Im (t^2) \ dt 
+    + \int_{0}^{1} \Im ((1-t) + it)^2 (-1 + i) \ dt 
+    + \int_{0}^{1} \Im (i(1 - t))^2 (-i) \ dt \\
+&= \int_{0}^{1} 2(t)(0) \ dt 
+    + (-1 + i) \int_{0}^{1} 2(1-t)(t) \ dt 
+    - i \int_{0}^{1} 2(0)(1 - t) \ dt \\
+&= 2(-1 + i) \int_{0}^{1} (t-t^2) \ dt \\
+&= 2(-1 + i) \brackets{\frac{t^2}{2} - \frac{t^3}{3}}_{0}^{1} \\
+&= \boxed{-\frac{1}{3} + \frac{i}{3}} \\
+\end{aligned}
+$$
