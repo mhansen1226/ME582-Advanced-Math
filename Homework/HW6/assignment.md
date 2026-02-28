@@ -318,7 +318,7 @@ $$\text{Segment from } (-1, 1) \text{ to } (1, 3)$$
 ## Solution
 
 $$
-z(t) = (t - 1) + i(t + 1) \quad (0 \leq t \leq 2)
+z(t) = (t - 1) + i(t + 1) \quad t \in [0, 2]
 $$
 
 ![$z(t)$](images/14.1.11.svg){width=3.5in}
@@ -332,7 +332,7 @@ $$\text{Parabola } y = 1 - \frac{1}{4} x^2 \quad (-2 \leq x \leq 2)$$
 ## Solution
 
 $$
-z(t) = t + i \parens{1 - \frac{1}{4} t^2} \quad (-2 \leq t \leq 2)
+z(t) = t + i \parens{1 - \frac{1}{4} t^2} \quad t \in [-2, 2]
 $$
 
 ![$z(t)$](images/14.1.19.svg){width=3.5in}
@@ -344,6 +344,44 @@ Integrate by the first method or state why it does not apply and use the second 
 $$\int_C \Re z \ dz, \quad \text{C the shortest path from } 1 + i \text{ to } 3 + 3i$$
 
 ## Solution
+
+$$f(z) = \Re z = u(x,y) + i v(x,y)$$
+
+$$
+\begin{aligned}
+u &= x \\
+u_x &= 1 \\
+u_y &= 0
+\end{aligned}
+\quad
+\begin{aligned}
+v &= 0 \\
+v_x &= 0 \\
+v_y &= 0
+\end{aligned}
+$$
+
+$u_x \neq v_y$ therefore $f$ is not analytic and the first method is invalid.
+
+$$
+\int_{C} f(z) \ dz = \int_{a}^{b} f[z(t)] \dot z(t) \ dt
+$$
+
+$$
+\begin{aligned}
+z(t) &= t + it \quad t \in [1, 3] \\
+\dot z(t) &= 1 + i
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\int_{C} f(z) \ dz &= \int_{1}^{3} f[z(t)] \dot z(t) \ dt \\
+&= \int_{1}^{3} t \cdot (1 + i) \ dt \\
+&= (1 + i) \frac{1}{2} t^2\Big|_{1}^{3} \\
+&= \boxed{4 + 4i}
+\end{aligned}
+$$
 
 # Problem 14.1.25
 
