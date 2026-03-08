@@ -35,6 +35,12 @@ $$f(z) = \exp(-z^2)$$
 
 ## Solution
 
+$f$ is entire since $f'(z) = -2z\exp(-z^2)$ is defined everywhere, therefore by Cauchy’s integral theorem
+
+$$
+\boxed{\oint_C f(z) \ dz = 0}
+$$
+
 # Problem 14.2.11
 
 Integrate $f(z)$ counterclockwise around the unit circle. Indicate whether Cauchy’s integral theorem applies. Show the details.
@@ -42,6 +48,30 @@ Integrate $f(z)$ counterclockwise around the unit circle. Indicate whether Cauch
 $$f(z) = \frac{1}{2z-1}$$
 
 ## Solution
+
+$f' = -\frac{2}{(2z-1)^2}$ is not defined at $z = \frac{1}{2}$ and therefore Cauchy’s integral theorem does not apply.
+
+$C: z = e^{it}, dz = ie^{it} \ dt, \quad t \in [0, 2\pi]$
+
+$$
+\begin{aligned}
+\oint_C f(z) \ dz 
+&= \oint_C f(z(t)) \dot z(t) \ dt \\
+&= \oint_0^{2\pi} \frac{ie^{it}}{2e^{it}-1} \ dt
+\end{aligned}
+$$
+
+$u = 2e^{it}-1, \ du = 2ie^{it}, \ C'$ is the circle centered at $-1$ with radius $2$
+
+$$
+\begin{aligned}
+\oint_0^{2\pi} \frac{ie^{it}}{2e^{it}-1} \ dt 
+&= \frac{1}{2} \oint_{C'} \frac{1}{u} \ du \\
+&= \frac{1}{2} \ln u \Big|_{C'} \\
+&= \frac{1}{2} \brackets{\ln |u| + i \arg(u)}_{t=0}^{t=2 \pi} \\
+&= \boxed{\pi i}
+\end{aligned}
+$$
 
 # Problem 14.2.13
 
