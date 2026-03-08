@@ -35,7 +35,7 @@ $$f(z) = \exp(-z^2)$$
 
 ## Solution
 
-$f$ is entire since $f'(z) = -2z\exp(-z^2)$ is defined everywhere, therefore by Cauchy’s integral theorem
+$f$ is entire since $f'$ is defined everywhere, therefore by Cauchy’s integral theorem
 
 $$
 \boxed{\oint_C f(z) \ dz = 0}
@@ -49,7 +49,7 @@ $$f(z) = \frac{1}{2z-1}$$
 
 ## Solution
 
-$f' = -\frac{2}{(2z-1)^2}$ is not defined at $z = \frac{1}{2}$ and therefore Cauchy’s integral theorem does not apply.
+$f'$ is not defined at $z = \frac{1}{2}$ and therefore Cauchy’s integral theorem does not apply.
 
 $C: z = e^{it}, dz = ie^{it} \ dt, \quad t \in [0, 2\pi]$
 
@@ -80,6 +80,12 @@ Integrate $f(z)$ counterclockwise around the unit circle. Indicate whether Cauch
 $$f(z) = \frac{1}{z^4-1.1}$$
 
 ## Solution
+
+$f'$ is not defined at $z = \sqrt[4]{1.1} \approx 1.02$, however this is outside the unit circle and therefore Cauchy’s integral theorem applies.
+
+$$
+\boxed{\oint_C f(z) \ dz = 0}
+$$
 
 # Problem 14.2.18
 
