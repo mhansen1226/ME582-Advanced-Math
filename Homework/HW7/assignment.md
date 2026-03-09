@@ -129,6 +129,51 @@ $$\oint_C \Re z \ dz$$
 
 ## Solution
 
+$$f(z) = \Re z = u(x,y) + i v(x,y)$$
+
+$$
+\begin{aligned}
+u &= x \\
+u_x &= 1 \\
+u_y &= 0
+\end{aligned}
+\quad
+\begin{aligned}
+v &= 0 \\
+v_x &= 0 \\
+v_y &= 0
+\end{aligned}
+$$
+
+$u_x \neq v_y$ therefore $f$ is not analytic and Cauchy’s theorem does not apply.
+
+$C_1: z = e^{it}, dz = ie^{it} \ dt, \ \Re z = \cos t, \quad t \in [0, \pi]$
+$C_2: z = t, dz = dt, \ \Re z = t, \quad t \in [-1, 1]$
+
+$$
+\begin{aligned}
+\oint_C f(z) \ dz 
+&= \oint_C f(z(t)) \dot z(t) \ dt \\
+&= \int_0^\pi \cos t ie^{it} \ dt 
+    + \int_{-1}^{1} t \ dt \\
+&= \int_0^\pi \cos t i(\cos t + i \sin t) \ dt 
+    + \int_{-1}^{1} t \ dt \\
+&= i\int_0^\pi \cos^2 t \ dt 
+    - \int_0^\pi \cos t \sin t \ dt 
+    + \int_{-1}^{1} t \ dt \\
+&= \frac{i}{2} \int_0^\pi 1 + \cos 2t \ dt 
+    - \frac{1}{2} \int_0^\pi \sin 2t \ dt 
+    + \int_{-1}^{1} t \ dt \\
+&= \frac{i}{2} \brackets{t + \frac{\sin 2t}{2}}_0^\pi 
+    + \frac{1}{4} \brackets{\cos 2t}_0^\pi 
+    + \frac{1}{2} \brackets{t^2}_{-1}^{1} \\
+&= \frac{i}{2} \brackets{\pi}
+    + \frac{1}{4} \brackets{0}
+    + \frac{1}{2} \brackets{0} \\
+&= \boxed{\frac{\pi i}{2}}
+\end{aligned}
+$$
+
 # Problem 14.2.24
 
 Evaluate the integral. Does Cauchy’s theorem apply? Show details. *(Use partial fraction)*
