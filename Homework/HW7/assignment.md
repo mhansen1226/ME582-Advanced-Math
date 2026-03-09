@@ -155,7 +155,52 @@ $$\oint_C \frac{dz}{z^2 - 1}$$
 
 ## Solution
 
+$$
+\frac{1}{z^2 - 1} = \frac{A}{z-1} + \frac{B}{z+1}
+\implies
+1 = A (z+1) + B (z-1)
+$$
 
+$\begin{array}{ll}
+z=-1: & B = -\frac{1}{2} \\
+z=1: & A = \frac{1}{2}
+\end{array}$
+
+$$
+\frac{1}{z^2 - 1} = \frac{1/2}{z-1} - \frac{1/2}{z+1}
+$$
+
+The integral becomes,
+
+$$
+\oint_C \frac{dz}{z^2 - 1} = \frac{1}{2} \oint_C \frac{1}{z - 1} - \frac{1}{z + 1} \ dz
+$$
+
+Splitting $C$ into $C_1$, the left half that circles $z=-1$ clockwise, and $C_2$, the right half that circles $z=1$ counterclockwise, we can evaluate each integral separately.
+
+The first integral has a singularity at $z=1$, therefore over $C_1$ Cauchy's theorem holds and the integral is zero. Over $C_2$, Cauchy's theorem does not hold, but 14.2.(3) gives a solution of $\pi i$. 
+
+$$
+\frac{1}{2} \oint_C \frac{1}{z - 1} 
+= \frac{1}{2} \brackets{\oint_{C_1} \frac{1}{z - 1} \ dz + \oint_{C_2} \frac{1}{z - 1} \ dz} 
+= \frac{1}{2} \brackets{0 + 2 \pi i} 
+= \pi i
+$$
+
+The second integral has a singularity at $z=-1$, therefore over $C_1$ Cauchy's theorem does not hold, but 14.2.(3) gives a solution of $-\pi i$ (due to the clockwise path). Over $C_2$, Cauchy's theorem holds and the integral is zero.
+
+$$
+\frac{1}{2} \oint_C \frac{1}{z + 1} 
+= \frac{1}{2} \brackets{\oint_{C_1} \frac{1}{z + 1} \ dz + \oint_{C_2} \frac{1}{z + 1} \ dz} 
+= \frac{1}{2} \brackets{0 - 2 \pi i} 
+= -\pi i
+$$
+
+The final integral is
+
+$$
+\boxed{\oint_C \frac{dz}{z^2 - 1} = 2 \pi i}
+$$
 
 # Problem 14.3.3
 
