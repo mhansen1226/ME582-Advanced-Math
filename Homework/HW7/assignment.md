@@ -49,26 +49,11 @@ $$f(z) = \frac{1}{2z-1}$$
 
 ## Solution
 
-$f'$ is not defined at $z = \frac{1}{2}$ and therefore Cauchy’s integral theorem does not apply.
-
-$C: z = e^{it}, dz = ie^{it} \ dt, \quad t \in [0, 2\pi]$
+$f'$ is not defined at $z = \frac{1}{2}$ and therefore Cauchy’s integral theorem does not apply. By 14.2.(3), $\oint_C (z - z_0)^{-1} = 2 \pi i$. Therefore,
 
 $$
 \begin{aligned}
-\oint_C f(z) \ dz 
-&= \oint_C f(z(t)) \dot z(t) \ dt \\
-&= \oint_0^{2\pi} \frac{ie^{it}}{2e^{it}-1} \ dt
-\end{aligned}
-$$
-
-$u = 2e^{it}-1, \ du = 2ie^{it}, \ C'$ is the circle centered at $-1$ with radius $2$
-
-$$
-\begin{aligned}
-\oint_0^{2\pi} \frac{ie^{it}}{2e^{it}-1} \ dt 
-&= \frac{1}{2} \oint_{C'} \frac{1}{u} \ du \\
-&= \frac{1}{2} \ln u \Big|_{C'} \\
-&= \frac{1}{2} \brackets{\ln |u| + i \arg(u)}_{t=0}^{t=2 \pi} \\
+\oint_C f(z) \ dz &= \frac{1}{2} \oint_C \parens{z-\frac{1}{2}}^{-1} \ dz \\
 &= \boxed{\pi i}
 \end{aligned}
 $$
@@ -95,26 +80,11 @@ $$f(z) = \frac{1}{4z-3}$$
 
 ## Solution
 
-$f'$ is not defined at $z = \frac{3}{4}$ and therefore Cauchy’s integral theorem does not apply.
-
-$C: z = e^{it}, dz = ie^{it} \ dt, \quad t \in [0, 2\pi]$
+$f'$ is not defined at $z = \frac{3}{4}$ and therefore Cauchy’s integral theorem does not apply. By 14.2.(3), $\oint_C (z - z_0)^{-1} = 2 \pi i$. Therefore,
 
 $$
 \begin{aligned}
-\oint_C f(z) \ dz 
-&= \oint_C f(z(t)) \dot z(t) \ dt \\
-&= \oint_0^{2\pi} \frac{ie^{it}}{4e^{it}-3} \ dt
-\end{aligned}
-$$
-
-$u = 4e^{it}-3, \ du = 4ie^{it}, \ C'$ is the circle centered at $-3$ with radius $4$
-
-$$
-\begin{aligned}
-\oint_0^{2\pi} \frac{ie^{it}}{4e^{it}-3} \ dt 
-&= \frac{1}{4} \oint_{C'} \frac{1}{u} \ du \\
-&= \frac{1}{4} \ln u \Big|_{C'} \\
-&= \frac{1}{4} \brackets{\ln |u| + i \arg(u)}_{t=0}^{t=2 \pi} \\
+\oint_C f(z) \ dz &= \frac{1}{4} \oint_C \parens{z-\frac{3}{4}}^{-1} \ dz \\
 &= \boxed{\frac{\pi i}{2}}
 \end{aligned}
 $$
@@ -148,6 +118,7 @@ $$
 $u_x \neq v_y$ therefore $f$ is not analytic and Cauchy’s theorem does not apply.
 
 $C_1: z = e^{it}, dz = ie^{it} \ dt, \ \Re z = \cos t, \quad t \in [0, \pi]$
+
 $C_2: z = t, dz = dt, \ \Re z = t, \quad t \in [-1, 1]$
 
 $$
@@ -178,11 +149,13 @@ $$
 
 Evaluate the integral. Does Cauchy’s theorem apply? Show details. *(Use partial fraction)*
 
-$$\oint_C \Re z \ dz$$
+$$\oint_C \frac{dz}{z^2 - 1}$$
 
 ![C](images/C-14.2.24.png){width=2in}
 
 ## Solution
+
+
 
 # Problem 14.3.3
 
