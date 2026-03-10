@@ -206,9 +206,27 @@ $$
 
 Integrate by Cauchy's formula counterclockwise around the circle.
 
-$$\frac{z^2}{z^2 - 1}, \qquad |z + i| = 1.4$$
+$$f(z) \frac{z^2}{z^2 - 1}, \qquad |z + i| = 1.4$$
 
 ## Solution
+
+$f(z)$ has singularities at
+
+$$
+z^2 - 1 = 0
+\implies
+z_{1,2} = \pm 1
+$$
+
+$$
+|z_{1,2} + i| = \sqrt{2} \approx 1.41 > 1.4
+$$
+
+Therefore the singularities are outside the domain and Cauchy's theorem holds.
+
+$$
+\boxed{\oint_C f(z) \ dz = 0}
+$$
 
 # Problem 14.3.11
 
@@ -219,6 +237,27 @@ $$
 $$
 
 ## Solution
+
+$f(z)$ has singularities at
+
+$$
+z^2 + 4 = 0
+\implies
+z_{1,2} = \pm 2i
+$$
+
+$z_1 = 2i$ is in the center of the region, however $z_2 = -2i$ lies outside. Therefore we can split the function in to the analytic and non-analytic factors and integrate via Cauchy's integral formula.
+
+$$
+\begin{aligned}
+\oint_C \frac{dz}{z^2 + 4} 
+&= \oint_C \frac{1}{(z - 2i)(z + 2i)} \ dz \\
+&= \oint_C \frac{1/(z + 2i)}{(z - 2i)} \ dz \\
+&= \frac{1}{(z + 2i)}\Big|_{z_0 = 2i} \cdot 2 \pi i \\
+&= \frac{1}{4i} \cdot 2 \pi i \\
+&= \boxed{\frac{\pi}{2}} \\
+\end{aligned}
+$$
 
 # Problem 14.3.13
 
