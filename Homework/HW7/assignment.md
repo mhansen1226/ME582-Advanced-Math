@@ -269,6 +269,17 @@ $$
 
 ## Solution
 
+$f(z)$ has a singularity at $z = 2$ which lies within the region. Integrate via Cauchy's integral formula.
+
+$$
+\begin{aligned}
+\oint_C \frac{z + 2}{z - 2} \ dz
+&= (z + 2)\Big|_{z_0 = 2} \cdot 2 \pi i \\
+&= 4 \cdot 2 \pi i \\
+&= \boxed{8 \pi i} \\
+\end{aligned}
+$$
+
 # Problem 14.3.15 
 
 Integrate counterclockwise. *(compute it for two squares: one with vertices $\pm 2, \pm 2i$; the other one with vertices $\pm 4, \pm 4i$)*
