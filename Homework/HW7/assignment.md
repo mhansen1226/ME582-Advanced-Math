@@ -358,10 +358,25 @@ $$
 Integrate counterclockwise around the unit circle.
 
 $$
-\oint_C \frac{dz}{(z - 2i)^2(z - i/2)^2}
+\oint_C \frac{dz}{(z - 2i)^2 (z - i/2)^2}
 $$
 
 ## Solution
+
+$f(z)$ has singularities at $z_1 = \frac{i}{2}, \ z_2 = 2i$
+
+$z_1$ lies inside the unit circle, however $z_2$ does not. Separating the analytic and non-analytic factors to use Cauchy's integral formula,
+
+$$
+\begin{aligned}
+\oint_C \frac{f(z)}{(z-z_0)^{n+1}} \ dz 
+&= f^{(n)}(z_0) \frac{2\pi i}{n!} \\
+\frac{(z - 2i)^{-2}}{(z - i/2)^2} \ dz
+&= \parens{(z - 2i)^{-2}}' \Big|_{z_0 = \frac{i}{2}} \cdot \frac{2\pi i}{1!} \\
+&= 2 \pi i \parens{-2(z - 2i)^{-3}} \Big|_{z_0 = \frac{i}{2}} \\
+&= \boxed{-\frac{32}{27} \pi} \\
+\end{aligned}
+$$
 
 # Problem 14.4.11
 
