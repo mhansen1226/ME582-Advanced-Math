@@ -317,6 +317,19 @@ $$
 
 ## Solution
 
+$f(z)$ has a singularity at $z_0 = 0$ which lies within the region.
+
+$$
+\begin{aligned}
+\oint_C \frac{f(z)}{(z-z_0)^{n+1}} \ dz 
+&= f^{(n)}(z_0) \frac{2\pi i}{n!} \\
+\oint_C \frac{\sin z}{z^4} \ dz 
+&= (\sin z)^{(3)}\Big|_{z_0 = 0} \cdot \frac{2\pi i}{3!} \\
+&= -\cos z\Big|_{z_0 = 0} \cdot \frac{\pi i}{3} \\
+&= \boxed{-\frac{\pi i}{3}} \\
+\end{aligned}
+$$
+
 # Problem 14.4.3
 
 Integrate counterclockwise around the unit circle.
