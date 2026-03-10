@@ -340,6 +340,19 @@ $$
 
 ## Solution
 
+$f(z)$ has a singularity at $z_0 = 0$ which lies within the region.
+
+$$
+\begin{aligned}
+\oint_C \frac{f(z)}{(z-z_0)^{n+1}} \ dz 
+&= f^{(n)}(z_0) \frac{2\pi i}{n!} \\
+\oint_C \frac{e^z}{z^n} \ dz 
+&= (e^z)^{(n-1)}\Big|_{z_0 = 0} \cdot \frac{2\pi i}{(n-1)!} \\
+&= e^z\Big|_{z_0 = 0} \cdot \frac{2\pi i}{(n-1)!} \\
+&= \boxed{\frac{2\pi i}{(n-1)!}} \\
+\end{aligned}
+$$
+
 # Problem 14.4.6
 
 Integrate counterclockwise around the unit circle.
