@@ -269,7 +269,7 @@ $$
 
 ## Solution
 
-$f(z)$ has a singularity at $z = 2$ which lies within the region. Integrate via Cauchy's integral formula.
+$f(z)$ has a singularity at $z_0 = 2$ which lies within the region. Integrate via Cauchy's integral formula.
 
 $$
 \begin{aligned}
@@ -289,6 +289,23 @@ $$
 $$
 
 ## Solution
+
+$f(z)$ has a singularity at $z_0 = \pi i$ which lies within the region. Integrate via Cauchy's integral formula.
+
+For the small square with vertices $\pm 2, \pm 2i$ the singularity is outside the region and Cauchy's theorem applies.
+
+$$\boxed{\oint_C \frac{\cosh \parens{z^2 - \pi i}}{z - \pi i} \ dz = 0}$$
+
+For the large square with vertices $\pm 4, \pm 4i$ the singularity is inside the region and Cauchy's theorem does not apply.
+
+$$
+\begin{aligned}
+\oint_C \frac{\cosh \parens{z^2 - \pi i}}{z - \pi i} \ dz
+&= \cosh \parens{z^2 - \pi i}\Big|_{z_0 = \pi i} \cdot 2 \pi i \\
+&= \cosh \parens{-\pi^2 - \pi i} \cdot 2 \pi i \\
+&= \boxed{-2 \pi i \cos \pi^2} \\
+\end{aligned}
+$$
 
 # Problem 14.4.1
 
