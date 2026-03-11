@@ -117,17 +117,18 @@ $$
 
 $u_x \neq v_y$ therefore $f$ is not analytic and Cauchy’s theorem does not apply.
 
-$C_1: z = e^{it}, dz = ie^{it} \ dt, \ \Re z = \cos t, \quad t \in [0, \pi]$
+$C_1: z_1 = e^{it}, dz_2 = ie^{it} \ dt, \ \Re z_1 = \cos t, \quad t \in [0, \pi]$
 
-$C_2: z = t, dz = dt, \ \Re z = t, \quad t \in [-1, 1]$
+$C_2: z_2 = t, dz_2 = dt, \ \Re z_2 = t, \quad t \in [-1, 1]$
 
 $$
 \begin{aligned}
 \oint_C f(z) \ dz 
 &= \oint_C f(z(t)) \dot z(t) \ dt \\
-&= \int_0^\pi \cos t ie^{it} \ dt 
+&= \oint_{C_1} f(z_1(t)) \dot z_1(t) \ dt + \oint_{C_2} f(z_2(t)) \dot z_2(t) \ dt \\
+&= \int_0^\pi \cos t \ ie^{it} \ dt 
     + \int_{-1}^{1} t \ dt \\
-&= \int_0^\pi \cos t i(\cos t + i \sin t) \ dt 
+&= \int_0^\pi \cos t \ i(\cos t + i \sin t) \ dt 
     + \int_{-1}^{1} t \ dt \\
 &= i\int_0^\pi \cos^2 t \ dt 
     - \int_0^\pi \cos t \sin t \ dt 
