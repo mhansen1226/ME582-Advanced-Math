@@ -25,91 +25,120 @@ header-includes: |
   \newcommand{\brackets}[1]{\left[ #1 \right]}
   \newcommand{\mat}[1]{\mathbf{#1}}
   \renewcommand{\vec}[1]{\mathbf{#1}}
+  \newcommand{\infsum}[1][0]{\sum_{n=#1}^\infty}
 ---
 
 # Problem 15.1.16
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=0}^\infty \frac{(20 + 30i)^n}{n!}$$
+$$\infsum \frac{(20 + 30i)^n}{n!}$$
+
+## Solution
 
 # Problem 15.1.17
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=2}^\infty \frac{(-i)^n}{\ln n}$$
+$$\infsum[2] \frac{(-i)^n}{\ln n}$$
+
+## Solution
 
 # Problem 15.1.18
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=1}^\infty n^2 \parens{\frac{i}{4}}^n$$
+$$\infsum[1] n^2 \parens{\frac{i}{4}}^n$$
+
+## Solution
 
 # Problem 15.1.19
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=0}^\infty \frac{i^n}{n^2 - i}$$
+$$\infsum \frac{i^n}{n^2 - i}$$
+
+## Solution
 
 # Problem 15.1.20
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=0}^\infty \frac{n + i}{3n^2 + 2i}$$
+$$\infsum \frac{n + i}{3n^2 + 2i}$$
+
+## Solution
 
 # Problem 15.1.21
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=0}^\infty \frac{(\pi + \pi i)^{2n + 1}}{(2n + 1)!}$$
+$$\infsum \frac{(\pi + \pi i)^{2n + 1}}{(2n + 1)!}$$
+
+## Solution
 
 # Problem 15.1.22
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=1}^\infty \frac{1}{\sqrt n}$$
+$$\infsum[1] \frac{1}{\sqrt n}$$
+
+## Solution
 
 # Problem 15.1.23
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=0}^\infty \frac{(-1)^n (1 + i)^{2n}}{(2n)!}$$
+$$\infsum \frac{(-1)^n (1 + i)^{2n}}{(2n)!}$$
+
+## Solution
 
 # Problem 15.1.24
 
 Is the series convergent or divergent? Give a reason.
 
-$$\sum_{n=1}^\infty \frac{(3i)^n n!}{n^n}$$
+$$\infsum[1] \frac{(3i)^n n!}{n^n}$$
+
+## Solution
 
 # Problem 15.2.7
 
 Find the center and the radius of convergence.
 
-$$\sum_{n=0}^\infty \frac{(-1)^n}{(2n)!} \parens{z - \frac{1}{2}}^{2n}$$
+$$\infsum \frac{(-1)^n}{(2n)!} \parens{z - \frac{1}{2}}^{2n}$$
+
+## Solution
 
 # Problem 15.2.9
 
 Find the center and the radius of convergence.
 
-$$\sum_{n=0}^\infty \frac{n (n-1)}{3^n} (z - i)^{2n}$$
+$$\infsum \frac{n (n-1)}{3^n} (z - i)^{2n}$$
+
+## Solution
 
 # Problem 15.2.13
 
 Find the center and the radius of convergence.
 
-$$\sum_{n=0}^\infty 16^n (z+i)^{4n}$$
+$$\infsum 16^n (z+i)^{4n}$$
+
+## Solution
 
 # Problem 15.2.15
 
 Find the center and the radius of convergence.
 
-$$\sum_{n=0}^\infty \frac{(2n)!}{4^n (n!)^2} (z - 2i)^n$$
+$$\infsum \frac{(2n)!}{4^n (n!)^2} (z - 2i)^n$$
+
+## Solution
 
 # Problem 15.2.17
 
 Find the center and the radius of convergence.
 
-$$\sum_{n=1}^\infty \frac{2^n}{n (n+1)} z^{2n+1}$$
+$$\infsum[1] \frac{2^n}{n (n+1)} z^{2n+1}$$
+
+## Solution
 
 # Problem 15.3.5
 
@@ -118,7 +147,9 @@ Find the radius of convergence in two ways:
 (a) Directly by the Cauchy–Hadamard formula in Sec. 15.2 
 (b) From a series of simpler terms by using Theorem 3 or Theorem 4
 
-$$\sum_{n=2}^\infty \frac{n (n-1)}{2^n} (z - 2i)^n$$
+$$\infsum[2] \frac{n (n-1)}{2^n} (z - 2i)^n$$
+
+## Solution
 
 # Problem 15.3.7
 
@@ -127,8 +158,10 @@ Find the radius of convergence in two ways:
 (a) Directly by the Cauchy–Hadamard formula in Sec. 15.2 
 (b) From a series of simpler terms by using Theorem 3 or Theorem 4
 
-$$\sum_{n=1}^\infty \frac{n}{3^n} (z + 2i)^{2n}$$
+$$\infsum[1] \frac{n}{3^n} (z + 2i)^{2n}$$
 
+
+## Solution
 
 # Problem 15.3.9
 
@@ -137,7 +170,9 @@ Find the radius of convergence in two ways:
 (a) Directly by the Cauchy–Hadamard formula in Sec. 15.2 
 (b) From a series of simpler terms by using Theorem 3 or Theorem 4
 
-$$\sum_{n=1}^\infty \frac{(-2)^n)}{n (n+1) (n+2)} z^{2n}$$
+$$\infsum[1] \frac{(-2)^n)}{n (n+1) (n+2)} z^{2n}$$
+
+## Solution
 
 # Problem 15.3.11
 
@@ -146,7 +181,9 @@ Find the radius of convergence in two ways:
 (a) Directly by the Cauchy–Hadamard formula in Sec. 15.2 
 (b) From a series of simpler terms by using Theorem 3 or Theorem 4
 
-$$\sum_{n=1}^\infty \frac{3^n n (n+1)}{7^n} (z + 2)^{2n}$$
+$$\infsum[1] \frac{3^n n (n+1)}{7^n} (z + 2)^{2n}$$
+
+## Solution
 
 # Problem 15.3.13
 
@@ -156,7 +193,9 @@ Find the radius of convergence in two ways:
 (b) From a series of simpler terms by using Theorem 3 or Theorem 4
 
 $$
-\sum_{n=0}^\infty \brackets{\begin{pmatrix}
+\infsum \brackets{\begin{pmatrix}
     n+k \\ k
 \end{pmatrix}}^{-1} z^{n+k}
 $$
+
+## Solution
