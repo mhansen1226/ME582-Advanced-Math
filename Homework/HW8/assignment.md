@@ -38,7 +38,7 @@ $$\infsum \frac{(20 + 30i)^n}{n!}$$
 
 ## Solution
 
-**Ratio Test**
+Ratio Test:
 
 $$
 \begin{aligned}
@@ -46,7 +46,7 @@ $$
 &= \inflim \abs{\frac{(20 + 30i)^{n+1}}{(n+1)!} \cdot \frac{n!}{(20 + 30i)^n}} \\
 &= \inflim \abs{\frac{20 + 30i}{n+1}} \\
 &= \inflim \frac{\sqrt{1300}}{n+1} \\
-&= 0, \text{ therefore the series converges.}
+&= 0 < 1, \text{ therefore the series converges}
 \end{aligned}
 $$
 
@@ -75,6 +75,19 @@ Is the series convergent or divergent? Give a reason.
 $$\infsum[1] n^2 \parens{\frac{i}{4}}^n$$
 
 ## Solution
+
+Ratio Test:
+
+$$
+\begin{aligned}
+\inflim \abs{\frac{a_{n+1}}{a_n}}
+&= \inflim \abs{\frac{(n+1)^2 \parens{\frac{i}{4}}^{n+1}}{n^2 \parens{\frac{i}{4}}^n}} \\
+&= \inflim \abs{\frac{(n+1)^2}{n^2} \cdot \frac{i}{4}} \\
+&= \frac{1}{4} \cdot \inflim \frac{(n+1)^2}{n^2} \\
+&= \frac{1}{4} \cdot 1 \\
+&= \frac{1}{4} < 1, \text{ therefore the series converges}
+\end{aligned}
+$$
 
 # Problem 15.1.19
 
