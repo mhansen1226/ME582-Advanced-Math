@@ -66,7 +66,7 @@ $$
 \end{aligned}
 $$
 
-Therefore, the series diverges by comparison to the divergent harmonic series.
+Therefore, the series diverges by direct comparison to the divergent harmonic series.
 
 # Problem 15.1.18
 
@@ -96,6 +96,12 @@ Is the series convergent or divergent? Give a reason.
 $$\infsum \frac{i^n}{n^2 - i}$$
 
 ## Solution
+
+$$\abs{a_n} = \abs{\frac{i^n}{n^2 - i}} = \frac{1}{\sqrt{n^4 + 1}}$$
+
+$$\abs{a_n} < \frac{1}{n^2} \ \forall n \in \mathbb{Z} > 0$$
+
+Therefore, the series converges by direct comparison to the convergent p-series $\infsum \frac{1}{n^2}$.
 
 # Problem 15.1.20
 
