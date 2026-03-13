@@ -23,9 +23,11 @@ header-includes: |
   \newcommand{\pdder}[2][]{\frac{\partial^2 #1}{\partial #2^2}}
   \newcommand{\parens}[1]{\left( #1 \right)}
   \newcommand{\brackets}[1]{\left[ #1 \right]}
+  \newcommand{\abs}[1]{\left| #1 \right|}
   \newcommand{\mat}[1]{\mathbf{#1}}
   \renewcommand{\vec}[1]{\mathbf{#1}}
   \newcommand{\infsum}[1][0]{\sum_{n=#1}^\infty}
+  \newcommand{\inflim}{\lim_{n \to \infty}}
 ---
 
 # Problem 15.1.16
@@ -36,6 +38,18 @@ $$\infsum \frac{(20 + 30i)^n}{n!}$$
 
 ## Solution
 
+**Ratio Test**
+
+$$
+\begin{aligned}
+\inflim \abs{\frac{a_{n+1}}{a_n}}
+&= \inflim \abs{\frac{(20 + 30i)^{n+1}}{(n+1)!} \cdot \frac{n!}{(20 + 30i)^n}} \\
+&= \inflim \abs{\frac{20 + 30i}{n+1}} \\
+&= \inflim \frac{\sqrt{1300}}{n+1} \\
+&= 0, \text{ therefore the series converges.}
+\end{aligned}
+$$
+
 # Problem 15.1.17
 
 Is the series convergent or divergent? Give a reason.
@@ -43,6 +57,16 @@ Is the series convergent or divergent? Give a reason.
 $$\infsum[2] \frac{(-i)^n}{\ln n}$$
 
 ## Solution
+
+The numerator is bounded cyclically so only the denominator affects the series convergence. 
+
+$$
+\begin{aligned}
+\frac{1}{\ln n} &> \frac{1}{n} \ \forall n \in \mathbb{Z} \ge 2
+\end{aligned}
+$$
+
+Therefore, the series diverges by comparison to the divergent harmonic series.
 
 # Problem 15.1.18
 
