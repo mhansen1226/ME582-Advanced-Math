@@ -111,6 +111,10 @@ $$\infsum \frac{n + i}{3n^2 + 2i}$$
 
 ## Solution
 
+The real part diverges due to the harmonic series and therefore the series diverges.
+
+$$\infsum \frac{n}{3n^2} = \frac{1}{3} \infsum \frac{1}{n}$$
+
 # Problem 15.1.21
 
 Is the series convergent or divergent? Give a reason.
