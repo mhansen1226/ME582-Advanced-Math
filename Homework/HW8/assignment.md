@@ -39,7 +39,6 @@ $$\infsum \frac{(20 + 30i)^n}{n!}$$
 ## Solution
 
 Ratio Test:
-
 $$
 \begin{aligned}
 \inflim \abs{\frac{a_{n+1}}{a_n}}
@@ -77,7 +76,6 @@ $$\infsum[1] n^2 \parens{\frac{i}{4}}^n$$
 ## Solution
 
 Ratio Test:
-
 $$
 \begin{aligned}
 \inflim \abs{\frac{a_{n+1}}{a_n}}
@@ -122,6 +120,16 @@ Is the series convergent or divergent? Give a reason.
 $$\infsum \frac{(\pi + \pi i)^{2n + 1}}{(2n + 1)!}$$
 
 ## Solution
+
+Ratio Test:
+$$
+\begin{aligned}
+\inflim \abs{\frac{a_{n+1}}{a_n}}
+&= \inflim \abs{\frac{(\pi + \pi i)^{2n + 3}}{(2n + 3)!} \cdot \frac{(2n + 1)!}{(\pi + \pi i)^{2n + 1}}} \\
+&= \inflim \abs{\frac{(\pi + \pi i)^2}{(2n + 3)(2n + 2)}} \\
+&= 0 < 1, \text{ therefore the series converges}
+\end{aligned}
+$$
 
 # Problem 15.1.22
 
