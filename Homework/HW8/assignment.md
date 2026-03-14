@@ -151,6 +151,16 @@ $$\infsum \frac{(-1)^n (1 + i)^{2n}}{(2n)!}$$
 
 ## Solution
 
+Ratio Test:
+$$
+\begin{aligned}
+\inflim \abs{\frac{a_{n+1}}{a_n}}
+&= \inflim \abs{\frac{(-1)^{n+1} (1 + i)^{2(n+1)}}{(2(n+1))!} \cdot \frac{(2n)!}{(-1)^n (1 + i)^{2n}}} \\
+&= \inflim \abs{\frac{-(1 + i)^2}{(2n+2)(2n+1)}} \\
+&= 0 < 1, \text{ therefore the series converges}
+\end{aligned}
+$$
+
 # Problem 15.1.24
 
 Is the series convergent or divergent? Give a reason.
