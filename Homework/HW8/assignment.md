@@ -139,6 +139,10 @@ $$\infsum[1] \frac{1}{\sqrt n}$$
 
 ## Solution
 
+$$\frac{1}{\sqrt n} > \frac{1}{n} \ \forall n \in \mathbb{Z} > 1$$
+
+Therefore, the series diverges by direct comparison with the harmonic series.
+
 # Problem 15.1.23
 
 Is the series convergent or divergent? Give a reason.
