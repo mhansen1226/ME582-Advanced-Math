@@ -169,6 +169,21 @@ $$\infsum[1] \frac{(3i)^n n!}{n^n}$$
 
 ## Solution
 
+Ratio Test:
+$$
+\begin{aligned}
+\inflim \abs{\frac{a_{n+1}}{a_n}}
+&= \inflim \abs{\frac{(3i)^{n+1} (n+1)!}{(n+1)^{n+1}} \cdot \frac{n^n}{(3i)^n n!}} \\
+&= \inflim \abs{\frac{(3i)^{n+1}}{(3i)^n} \cdot \frac{(n+1)!}{n!} \cdot \frac{n^n}{(n+1)^{n+1}}} \\
+&= \inflim \abs{3i \cdot (n+1) \cdot \frac{n^n}{(n+1)^n (n+1)}} \\
+&= 3 \inflim \abs{\parens{\frac{n}{n+1}}^n} \\
+&= 3 \inflim \abs{\frac{1}{\parens{\frac{n+1}{n}}^n}} \\
+&= 3 \inflim \abs{\frac{1}{\parens{1 + \frac{1}{n}}^n}} \\
+&= 3 \cdot \frac{1}{e} \\
+&= \frac{3}{e} > 1, \text{ therefore the series diverges}
+\end{aligned}
+$$
+
 # Problem 15.2.7
 
 Find the center and the radius of convergence.
