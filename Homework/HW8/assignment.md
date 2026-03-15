@@ -192,6 +192,18 @@ $$\infsum \frac{(-1)^n}{(2n)!} \parens{z - \frac{1}{2}}^{2n}$$
 
 ## Solution
 
+$$
+\begin{aligned}
+R 
+&= \inflim \abs{\frac{a_n}{a_{n+1}}} \\
+&= \inflim \abs{\frac{(-1)^n}{(2n)!} \cdot \frac{(2n + 2)!}{(-1)^{n+1}}} \\
+&= \inflim \abs{(2n + 2) (2n + 1)} \\
+&= \infty \\
+\end{aligned}
+$$
+
+The center of convergence is at $z_0 = \frac{1}{2}$ with radius $R = \infty$.
+
 # Problem 15.2.9
 
 Find the center and the radius of convergence.
