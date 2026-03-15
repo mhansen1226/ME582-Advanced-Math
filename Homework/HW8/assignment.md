@@ -212,6 +212,25 @@ $$\infsum \frac{n (n-1)}{3^n} (z - i)^{2n}$$
 
 ## Solution
 
+Rearranging the power series to the classic form by substituting $n = 2n$,
+
+$$
+\infsum \frac{\frac{n}{2} (\frac{n}{2}-1)}{3^\frac{n}{2}} (z - i)^{n}
+= \frac{1}{4} \infsum \frac{n (n-2)}{3^\frac{n}{2}} (z - i)^{n}
+$$
+
+$$
+\begin{aligned}
+R^*
+&= \inflim \abs{\frac{a_n}{a_{n+1}}} \\
+&= \inflim \abs{\frac{n (n-2)}{3^\frac{n}{2}} \cdot \frac{3^\frac{n+1}{2}}{(n+1)(n-1)}} \\
+&= \sqrt 3 \inflim \abs{\frac{n (n-2)}{(n+1)(n-1)}} \\
+&= \sqrt 3 \\
+\end{aligned}
+$$
+
+The center of convergence is at $z_0 = i$ with radius $R = \sqrt 3$.
+
 # Problem 15.2.13
 
 Find the center and the radius of convergence.
