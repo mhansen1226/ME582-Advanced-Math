@@ -221,7 +221,7 @@ $$
 
 $$
 \begin{aligned}
-R^*
+R
 &= \inflim \abs{\frac{a_n}{a_{n+1}}} \\
 &= \inflim \abs{\frac{n (n-2)}{3^\frac{n}{2}} \cdot \frac{3^\frac{n+1}{2}}{(n+1)(n-1)}} \\
 &= \sqrt 3 \inflim \abs{\frac{n (n-2)}{(n+1)(n-1)}} \\
@@ -239,6 +239,22 @@ $$\infsum 16^n (z+i)^{4n}$$
 
 ## Solution
 
+Rearranging the power series to the classic form by substituting $n = 4n$,
+
+$$\infsum 16^\frac{n}{4} (z+i)^n$$
+
+$$
+\begin{aligned}
+R
+&= \inflim \abs{\frac{a_n}{a_{n+1}}} \\
+&= \inflim \abs{\frac{16^\frac{n}{4}}{16^\frac{n+1}{4}}} \\
+&= \inflim \abs{16^{-\frac{1}{4}}} \\
+&= \frac{1}{2} \\
+\end{aligned}
+$$
+
+The center of convergence is at $z_0 = -i$ with radius $R = \frac{1}{2}$.
+
 # Problem 15.2.15
 
 Find the center and the radius of convergence.
@@ -246,6 +262,20 @@ Find the center and the radius of convergence.
 $$\infsum \frac{(2n)!}{4^n (n!)^2} (z - 2i)^n$$
 
 ## Solution
+
+$$
+\begin{aligned}
+R
+&= \inflim \abs{\frac{a_n}{a_{n+1}}} \\
+&= \inflim \abs{\frac{(2n)!}{4^n (n!)^2} \cdot \frac{4^{n+1} ((n+1)!)^2}{(2n+2)!}} \\
+&= \inflim \abs{4 \cdot \frac{(2n)!}{(2n+2)!} \cdot \frac{((n+1)!)^2}{(n!)^2}} \\
+&= \inflim \abs{4 \cdot \frac{1}{(2n+2)(2n+1)} \cdot (n+1)^2} \\
+&= \inflim \abs{\frac{2n+2}{2n+1}} \\
+&= 1
+\end{aligned}
+$$
+
+The center of convergence is at $z_0 = 2i$ with radius $R = 1$.
 
 # Problem 15.2.17
 
