@@ -285,6 +285,27 @@ $$\infsum[1] \frac{2^n}{n (n+1)} z^{2n+1}$$
 
 ## Solution
 
+$$
+\begin{aligned}
+L
+&= \inflim \abs{\frac{a_{n+1}}{a_n}} \\
+&= \inflim \abs{\frac{2^{n+1}}{(n+1)(n+2)} z^{2n+3} \cdot \frac{n (n+1)}{2^n} z^{-(2n+1)}} \\
+&= \inflim \abs{2 z^2 \cdot \frac{n}{n+1}} \\
+&= 2\abs{z}^2 \\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+L &< 1 \\
+2\abs{z}^2 &< 1 \\
+\abs{z}^2 &< \frac{1}{2} \\
+\abs{z} &< \frac{1}{\sqrt 2} \\
+\end{aligned}
+$$
+
+The center of convergence is at $z_0 = 0$ with radius $R = \frac{1}{\sqrt 2}$.
+
 # Problem 15.3.5
 
 Find the radius of convergence in two ways: 
