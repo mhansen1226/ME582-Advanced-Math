@@ -317,6 +317,41 @@ $$\infsum[2] \frac{n (n-1)}{2^n} (z - 2i)^n$$
 
 ## Solution
 
+### Cauchy-Hadamard
+
+$$
+\begin{aligned}
+R
+&= \inflim \abs{\frac{a_n}{a_{n+1}}} \\
+&= \inflim \abs{\frac{n (n-1)}{2^n} \cdot \frac{2^{n+1}}{(n+1) n}} \\
+&= 2 \cdot \inflim \abs{\frac{n-1}{n+1}} \\
+&= 2 \\
+\end{aligned}
+$$
+
+### Theorem 3: Differentiation
+
+$$
+f(z) = \infsum \parens{\frac{z - 2i}{2}}^n = \infsum \frac{1}{2^n} (z - 2i)^n
+$$
+
+The geometric series $f(z)$ converges if 
+
+$$
+\frac{z - 2i}{2} < 1 \implies R = 2
+$$
+
+Differentiating,
+
+$$
+\begin{aligned}
+f'(z) &= \infsum[1] \frac{n}{2^n} (z - 2i)^{n-1} \\
+f''(z) &= \infsum[2] \frac{n (n-1)}{2^n} (z - 2i)^{n-2} \\
+\end{aligned}
+$$
+
+The original series is equivalent to $f''(z) (z - 2i)^2$ and therefore also converges with $R = 2$
+
 # Problem 15.3.7
 
 Find the radius of convergence in two ways: 
@@ -336,7 +371,7 @@ Find the radius of convergence in two ways:
 (a) Directly by the Cauchy–Hadamard formula in Sec. 15.2 
 (b) From a series of simpler terms by using Theorem 3 or Theorem 4
 
-$$\infsum[1] \frac{(-2)^n)}{n (n+1) (n+2)} z^{2n}$$
+$$\infsum[1] \frac{(-2)^n}{n (n+1) (n+2)} z^{2n}$$
 
 ## Solution
 
