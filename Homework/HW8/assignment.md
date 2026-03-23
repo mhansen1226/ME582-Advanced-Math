@@ -515,6 +515,42 @@ $$
 \infsum \brackets{\begin{pmatrix}
     n+k \\ k
 \end{pmatrix}}^{-1} z^{n+k}
+= \infsum \frac{k!n!}{(n+k)!} z^{n+k}
 $$
 
 ## Solution
+
+### Cauchy-Hadamard
+
+$$
+\begin{aligned}
+L
+&= \inflim \abs{\frac{a_{n+1}}{a_n}} \\
+&= \inflim \abs{\frac{k!(n+1)!}{(n+1+k)!} z^{n+1+k} \cdot \frac{(n+k)!}{k!n!} z^{-n-k}} \\
+&= \abs{z} \cdot \inflim \abs{\frac{(n+1)!}{n!} \cdot \frac{(n+k)!}{(n+1+k)!}} \\
+&= \abs{z} \cdot \inflim \abs{\frac{n+1}{n+k}} \\
+&= \abs{z} \\
+\end{aligned}
+$$
+
+$$L < 1 \implies R = 1$$
+
+### Theorem 3: Differentiation
+
+$$
+f(z) = \infsum z^n 
+$$
+
+The geometric series $f(z)$ converges if 
+
+$$
+\abs{z} < 1 \implies R = 1
+$$
+
+Integrating $k$ times 
+
+$$
+\int \int \cdots \int f(z) \propto \frac{z^{n+k}}{(n+1)(n+2)\cdots(n+k)}
+$$
+
+This gives a series that is proportional to the original and therefore also converges with $R=1$
