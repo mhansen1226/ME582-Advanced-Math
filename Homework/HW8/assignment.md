@@ -467,6 +467,43 @@ $$\infsum[1] \frac{3^n n (n+1)}{7^n} (z + 2)^{2n}$$
 
 ## Solution
 
+### Cauchy-Hadamard
+
+$$
+\begin{aligned}
+L
+&= \inflim \abs{\frac{a_{n+1}}{a_n}} \\
+&= \inflim \abs{\frac{3^{n+1} (n+1) (n+2)}{7^{n+1}} (z + 2)^{2n+2} \cdot \frac{7^n}{3^n n (n+1)} (z + 2)^{-2n}} \\
+&= \frac{3}{7} \abs{z+2}^2 \cdot \inflim \abs{\frac{(n+1) (n+2)}{n (n+1)}} \\
+&= \frac{3}{7} \abs{z+2}^2 \\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+L &< 1 \\
+\frac{3}{7} \abs{z+2}^2 &< 1 \\
+\abs{z+2}^2 &< \frac{7}{3} \\
+\abs{z+2} &< \sqrt \frac{7}{3} \\
+\end{aligned}
+$$
+
+Therefore $R = \sqrt \frac{7}{3}$
+
+### Theorem 3: Differentiation
+
+$$
+f(z) = \infsum \parens{\frac{3}{7}(z + 2)^2}^n 
+$$
+
+The geometric series $f(z)$ converges if 
+
+$$
+\abs{\frac{3}{7}(z + 2)^2} < 1 \implies R = \sqrt \frac{7}{3}
+$$
+
+Taking the derivative 2 times introduces the factors $n$ and $n+1$ which is similar to the original series and it therefore also converges with $R = \sqrt \frac{7}{3}$
+
 # Problem 15.3.13
 
 Find the radius of convergence in two ways: 
