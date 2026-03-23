@@ -419,6 +419,43 @@ $$\infsum[1] \frac{(-2)^n}{n (n+1) (n+2)} z^{2n}$$
 
 ## Solution
 
+### Cauchy-Hadamard
+
+$$
+\begin{aligned}
+L
+&= \inflim \abs{\frac{a_{n+1}}{a_n}} \\
+&= \inflim \abs{\frac{(-2)^{n+1}}{(n+1) (n+2) (n+3)} z^{2n+2} \cdot \frac{n (n+1) (n+2)}{(-2)^n} z^{-2n}} \\
+&= 2 \abs{z}^2 \cdot \inflim \abs{\frac{n (n+1) (n+2)}{(n+1) (n+2) (n+3)}} \\
+&= 2 \abs{z}^2 \\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+L &< 1 \\
+2 \abs{z}^2 &< 1 \\
+\abs{z}^2 &< \frac{1}{2} \\
+\abs{z} &< \frac{1}{\sqrt 2} \\
+\end{aligned}
+$$
+
+Therefore $R = \frac{1}{\sqrt 2}$
+
+### Theorem 4: Integration
+
+$$
+f(z) = \infsum \parens{-2 z^{2}}^n
+$$
+
+The geometric series $f(z)$ converges if 
+
+$$
+\abs{-2 z^{2}} < 1 \implies R = \frac{1}{\sqrt 2}
+$$
+
+Integrating 3 times introduces the factors $\frac{1}{n+1}$, $\frac{1}{n+2}$, and $\frac{1}{n+3}$ which is similar to the original series and it therefore also converges with $R = \frac{1}{\sqrt 2}$
+
 # Problem 15.3.11
 
 Find the radius of convergence in two ways: 
