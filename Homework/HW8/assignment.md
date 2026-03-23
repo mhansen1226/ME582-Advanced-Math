@@ -361,8 +361,52 @@ Find the radius of convergence in two ways:
 
 $$\infsum[1] \frac{n}{3^n} (z + 2i)^{2n}$$
 
-
 ## Solution
+
+### Cauchy-Hadamard
+
+$$
+\begin{aligned}
+L
+&= \inflim \abs{\frac{a_{n+1}}{a_n}} \\
+&= \inflim \abs{\frac{3^{n+1}}{n+1} (z + 2i)^{2n+2} \cdot \frac{n}{3^n} (z + 2i)^{-2n}} \\
+&= \frac{1}{3} \cdot \inflim \abs{(z + 2i)^2 \cdot \frac{n+1}{n}} \\
+&= \frac{1}{3} \abs{z + 2i}^2
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\frac{1}{3} \abs{z + 2i}^2 &< 1 \\
+\abs{z + 2i}^2 &< 3 \\
+\abs{z + 2i} &< \sqrt 3 \\
+\end{aligned}
+$$
+
+Therefore $R = \sqrt 3$
+
+### Theorem 3: Differentiation
+
+$$
+f(z) = \infsum \parens{\frac{(z + 2i)^2}{3}}^n = \infsum \frac{1}{3^n} (z + 2i)^{2n}
+$$
+
+The geometric series $f(z)$ converges if 
+
+$$
+\frac{(z + 2i)^2}{3} < 1 \implies R = \sqrt 3
+$$
+
+Differentiating,
+
+$$
+\begin{aligned}
+f'(z) &= \infsum[1] \frac{2n}{3^n} (z + 2i)^{2n-1} \\
+\end{aligned}
+$$
+
+The original series is equivalent to $\frac{1}{2} (z + 2i) f'(z)$ and therefore also converges with $R = \sqrt 3$
+
 
 # Problem 15.3.9
 
