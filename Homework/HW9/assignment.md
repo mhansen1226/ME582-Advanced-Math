@@ -131,15 +131,34 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+f(z) 
+&= \frac{1}{1-z} \\
+&= \frac{1}{1 - i - (z - i)} \\
+&= \frac{1}{(1 - i) \parens{1 - \frac{z-i}{1-i}}}  \\
+&= \frac{1}{1 - i} \infsum \parens{\frac{z-i}{1-i}}^n & \text{by 15.4(11)}
+\end{aligned}
+$$
 
+This series converges on 
+
+$$
+\begin{aligned}
+\abs{\frac{z-i}{1-i}} &< 1 \\
+\abs{z-i} &< \abs{1-i} \\
+\abs{z-i} &< \sqrt 2 \\
+\therefore R &= \boxed{\sqrt 2}
+\end{aligned}
+$$
 
 \newpage
 # Problem 15.4.21
 
-Find the Taylor series with center $z_0$ and its radius of convergence.
+Find the Taylor series with center $z_0 = \frac{\pi}{2}$ and its radius of convergence.
 
 $$
-\sin z, \quad z_0 = \frac{\pi}{2}
+\sin z
 $$
 
 ## Solution
@@ -149,8 +168,10 @@ $$
 \newpage
 # Problem 15.4.23
 
+Find the Taylor series with center $z_0 = i$ and its radius of convergence.
+
 $$
-\frac{1}{(z + i)^2}, \quad z_0 = i
+\frac{1}{(z + i)^2}
 $$
 
 ## Solution
