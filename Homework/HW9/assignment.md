@@ -163,7 +163,41 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+f(z) &= \sin z 
+&f(z_0) = 1 \\
+f'(z) &= \cos z
+&f'(z_0) &= 0 \\
+f''(z) &= -\sin z
+&f''(z_0) &= -1 \\
+f^{(3)}(z) &= -\cos z
+&f^{(3)}(z_0) &= 0 \\
+f^{(4)}(z) &= \sin z
+&f^{(4)}(z_0) &= 1 \\
+\end{aligned}
+$$
 
+$$
+\begin{aligned}
+f(z) 
+&= \infsum a_n (z - z_0)^n
+    &a_n = \frac{1}{n!} f^{(n)}(z_0) \\
+&= 1 + 0 - \frac{1}{2!} (z - \frac{\pi}{2})^2 + 0 + \frac{1}{4!} (z - \frac{\pi}{2})^4 + \cdots \\
+&= 1 - \frac{1}{2!} (z - \frac{\pi}{2})^2 + \frac{1}{4!} (z - \frac{\pi}{2})^4 - \cdots \\
+&= \boxed{\infsum \frac{(-1)^n}{(2n)!} (z - \frac{\pi}{2})^{2n}}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+L &= \inflim \abs{\frac{a_{n+1}}{a_n}} \\
+L &= \inflim \abs{\frac{(-1)^{n+1}}{(2n+2)!} \cdot \frac{(2n)!}{(-1)^n}} \\
+L &= \inflim \abs{\frac{-1}{(2n+2)(2n+1)}} \\
+L &= 0 \\
+\therefore R &= \boxed{\infty}
+\end{aligned}
+$$
 
 \newpage
 # Problem 15.4.23
@@ -175,3 +209,4 @@ $$
 $$
 
 ## Solution
+
