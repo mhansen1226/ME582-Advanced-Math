@@ -166,7 +166,7 @@ $$
 $$
 \begin{aligned}
 f(z) &= \sin z 
-&f(z_0) = 1 \\
+&f(z_0) &= 1 \\
 f'(z) &= \cos z
 &f'(z_0) &= 0 \\
 f''(z) &= -\sin z
@@ -210,3 +210,46 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+f(z) &= \frac{1}{(z + i)^2}
+&f(z_0) &= -\frac{1}{4}
+&a_0 &= -\frac{1}{4} 
+\\
+f'(z) &= -\frac{2}{(z + i)^3}
+&f'(z_0) &= -\frac{i}{4}
+&a_1 &= -\frac{i}{4} 
+\\
+f''(z) &= \frac{6}{(z + i)^4}
+&f''(z_0) &= \frac{3}{8}
+&a_2 &= \frac{3}{16} 
+\\
+f^{(3)}(z) &= -\frac{24}{(z + i)^5}
+&f^{(3)}(z_0) &= \frac{3i}{4}
+&a_3 &= \frac{i}{8} 
+\\
+&
+& 
+&
+&a_n &= -\frac{n+1}{4}  \parens{\frac{i}{2}}^n
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+f(z) 
+&= \infsum a_n (z - z_0)^n \\
+&= \boxed{- \infsum \frac{n+1}{4}  \parens{\frac{i}{2}}^n (z - i)^n}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+L &= \inflim \abs{\frac{a_{n+1}}{a_n}} \\
+L &= \inflim \abs{\frac{n+2}{4}  \parens{\frac{i}{2}}^{n+1} \cdot \frac{4}{n+1} \parens{\frac{i}{2}}^{-n}} \\
+L &= \inflim \abs{\frac{n+2}{n+1}  \parens{\frac{i}{2}}} \\
+L &= \abs{\frac{i}{2}} \\
+L &= \frac{1}{2} \\
+\therefore R &= \boxed{2}
+\end{aligned}
+$$
