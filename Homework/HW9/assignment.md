@@ -26,6 +26,8 @@ header-includes: |
   \newcommand{\abs}[1]{\left| #1 \right|}
   \newcommand{\mat}[1]{\mathbf{#1}}
   \renewcommand{\vec}[1]{\mathbf{#1}}
+  \newcommand{\infsum}[1][0]{\sum_{n=#1}^\infty}
+  \newcommand{\inflim}{\lim_{n \to \infty}}
 ---
 
 # Problem 15.4.3
@@ -36,7 +38,25 @@ $$\sin 2 z^2$$
 
 ## Solution
 
+$$
+\sin (w) = \infsum[1] (-1)^n \frac{w^{2n+1}}{(2n+1)!}
+$$
 
+$$
+\sin 2 z^2
+= \infsum[1] (-1)^n \frac{(2 z^2)^{2n+1}}{(2n+1)!}
+= \boxed{\infsum[1] (-1)^n \frac{2^{2n+1} z^{4n+2}}{(2n+1)!}}
+$$
+
+$$
+\begin{aligned}
+L
+&= \inflim \abs{\frac{(-1)^{n+1}}{(-1)^n} \cdot \frac{2^{2n+3}}{2^{2n+1}} \cdot \frac{(2n+1)!}{(2n+3)!}} \\
+&= \inflim \abs{-1 \cdot 4 \cdot \frac{1}{(2n+3)(2n+2)}} \\
+&= 0 \\
+\therefore R &= \boxed{\infty}
+\end{aligned}
+$$
 
 \newpage
 # Problem 15.4.16. Inverse sine. 
@@ -54,15 +74,59 @@ $$
 
 ## Solution
 
+$$f(z) = \sin^{-1} z$$
 
+$$f'(z) = \parens{1 - z^2}^{-1/2}$$
+
+$$
+\parens{1 + w}^{-m}
+= \infsum \begin{pmatrix} -m \\ n \end{pmatrix} w^n
+= 1 - m w
+    + \frac{m (m+1)}{2!} w^2 
+    - \frac{m (m+1) (m+2)}{3!} w^3 
+    + \cdots
+$$
+
+$$
+\begin{aligned}
+f'(z)
+&= \infsum \begin{pmatrix} \frac{1}{2} \\ n \end{pmatrix} \parens{-z^2}^n \\
+&= 1 - \frac{1}{2} \parens{-z^2} 
+    + \frac{\frac{1}{2} (\frac{1}{2}+1)}{2!} \parens{-z^2}^2 
+    - \frac{\frac{1}{2} (\frac{1}{2}+1) (\frac{1}{2}+2)}{3!} \parens{-z^2}^3 
+    + \cdots \\
+&= 1 + \frac{1}{2} z^2
+    + \frac{\frac{1}{2} (\frac{3}{2})}{2} z^4
+    + \frac{\frac{1}{2} (\frac{3}{2}) (\frac{5}{2})}{6} z^6
+    + \cdots \\
+&= 1 
+    + \parens{\frac{1}{2}} z^2
+    + \parens{\frac{1 \cdot 3}{2 \cdot 4}} z^4
+    + \parens{\frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6}} z^6
+    + \cdots
+\end{aligned}
+$$
+
+Integrating termwise
+
+$$
+f(z)
+= z 
+    + \parens{\frac{1}{2}} \frac{z^3}{3}
+    + \parens{\frac{1 \cdot 3}{2 \cdot 4}} \frac{z^5}{5}
+    + \parens{\frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6}} \frac{z^7}{7}
+    + \cdots
+$$
+
+This converges on $\abs{z} < 1$ due to the geometric series $f'$
 
 \newpage
 # Problem 15.4.19
 
-Find the Taylor series with center $z_0$ and its radius of convergence.
+Find the Taylor series with center $z_0 = i$ and its radius of convergence.
 
 $$
-\frac{1}{1-z}, \quad z_0 = i
+\frac{1}{1-z}
 $$
 
 ## Solution
