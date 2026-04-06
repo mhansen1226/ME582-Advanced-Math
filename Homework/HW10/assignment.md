@@ -45,14 +45,14 @@ $$
 \cos z = \infsum \frac{(-1)^n}{(2n)!} z^{2n},
 $$
 
-dividing by $z^4$,
+Dividing by $z^4$,
 
 $$
 \boxed{\frac{\cos z}{z^4} 
 = \infsum \frac{(-1)^n}{(2n)!} z^{2n-4}}
 $$
 
-The Taylor series for $\cos z$ converges with $R=\infty$, so the Laurent series converges for every $z\neq 0$. 
+The Taylor series for $\cos z$ converges with $R=\infty$, so the Laurent series converges for every $z\neq 0$, or $0 < \abs{z} < \infty$.
 
 \newpage
 # Problem 16.1.3
@@ -65,7 +65,19 @@ $$
 
 ## Solution
 
+The Taylor series for $\exp z^2$ is,
 
+$$
+\exp z^2 = \infsum \frac{z^{2n}}{n!}
+$$
+
+Dividing by $z^3$,
+
+$$
+\boxed{\frac{\exp z^2}{z^3} = \infsum \frac{z^{2n-3}}{n!}}
+$$
+
+The Taylor series for $\exp z^2$ converges with $R=\infty$, so the Laurent series converges for every $z\neq 0$, or $0 < \abs{z} < \infty$.
 
 \newpage
 # Problem 16.1.5
