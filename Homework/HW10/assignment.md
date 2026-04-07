@@ -90,6 +90,24 @@ $$
 
 ## Solution
 
+$$
+\frac{1}{z^2 - z^3} = \frac{1}{z^2} \frac{1}{1 - z}
+$$
+
+The Taylor series for the geometric series $\frac{1}{1 - z}$ is,
+
+$$
+\frac{1}{1 - z} = \infsum z^n
+$$
+
+Dividing by $z^2$,
+
+$$
+\boxed{\frac{1}{z^2 - z^3} = \infsum z^{n-2}}
+$$
+
+The Taylor series for $\frac{1}{1 - z}$ converges on $\abs{z} < 1$, so the Laurent series converges on $0 < \abs{z} < 1$.
+
 \newpage
 # Problem 16.1.8
 
