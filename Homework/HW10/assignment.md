@@ -119,6 +119,20 @@ $$
 
 ## Solution
 
+The Taylor series for $e^z$ is,
+
+$$
+e^z = \infsum \frac{z^n}{n!}
+$$
+
+Multiplying by the series from **16.1.5**,
+
+$$
+\frac{e^z}{z^2 - z^3} = \infsum \frac{z^{2n-2}}{n!}
+$$
+
+The Taylor series for $e^z$ converges everywhere. As in **16.1.5**, the Laurent series converges on $0 < \abs{z} < 1$.
+
 \newpage
 # Problem 16.1.13
 
