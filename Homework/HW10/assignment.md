@@ -391,6 +391,23 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+z^4 + (1 - 8i) z^2 - 8i
+&= z^4 + z^2 - 8i z^2 - 8i \\
+&= z^2(z^2 + 1) - 8i (z^2 + 1) \\
+&= (z^2 - 8i) (z^2 + 1) \\
+\end{aligned}
+$$
+
+$$
+z^2 = 8i \implies \boxed{z = \pm \sqrt{8i} \text{ with order 2}}
+$$
+
+$$
+z^2 = -1 \implies \boxed{z = \pm i \text{ with order 2}}
+$$
+
 \newpage
 # Problem 16.2.9
 
