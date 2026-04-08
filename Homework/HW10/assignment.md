@@ -401,11 +401,11 @@ z^4 + (1 - 8i) z^2 - 8i
 $$
 
 $$
-z^2 = 8i \implies \boxed{z = \pm \sqrt{8i} \text{ with order 2}}
+z^2 = 8i \implies \boxed{z = \pm \sqrt{8i} \text{ with order 1}}
 $$
 
 $$
-z^2 = -1 \implies \boxed{z = \pm i \text{ with order 2}}
+z^2 = -1 \implies \boxed{z = \pm i \text{ with order 1}}
 $$
 
 \newpage
@@ -418,6 +418,18 @@ $$
 $$
 
 ## Solution
+
+$$
+\sin 2z \cos 2z = \frac{1}{2} \sin 4z = 0
+\implies \boxed{z = \frac{n \pi}{4}, \quad n \in \mathbb{Z}}
+$$
+
+$$
+f'(z) = 2 \cos 4z 
+\qquad f'\parens{\frac{n \pi}{4}} = 2 (-1)^n \neq 0
+$$
+
+Therefore the zeros are all simple zeros
 
 \newpage
 # Problem 16.2.13
