@@ -144,6 +144,44 @@ $$
 
 ## Solution
 
+Substituting $w = z - i$,
+
+$$
+\begin{aligned}
+\frac{1}{z^3 \parens{z - i}^2}
+= \frac{1}{\parens{i + w}^3 w^2}
+&= \frac{1}{w^2} \cdot \frac{1}{\parens{i + w}^3} \\
+&= \frac{1}{w^2} \cdot \frac{1}{i^3 \parens{1 + \frac{w}{i}}^3} \\
+&= \frac{1}{w^2} \cdot \frac{1}{-i \parens{1 - iw}^3} \\
+&= \frac{i}{w^2} \cdot \frac{1}{\parens{1 - iw}^3} \\
+\end{aligned}
+$$
+
+The Taylor series of $\frac{1}{\parens{1 - iw}^3}$ is 
+
+$$
+\begin{aligned}
+\parens{1 + z}^{-m} &= \infsum \begin{pmatrix} -m \\ n \end{pmatrix} z^n \\
+\parens{1 - iw}^{-3} &= \infsum \begin{pmatrix} -3 \\ n \end{pmatrix} \parens{-iw}^n \\
+\end{aligned}
+$$
+
+Multiplying by $\frac{i}{w^2}$,
+
+$$
+\frac{i}{w^2 \parens{1 - iw}^3} 
+= \infsum \begin{pmatrix} -3 \\ n \end{pmatrix} -i^{n+1} w^{n-2}
+$$
+
+Substituting $z = w + i$,
+
+$$
+\frac{1}{z^3 \parens{z - i}^2}
+= \infsum \begin{pmatrix} -3 \\ n \end{pmatrix} -i^{n+1} {z-i}^{n-2}
+$$
+
+The Laurent series converges on $0 < \abs{z - i} < 1$.
+
 \newpage
 # Problem 16.1.22
 
