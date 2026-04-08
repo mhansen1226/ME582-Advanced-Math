@@ -353,6 +353,33 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+&z^{-2} \sin^2 \pi z = 0 \\
+&\implies
+\sin^2 \pi z = 0 \\
+&\implies 
+z = n, \quad n \in \mathbb{Z}  
+\end{aligned}
+$$
+
+$$
+\sin^2 \pi z 
+= \parens{\infsum (-1)^n \frac{z^{2n+1}}{(2n+1)!}}^2 
+= (\pi z)^2 + \cdots \text{ (higher order powers of z)}
+$$
+
+$$
+z^{-2} \sin^2 \pi z
+= \pi^2 + \cdots \text{ (higher order powers of z)}
+$$
+
+Therefore $z = 0$ is a removable singularity and the zeros are
+
+$$
+\boxed{z = \pm n, \quad n \in \mathbb{Z}^+ \text{ with order 2}}
+$$
+
 \newpage
 # Problem 16.2.7
 
