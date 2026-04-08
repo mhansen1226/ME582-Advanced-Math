@@ -327,10 +327,20 @@ $$
 Determine the location and order of the zeros.
 
 $$
-\parens{z + 81 i}^4
+(z + 81 i)^4
 $$
 
 ## Solution
+
+$$
+\begin{aligned}
+&(z + 81 i)^4 = 0 \\
+&\implies
+z + 81 i = 0 \\
+&\implies 
+\boxed{z = -81 i \text{ with order 4}}
+\end{aligned}
+$$
 
 \newpage
 # Problem 16.2.5
