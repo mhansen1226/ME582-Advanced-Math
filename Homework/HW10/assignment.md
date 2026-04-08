@@ -149,7 +149,6 @@ Substituting $w = z - i$,
 $$
 \begin{aligned}
 \frac{1}{z^3 \parens{z - i}^2}
-= \frac{1}{\parens{i + w}^3 w^2}
 &= \frac{1}{w^2} \cdot \frac{1}{\parens{i + w}^3} \\
 &= \frac{1}{w^2} \cdot \frac{1}{i^3 \parens{1 + \frac{w}{i}}^3} \\
 &= \frac{1}{w^2} \cdot \frac{1}{-i \parens{1 - iw}^3} \\
@@ -162,7 +161,7 @@ The Taylor series of $\frac{1}{\parens{1 - iw}^3}$ is
 $$
 \begin{aligned}
 \parens{1 + z}^{-m} &= \infsum \begin{pmatrix} -m \\ n \end{pmatrix} z^n \\
-\parens{1 - iw}^{-3} &= \infsum \begin{pmatrix} -3 \\ n \end{pmatrix} \parens{-iw}^n \\
+\parens{1 - iw}^{-3} &= \infsum \begin{pmatrix} -3 \\ n \end{pmatrix} (-iw)^n \\
 \end{aligned}
 $$
 
@@ -176,8 +175,10 @@ $$
 Substituting $z = w + i$,
 
 $$
+\boxed{
 \frac{1}{z^3 \parens{z - i}^2}
 = \infsum \begin{pmatrix} -3 \\ n \end{pmatrix} -i^{n+1} {z-i}^{n-2}
+}
 $$
 
 The Laurent series converges on $0 < \abs{z - i} < 1$.
@@ -192,6 +193,70 @@ $$
 $$
 
 ## Solution
+
+$\frac{1}{z^2}$ is singular at $z = 0$, therefore a Taylor series can be defined on $\abs{z-i} < 1$ and a Laurent series can be defined on $\abs{z-i} > 1$ 
+
+### Taylor Series
+
+Substituting $w = z - i$,
+
+$$
+\frac{1}{z^2} 
+= \frac{1}{(i + w)^2} \\
+= \frac{1}{i^2 (1 - iw)^2} \\
+= \frac{-1}{(1 - iw)^2} \\
+$$
+
+The Taylors series of $-(1 - iw)^{-2}$ is
+
+$$
+\begin{aligned}
+\parens{1 + z}^{-m} &= \infsum \begin{pmatrix} -m \\ n \end{pmatrix} z^n \\
+-\parens{1 - iw}^{-2} &= -\infsum \begin{pmatrix} -2 \\ n \end{pmatrix} (-iw)^n \\
+\end{aligned}
+$$
+
+Substituting $z = w + i$,
+
+$$
+\boxed{\frac{1}{z^2} = -\infsum \begin{pmatrix} -2 \\ n \end{pmatrix} (-i)^n (z-i)^n}
+$$
+
+### Laurent Series
+
+Substituting $w = z - i$ and rearranging for the Laurent series,
+
+$$
+\frac{1}{z^2}
+= \frac{1}{(w + i)^2} \\
+= \frac{1}{w^2 (1 + \frac{i}{w})^2} \\
+= \frac{1}{w^2} \cdot \frac{1}{(1 + \frac{i}{w})^2} \\
+$$
+
+The Taylor series of $(1 + \frac{i}{w})^{-2}$
+
+$$
+\begin{aligned}
+\parens{1 + z}^{-m} &= \infsum \begin{pmatrix} -m \\ n \end{pmatrix} z^n \\
+\parens{1 - iw}^{-2} &= \infsum \begin{pmatrix} -2 \\ n \end{pmatrix} \parens{\frac{i}{w}}^n \\
+\end{aligned}
+$$
+
+Dividing by $w^2$,
+
+$$
+\frac{1}{w^2 (w + i)^2}
+= \infsum \begin{pmatrix} -2 \\ n \end{pmatrix} \frac{i^n}{w^{n+2}}
+$$
+
+Substituting $z = w + i$,
+
+$$
+\boxed{
+\frac{1}{z^2} 
+\infsum \begin{pmatrix} -2 \\ n \end{pmatrix} \frac{i^n}{\parens{z - i}^{n+2}}
+}
+$$
 
 \newpage
 # Problem 16.1.23
