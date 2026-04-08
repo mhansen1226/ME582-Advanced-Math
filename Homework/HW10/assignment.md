@@ -269,6 +269,35 @@ $$
 
 ## Solution
 
+$\frac{z^8}{1 - z^4}$ is singular at $z = \pm 1, \pm i$, therefore a Taylor series can be defined on $\abs{z} < 1$ and a Laurent series can be defined on $\abs{z} > 1$ 
+
+### Taylor Series
+
+$$
+\frac{1}{1 - z^4}
+= \infsum z^{4n}
+$$
+
+$$
+\boxed{
+\frac{z^8}{1 - z^4}
+= \infsum z^{4n + 8}
+}
+$$
+
+### Laurent Series
+
+$$
+\frac{1}{1 - z^4} = \frac{-z^4}{1 - z^{-4}} = -z^4 \infsum z^{-4n}
+$$
+
+$$
+\boxed{
+\frac{z^8}{1 - z^4}
+= \infsum z^{4-4n}
+}
+$$
+
 \newpage
 # Problem 16.2.1
 
