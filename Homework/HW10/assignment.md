@@ -309,6 +309,18 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+&\sin^4 \frac{1}{2} z = 0 \\
+&\implies
+\sin \frac{1}{2} z = 0 \\
+&\implies 
+\frac{1}{2} z = n \pi \\
+&\implies
+\boxed{z = 2 n \pi, \quad n \in \mathbb{Z} \text{ with order 4}}
+\end{aligned}
+$$
+
 \newpage
 # Problem 16.2.3
 
