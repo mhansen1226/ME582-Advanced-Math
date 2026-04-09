@@ -17,6 +17,7 @@ header-includes: |
   \DeclareMathOperator{\curl}{\nabla \times}
   \DeclareMathOperator{\laplacian}{\Delta}
   \DeclareMathOperator{\Ln}{\operatorname{Ln}}
+  \DeclareMathOperator*{\Res}{Res}
   \renewcommand{\Re}{\operatorname{Re}}
   \renewcommand{\Im}{\operatorname{Im}}
   \newcommand{\pder}[2][]{\frac{\partial #1}{\partial #2}}
@@ -576,6 +577,10 @@ z-1 = 0
 \boxed{z = 1}
 $$
 
+$$
+\boxed{z = \infty}
+$$
+
 Simple pole:
 
 $$
@@ -594,6 +599,22 @@ $$
 $$
 
 ## Solution
+
+Pole at $\boxed{z=0}$ (order 5)
+
+The Laurent series is 
+
+$$
+\frac{\sin 2z}{z^6}
+= \frac{1}{z^6} \infsum \frac{(-1)^n}{(2n+1)!} (2z)^{2n+1}
+= \infsum \frac{(-1)^n 2^{2n+1}}{(2n+1)!} z^{2n-5}
+$$
+
+The residue is the coefficient of the $z^{-1}$ term, when $2n-5 = -1 \implies n = 2$:
+
+$$
+a_2 = \Res_{z=0} f(z) = \frac{2^5}{5!} = \boxed{\frac{4}{15}}
+$$
 
 \newpage
 # Problem 16.3.5
