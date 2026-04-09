@@ -627,6 +627,16 @@ $$
 
 ## Solution
 
+Simple poles at $\boxed{z = \pm i}$
+
+$$
+\Res_{z=z_0} f(z) = \frac{8}{2z} = \frac{4}{z}
+$$
+
+$$
+\boxed{\Res_{z= \pm i} f(z) = \mp 4i}
+$$
+
 \newpage
 # Problem 16.3.7
 
@@ -638,6 +648,20 @@ $$
 
 ## Solution
 
+$$
+f(z) = \cot \pi z = \frac{\cos \pi z}{\sin \pi z}
+$$
+
+Simple poles at $\boxed{z = n, \ n \in \mathbb{Z}}$
+
+$$
+\Res_{z=z_0} f(z) = \frac{\cos \pi z}{\pi \cos \pi z}
+$$
+
+$$
+\boxed{\Res_{z=n} f(z) = \frac{1}{\pi}}
+$$
+
 \newpage
 # Problem 16.3.9
 
@@ -648,6 +672,16 @@ $$
 $$
 
 ## Solution
+
+Simple poles at $\boxed{z = 2 n \pi i, \quad n \in \mathbb{Z}}$ (see 16.2.19)
+
+$$
+\Res_{z=z_0} f(z) = \frac{1}{-e^z}
+$$
+
+$$
+\boxed{\Res_{z=2 n \pi i} f(z) = -1}
+$$
 
 \newpage
 # Problem 16.3.11
