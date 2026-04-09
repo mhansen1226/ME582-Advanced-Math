@@ -24,6 +24,7 @@ header-includes: |
   \newcommand{\pdder}[2][]{\frac{\partial^2 #1}{\partial #2^2}}
   \newcommand{\parens}[1]{\left( #1 \right)}
   \newcommand{\brackets}[1]{\left[ #1 \right]}
+  \newcommand{\braces}[1]{\left\{ #1 \right\}}
   \newcommand{\abs}[1]{\left| #1 \right|}
   \newcommand{\mat}[1]{\mathbf{#1}}
   \renewcommand{\vec}[1]{\mathbf{#1}}
@@ -693,3 +694,12 @@ $$
 $$
 
 ## Solution
+
+Pole of order 3 at $\boxed{z = \pi i}$
+
+$$
+\Res_{z=\pi i} f(z) 
+= \frac{1}{2!} \lim_{z \to \pi i} \braces{\frac{d^2}{dz^2} (z - \pi i)^3 f(z)}
+= \frac{1}{2} \lim_{z \to \pi i} e^z
+= \boxed{-\frac{1}{2}}
+$$
