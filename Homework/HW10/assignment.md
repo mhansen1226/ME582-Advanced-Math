@@ -568,7 +568,21 @@ $$
 
 ## Solution
 
+Essential singularity:
 
+$$
+z-1 = 0
+\implies
+\boxed{z = 1}
+$$
+
+Simple pole:
+
+$$
+e^z - 1 = 0
+\implies
+\boxed{z = 2 n \pi i, \quad n \in \mathbb{Z}}
+$$
 
 \newpage
 # Problem 16.3.3
