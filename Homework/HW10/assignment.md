@@ -520,6 +520,16 @@ $$
 
 ## Solution
 
+Poles with order 4:
+
+$$
+\cot^4 z = \frac{\cos^4 z}{\sin^4 z}
+\implies
+\boxed{z = n \pi \quad n \in \mathbb{Z}}
+$$
+
+There is no isolated pole at $\infty$
+
 \newpage
 # Problem 16.2.19
 
