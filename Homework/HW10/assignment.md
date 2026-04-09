@@ -528,7 +528,7 @@ $$
 \boxed{z = n \pi \quad n \in \mathbb{Z}}
 $$
 
-There is no isolated pole at $\infty$
+Essential singularity at $\infty$
 
 \newpage
 # Problem 16.2.19
@@ -541,6 +541,22 @@ $$
 
 ## Solution
 
+$$
+e^z - e^{2z} = 0
+\implies (1 - e^z) = 0
+\implies \boxed{z = 2 n \pi i, \quad n \in \mathbb{Z}}
+$$
+
+$$
+f'(z) = e^z - 2 e^{2z}
+\qquad
+f'(2 n \pi i) = -1
+$$
+
+Therefore these are simple poles.
+
+Essential singularity at $\infty$.
+
 \newpage
 # Problem 16.2.21
 
@@ -551,6 +567,8 @@ $$
 $$
 
 ## Solution
+
+
 
 \newpage
 # Problem 16.3.3
