@@ -442,6 +442,42 @@ $$
 
 ## Solution
 
+Poles with order 2: 
+
+$$
+\parens{z + 2i}^2
+\implies
+\boxed{z = -2i}
+$$
+
+$$
+\parens{z - i}^2
+\implies
+\boxed{z = i}
+$$
+
+Looking at $\infty$,
+
+$$
+\begin{aligned}
+f(z) = f(1/w) 
+&= \frac{1}{\parens{\frac{1}{w} + 2i}^2} 
+    - \frac{\frac{1}{w}}{\frac{1}{w} - i} 
+    + \frac{\frac{1}{w} + 1}{\parens{\frac{1}{w} - i}^2} \\
+&= \frac{w^2}{\parens{1 + 2iw}^2} 
+    - \frac{1}{1 - iw} 
+    + \frac{w (1 + w)}{\parens{1 - iw}^2} \\
+\end{aligned}
+$$
+
+As $z \to \infty$ or $w \to 0$,
+
+$$
+f \to 0 - 1 + 0 = -1
+$$
+
+Therefore the function is bounded at $\infty$.
+
 \newpage
 # Problem 16.2.15
 
@@ -452,6 +488,10 @@ z \exp \parens{\frac{1}{\parens{z - 1 - i}^2}}
 $$
 
 ## Solution
+
+The singularity occurs when the denominator of the exponential goes to zero,
+
+$$z = 1 + i$$
 
 \newpage
 # Problem 16.2.17
