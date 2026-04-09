@@ -489,9 +489,25 @@ $$
 
 ## Solution
 
-The singularity occurs when the denominator of the exponential goes to zero,
+Essential singularity: 
 
-$$z = 1 + i$$
+$$
+\parens{z - 1 - i}^2
+\implies
+\boxed{z = 1 + i}
+$$
+
+Looking at $\infty$,
+
+$$
+\begin{aligned}
+f(z) = f(1/w) 
+&= \frac{1}{w} \exp \parens{\frac{1}{\parens{\frac{1}{w} - 1 - i}^2}} \\
+&= \frac{1}{w} \exp \parens{\frac{w^2}{\parens{1 - w - iw}^2}} \\
+\end{aligned}
+$$
+
+As $z \to \infty$ or $w \to 0$ there is a simple pole.
 
 \newpage
 # Problem 16.2.17
