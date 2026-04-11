@@ -69,3 +69,10 @@ plot_poles(
     radius=4.5,
     save_name="16.3.17",
 )
+plot_poles(
+    pole_func=lambda n: 1j / 2,
+    n_range=range(1),
+    center=2j,
+    radius=2,
+    save_name="16.3.19",
+)

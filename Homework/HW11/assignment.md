@@ -54,7 +54,7 @@ $$
 
 Only $z_0 = \frac{1}{4}$ lies in $C$,
 
-![Poles](images/16.3.15.svg){width=1.5in}
+![Poles](images/16.3.15.svg){width=2in}
 
 $$
 \Res_{z = z_0} f(z) 
@@ -92,7 +92,7 @@ $$
 
 Poles at $z_{1,2} = \pm \frac{\pi}{2}$ lie within the region,
 
-![Poles](images/16.3.17.svg){width=1.5in}
+![Poles](images/16.3.17.svg){width=2in}
 
 $$
 \Res_{z = z_0} f(z) 
@@ -132,7 +132,36 @@ $$
 
 ## Solution
 
+The function $f(z) = \frac{\sinh z}{2z - i}$ has simple poles at
 
+$$
+2z - i = 0
+\implies z = \frac{i}{2}
+$$
+
+The pole at $z_0 = \frac{i}{2}$ lies within the region,
+
+![Poles](images/16.3.19.svg){width=2in}
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{p(z_0)}{q'(z_0)}
+= \frac{1}{2} \sinh z_0
+$$
+
+$$
+\Res_{z = \frac{i}{2}} f(z) 
+= \frac{1}{2} \sinh \frac{i}{2}
+= \frac{i}{2} \sin \frac{1}{2}
+$$
+
+The integral is then in the form, $$\oint_C f(z) \ dz = 2 \pi i \Res_{z = z_0} f(z)$$
+
+$$
+\oint_C \frac{\sinh z}{2z - i} \ dz
+= 2 \pi i \parens{\frac{i}{2} \sin \frac{1}{2}}
+= \boxed{-\pi \sin \frac{i}{2}}
+$$
 
 \newpage
 # Problem 16.3.21
