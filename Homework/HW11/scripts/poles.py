@@ -1,4 +1,4 @@
-from typing import Callable
+from typing import Callable, Iterable
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -6,7 +6,7 @@ import numpy as np
 
 def plot_poles(
     pole_func: Callable[[int], complex],
-    n_range: range,
+    n_range: Iterable[int],
     center: complex,
     radius: float,
     save_name: str,
@@ -71,8 +71,15 @@ plot_poles(
 )
 plot_poles(
     pole_func=lambda n: 1j / 2,
-    n_range=range(1),
+    n_range=[0],
     center=2j,
     radius=2,
     save_name="16.3.19",
+)
+plot_poles(
+    pole_func=lambda n: 0,
+    n_range=range(1),
+    center=0 + 0j,
+    radius=1 / 2,
+    save_name="16.3.21",
 )

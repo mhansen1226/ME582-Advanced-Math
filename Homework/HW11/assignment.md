@@ -175,7 +175,32 @@ $$
 
 ## Solution
 
+The function $f(z) = \frac{\cos \pi z}{z^5}$ has a 5th-order pole at
 
+$$
+z^5 = 0
+\implies z = 0
+$$
+
+The pole at $z_0 = 0$ lies within the region,
+
+![Poles](images/16.3.21.svg){width=2in}
+
+$$
+\Res_{z = 0} f(z) 
+= \frac{1}{4!} \lim_{z \to 0} \braces{\frac{d^4}{dz^4} \brackets{z^4 f(z)}}
+= \frac{1}{24} \frac{d^4}{dz^4} \brackets{\cos \pi z}\Big|_{z=0}
+= \frac{\pi^4}{24} \cos \pi z\Big|_{z=0}
+= \frac{\pi^4}{24}
+$$
+
+The integral is then in the form, $$\oint_C f(z) \ dz = 2 \pi i \Res_{z = z_0} f(z)$$
+
+$$
+\oint_C \frac{\cos \pi z}{z^5} \ dz
+= 2 \pi i \parens{\frac{\pi^4}{24}}
+= \boxed{\frac{i \pi^5}{12}}
+$$
 
 \newpage
 # Problem 16.4.1
