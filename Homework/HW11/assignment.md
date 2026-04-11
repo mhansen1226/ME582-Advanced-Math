@@ -49,13 +49,18 @@ The function $f(z) = \tan 2 \pi z = \frac{\sin 2 \pi z}{\cos 2 \pi z}$ has simpl
 $$
 \cos 2 \pi z = 0
 \implies 2 \pi z = \frac{\pi}{2} + n\pi
-\implies z = \frac{1}{4} + \frac{n}{4}, \ n \in \mathbb{Z}
+\implies z = \frac{1}{4} + \frac{n}{2}, \ n \in \mathbb{Z}
 $$
 
 Only $z_0 = \frac{1}{4}$ lies in $C$,
 
+![Poles](images/16.3.15.svg){width=1.5in}
+
 $$
-\Res_{z = z_0} f(z) = \frac{\sin 2 \pi z}{-2 \pi\sin 2 \pi z} = -\frac{1}{2 \pi}
+\Res_{z = z_0} f(z) 
+= \frac{p(z_0)}{q'(z_0)} 
+= \frac{\sin 2 \pi z}{-2 \pi\sin 2 \pi z} 
+= -\frac{1}{2 \pi}
 $$
 
 The integral is then in the form, $$\oint_C f(z) \ dz = 2 \pi i \Res_{z = z_0} f(z)$$
@@ -78,7 +83,42 @@ $$
 
 ## Solution
 
+The function $f(z) = \frac{e^z}{\cos z}$ has simple poles at
 
+$$
+\cos z = 0
+\implies z = \frac{\pi}{2} + n\pi, \ n \in \mathbb{Z}
+$$
+
+Poles at $z_{1,2} = \pm \frac{\pi}{2}$ lie within the region,
+
+![Poles](images/16.3.17.svg){width=1.5in}
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{p(z_0)}{q'(z_0)} 
+= -\frac{e^{z_0}}{\sin z_0}
+$$
+
+$$
+\Res_{z = \frac{\pi}{2}} f(z)
+= -\frac{e^{\frac{\pi}{2}}}{\sin \frac{\pi}{2}}
+= -e^{\frac{\pi}{2}}
+$$
+
+$$
+\Res_{z = -\frac{\pi}{2}} f(z)
+= -\frac{e^{-\frac{\pi}{2}}}{\sin -\frac{\pi}{2}}
+= e^{-\frac{\pi}{2}}
+$$
+
+The integral is then in the form, $$\oint_C f(z) \ dz = 2 \pi i \sum_{j=1}^{k} \Res_{z = z_j} f(z)$$
+
+$$
+\oint_C \frac{e^z}{\cos z} \ dz
+= 2 \pi i \parens{-e^{\frac{\pi}{2}} + e^{-\frac{\pi}{2}}}
+= \boxed{-4 \pi i \sinh \parens{\frac{\pi}{2}}}
+$$
 
 \newpage
 # Problem 16.3.19
