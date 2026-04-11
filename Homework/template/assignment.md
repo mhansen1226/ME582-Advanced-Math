@@ -17,14 +17,19 @@ header-includes: |
   \DeclareMathOperator{\curl}{\nabla \times}
   \DeclareMathOperator{\laplacian}{\Delta}
   \DeclareMathOperator{\Ln}{\operatorname{Ln}}
+  \DeclareMathOperator*{\Res}{Res}
   \renewcommand{\Re}{\operatorname{Re}}
   \renewcommand{\Im}{\operatorname{Im}}
   \newcommand{\pder}[2][]{\frac{\partial #1}{\partial #2}}
   \newcommand{\pdder}[2][]{\frac{\partial^2 #1}{\partial #2^2}}
   \newcommand{\parens}[1]{\left( #1 \right)}
   \newcommand{\brackets}[1]{\left[ #1 \right]}
+  \newcommand{\braces}[1]{\left\{ #1 \right\}}
+  \newcommand{\abs}[1]{\left| #1 \right|}
   \newcommand{\mat}[1]{\mathbf{#1}}
   \renewcommand{\vec}[1]{\mathbf{#1}}
+  \newcommand{\infsum}[1][0]{\sum_{n=#1}^\infty}
+  \newcommand{\inflim}{\lim_{n \to \infty}}
 ---
 
 # Problem X.X.X
