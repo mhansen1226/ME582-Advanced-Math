@@ -218,7 +218,7 @@ The integral can be converted to a complex integral by substituting $z = e^{i\th
 $$
 \int_0^\pi \frac{2}{k - \cos \theta} \ d\theta
 = \int_0^{2\pi} \frac{1}{k - \cos \theta} \ d\theta
-= \oint_C \frac{2}{k - \frac{1}{2} \parens{z + \frac{1}{z}}} \ \frac{dz}{iz}
+= \oint_C \frac{1}{k - \frac{1}{2} \parens{z + \frac{1}{z}}} \ \frac{dz}{iz}
 = 2i \oint_C \frac{1}{z^2 - 2kz + 1} \ dz
 $$
 
@@ -276,7 +276,58 @@ $$
 
 ## Solution
 
+The integral can be converted to a complex integral by substituting $z = e^{i\theta}$
 
+$$
+\int_0^{2\pi} \frac{a}{a - \sin \theta} \ d\theta
+= \oint_C \frac{a}{a - \frac{1}{2i} \parens{z - \frac{1}{z}}} \ \frac{dz}{iz}
+= -2a \oint_C \frac{1}{z^2 - 2aiz - 1} \ dz
+$$
+
+Where $C$ is the the unit circle in the complex plane.
+
+$f(z) = \frac{1}{z^2 - 2aiz - 1}$ has simple poles where
+
+$$
+z^2 - 2aiz - 1 = 0
+\implies z = \frac{2ai \pm \sqrt{-4a^2 + 4}}{2} = ai \pm \sqrt{1 - a^2}
+$$
+
+Assuming $a > 1$
+
+$$
+z_1 = \parens{a - \sqrt{a^2 - 1}}i
+\quad
+z_2 = \parens{a + \sqrt{a^2 - 1}}i
+$$
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{1}{2 z_0 - 2ai}
+= \frac{1}{2 (z_0 - ai)}
+$$
+
+$$
+\Res_{z = z_{1,2}} f(z) 
+= \frac{1}{2 (\parens{a \pm \sqrt{a^2 - 1}}i - ai)}
+= \pm \frac{1}{2i \sqrt{a^2 - 1}}
+$$
+
+Only $z_1$ lies within $C$,
+
+![Poles (e.g. $a=1.1$)](images/16.4.7.svg){width=2in}
+
+$$
+\begin{aligned}
+\oint_C f(z) \ dz 
+    &= 2 \pi i \Res_{z = z_0} f(z) \\
+\oint_C \frac{1}{z^2 - 2kz + 1} &= 2 \pi i \parens{-\frac{1}{2i \sqrt{a^2 - 1}}}
+    &= - \frac{\pi}{\sqrt{a^2 - 1}} \\
+\int_0^{2\pi} \frac{a}{a - \sin \theta} \ d\theta
+    &= -2a \parens{- \frac{\pi}{\sqrt{a^2 - 1}}} \\
+    &= \boxed{\frac{2 a \pi}{\sqrt{a^2 - 1}}} \\
+\end{aligned}
+$$
 
 \newpage
 # Problem 16.4.9
