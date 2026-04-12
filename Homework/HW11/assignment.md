@@ -213,7 +213,57 @@ $$
 
 ## Solution
 
+The integral can be converted to a complex integral by substituting $z = e^{i\theta}$
 
+$$
+\int_0^\pi \frac{2}{k - \cos \theta} \ d\theta
+= \int_0^{2\pi} \frac{1}{k - \cos \theta} \ d\theta
+= \oint_C \frac{2}{k - \frac{1}{2} \parens{z + \frac{1}{z}}} \ \frac{dz}{iz}
+= 2i \oint_C \frac{1}{z^2 - 2kz + 1} \ dz
+$$
+
+Where $C$ is the the unit circle in the complex plane.
+
+$f(z) = \frac{1}{z^2 - 2kz + 1}$ has simple poles where
+
+$$
+z^2 - 2kz + 1 = 0
+\implies z = \frac{2k \pm \sqrt{4k^2 - 4}}{2} = k \pm \sqrt{k^2 - 1}
+$$
+
+$$
+z_1 = k - \sqrt{k^2 - 1}
+\quad
+z_2 = k + \sqrt{k^2 - 1}
+$$
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{1}{2 z_0 - 2 k}
+= \frac{1}{2 (z_0 - k)}
+$$
+
+$$
+\Res_{z = z_{1,2}} f(z) 
+= \frac{1}{2 (k \pm \sqrt{k^2 - 1} - k)}
+= \pm \frac{1}{2\sqrt{k^2 - 1}}
+$$
+
+Assuming $k > 1$, only $z_1$ lies within $C$,
+
+![Poles (e.g. $k=1.1$)](images/16.4.1.svg){width=2in}
+
+$$
+\begin{aligned}
+\oint_C f(z) \ dz 
+    &= 2 \pi i \Res_{z = z_0} f(z) \\
+\oint_C \frac{1}{z^2 - 2kz + 1} &= 2 \pi i \parens{- \frac{1}{2\sqrt{k^2 - 1}}}
+    &= - \frac{\pi i}{\sqrt{k^2 - 1}} \\
+\int_0^\pi \frac{2}{k - \cos \theta} \ d\theta 
+    &= 2i \parens{- \frac{\pi i}{\sqrt{k^2 - 1}}} \\
+    &= \boxed{\frac{2 \pi}{\sqrt{k^2 - 1}}} \\
+\end{aligned}
+$$
 
 \newpage
 # Problem 16.4.7
