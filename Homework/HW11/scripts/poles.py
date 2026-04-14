@@ -64,7 +64,7 @@ def plot_poles(
     ax.set_xlabel(r"Re($z$)")
     ax.set_ylabel(r"Im($z$)")
 
-    ax.plot(boundary.real, boundary.imag, "b-", label=f"$C$ ({plane})")
+    ax.plot(boundary.real, boundary.imag, "b-", label=f"$C$")
     ax.fill(boundary.real, boundary.imag, "b", alpha=0.1)
     ax.plot(center.real, center.imag, "b.", markersize=4)
 
@@ -154,4 +154,13 @@ plot_poles(
     center=0 + 0j,
     radius=1,
     save_name="16.4.7",
+)
+
+
+plot_poles(
+    pole_func=lambda n: [2 / 3, -2 / 3, 3 / 2, -3 / 2][n],
+    n_range=range(4),
+    center=0 + 0j,
+    radius=1,
+    save_name="16.4.9",
 )

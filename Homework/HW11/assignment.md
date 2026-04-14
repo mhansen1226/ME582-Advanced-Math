@@ -218,7 +218,7 @@ The integral can be converted to a complex integral by substituting $z = e^{i\th
 $$
 \int_0^\pi \frac{2}{k - \cos \theta} \ d\theta
 = \int_0^{2\pi} \frac{1}{k - \cos \theta} \ d\theta
-= \oint_C \frac{1}{k - \frac{1}{2} \parens{z + \frac{1}{z}}} \ \frac{dz}{iz}
+= \oint_C \frac{1}{k - \frac{1}{2} \parens{z + z^{-1}}} \ \frac{dz}{iz}
 = 2i \oint_C \frac{1}{z^2 - 2kz + 1} \ dz
 $$
 
@@ -280,7 +280,7 @@ The integral can be converted to a complex integral by substituting $z = e^{i\th
 
 $$
 \int_0^{2\pi} \frac{a}{a - \sin \theta} \ d\theta
-= \oint_C \frac{a}{a - \frac{1}{2i} \parens{z - \frac{1}{z}}} \ \frac{dz}{iz}
+= \oint_C \frac{a}{a - \frac{1}{2i} \parens{z - z^{-1}}} \ \frac{dz}{iz}
 = -2a \oint_C \frac{1}{z^2 - 2aiz - 1} \ dz
 $$
 
@@ -340,7 +340,63 @@ $$
 
 ## Solution
 
+The integral can be converted to a complex integral by substituting $z = e^{i\theta}$
 
+$$
+\begin{aligned}
+\int_0^{2\pi} \frac{\cos \theta}{13 - 12 \cos 2\theta} \ d\theta
+&= \oint_C \frac{\frac{1}{2} \parens{z + z^{-1}}}{13 - 12 \parens{\frac{1}{2} \parens{z^2 + z^{-2}}}} \ \frac{dz}{iz}
+&= \oint_C \frac{z^2 + 1}{2z} \cdot \frac{z^2}{-6z^4 + 13z^2 - 6} \cdot \frac{dz}{iz}
+&= \frac{i}{2} \oint_C \frac{z(z^2 + 1)}{6z^4 - 13z^2 + 6} \ dz
+\end{aligned}
+$$
+
+Where $C$ is the the unit circle in the complex plane.
+
+$f(z) = \frac{z(z^2 + 1)}{6z^4 - 13z^2 + 6}$ has simple poles where
+
+$$
+6z^4 - 13z^2 + 6 = 0
+\implies z^2 = \frac{13 \pm \sqrt{169 -144}}{6} = \frac{13 \pm 5}{12}
+\implies z = \pm \sqrt{\frac{2}{3}}, \ \pm \sqrt{\frac{3}{2}}
+$$
+
+$$
+z_1 = -\sqrt{\frac{2}{3}} \quad
+z_2 = \sqrt{\frac{2}{3}} \quad
+z_3 = -\sqrt{\frac{3}{2}} \quad
+z_4 = \sqrt{\frac{3}{2}}
+$$
+
+Only $z_1$ and $z_2$ lie within $C$,
+
+![Poles](images/16.4.9.svg){width=2in}
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{z_0(z_0^2 + 1)}{24z_0^3 - 26z_0}
+= \frac{z_0^2 + 1}{24z_0^2 - 26}
+$$
+
+$$
+\Res_{z = z_{1,2}} f(z) 
+= \frac{\parens{\pm \sqrt{\frac{2}{3}}}^2 + 1}{24\parens{\pm \sqrt{\frac{2}{3}}}^2 - 26}
+= - \frac{1}{6}
+$$
+
+The integral is then in the form, $$\oint_C f(z) \ dz = 2 \pi i \sum_{j=1}^{k} \Res_{z = z_j} f(z)$$
+
+$$
+\oint_C \frac{z(z^2 + 1)}{6z^4 - 13z^2 + 6}
+= 2 \pi i \parens{-\frac{1}{6} - \frac{1}{6}}
+= -\frac{2 \pi i}{3}
+$$
+
+$$
+\int_0^{2\pi} \frac{\cos \theta}{13 - 12 \cos 2\theta} \ d\theta
+= \frac{i}{2} \parens{-\frac{2 \pi i}{3}}
+= \boxed{\frac{\pi}{3}}
+$$
 
 \newpage
 # Problem 16.4.11
