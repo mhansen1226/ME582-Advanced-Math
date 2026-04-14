@@ -164,3 +164,12 @@ plot_poles(
     radius=1,
     save_name="16.4.9",
 )
+
+plot_poles(
+    pole_func=lambda n: 1j * n,
+    n_range=[-1, 1],
+    center=0 + 0j,
+    radius=1.5,
+    plane="upper",
+    save_name="16.4.11",
+)

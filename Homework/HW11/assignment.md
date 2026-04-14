@@ -409,7 +409,37 @@ $$
 
 ## Solution
 
+$$
+\infint f(x) \ dx = 2 \pi i \sum \Res f(z)
+$$
 
+$f(z) = \frac{1}{\parens{1 + z^2}^2}$ has second order poles where
+
+$$
+\parens{1 + z^2}^2 = 0
+\implies z = \pm i
+$$
+
+Only $z = i$ lies in the upper half contour.
+
+![Poles](images/16.4.11.svg){width=2in}
+
+$$
+\begin{aligned}
+\Res_{z = i} f(z) 
+&= \lim_{z \to i} \braces{\frac{d}{dz} \brackets{\frac{\parens{z - i}^2}{\parens{1 + z^2}^2}}} \\
+&= \lim_{z \to i} \braces{\frac{d}{dz} \brackets{\frac{\parens{z - i}^2}{\parens{z - i}^2 \parens{z + i}^2}}} \\
+&= \lim_{z \to i} \frac{d}{dz} \frac{1}{\parens{z + i}^2} \\
+&= \lim_{z \to i} \frac{-2}{\parens{z + i}^3} \\
+&= -\frac{i}{4} \\
+\end{aligned}
+$$
+
+$$
+\infint \frac{1}{\parens{1 + x^2}^2} \ dx
+= 2 \pi i \parens{-\frac{i}{4}}
+= \boxed{\frac{\pi}{2}}
+$$
 
 \newpage
 # Problem 16.4.15
