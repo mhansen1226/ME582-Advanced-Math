@@ -469,8 +469,8 @@ Only $z_1$, $z_2$, and $z_3$ lie in the upper half contour.
 
 $$
 \Res_{z = z_0} f(z) 
-= \frac{z^2}{6z^5}
-= \frac{1}{6z^3}
+= \frac{z_0^2}{6z_0^5}
+= \frac{1}{6z_0^3}
 $$
 
 $$
@@ -505,7 +505,12 @@ $$
 
 ## Solution
 
-
+$$
+\infint \frac{\sin 3x}{x^4 + 1} \ dx
+= \infint \frac{ODD}{EVEN}
+= \infint ODD
+= \boxed{0}
+$$
 
 \newpage
 # Problem 16.4.19
