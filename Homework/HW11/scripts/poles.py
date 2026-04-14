@@ -60,7 +60,7 @@ def plot_poles(
     poles_inside, poles_outside = filter_poles(all_poles, center, radius, plane)
     boundary = get_contour_points(center, radius, plane)
 
-    fig, ax = plt.subplots(constrained_layout=True)
+    fig, ax = plt.subplots(figsize=(4, 3), constrained_layout=True)
     ax.set_xlabel(r"Re($z$)")
     ax.set_ylabel(r"Im($z$)")
 
@@ -91,7 +91,7 @@ def plot_poles(
     ax.axhline(0, color="black", lw=0.8)
     ax.axvline(0, color="black", lw=0.8)
     ax.grid(True, linestyle=":", alpha=0.6)
-    ax.legend(frameon=True, loc="upper right", fontsize="small")
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.05), ncol=3, fontsize="small")
     ax.set_aspect("equal", adjustable="datalim")
 
     # Export Logic
@@ -172,4 +172,13 @@ plot_poles(
     radius=1.5,
     plane="upper",
     save_name="16.4.11",
+)
+
+plot_poles(
+    pole_func=lambda n: np.exp(1j * np.pi / 6 * (1 + 2 * n)),
+    n_range=range(6),
+    center=0 + 0j,
+    radius=1.5,
+    plane="upper",
+    save_name="16.4.15",
 )

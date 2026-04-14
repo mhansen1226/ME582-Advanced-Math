@@ -54,7 +54,7 @@ $$
 
 Only $z_0 = \frac{1}{4}$ lies in $C$,
 
-![Poles](images/16.3.15.svg){width=2in}
+![Poles](images/16.3.15.svg)
 
 $$
 \Res_{z = z_0} f(z) 
@@ -92,7 +92,7 @@ $$
 
 Poles at $z_{1,2} = \pm \frac{\pi}{2}$ lie within the region,
 
-![Poles](images/16.3.17.svg){width=2in}
+![Poles](images/16.3.17.svg)
 
 $$
 \Res_{z = z_0} f(z) 
@@ -141,7 +141,7 @@ $$
 
 The pole at $z_0 = \frac{i}{2}$ lies within the region,
 
-![Poles](images/16.3.19.svg){width=2in}
+![Poles](images/16.3.19.svg)
 
 $$
 \Res_{z = z_0} f(z) 
@@ -184,7 +184,7 @@ $$
 
 The pole at $z_0 = 0$ lies within the region,
 
-![Poles](images/16.3.21.svg){width=2in}
+![Poles](images/16.3.21.svg)
 
 $$
 \Res_{z = 0} f(z) 
@@ -251,7 +251,7 @@ $$
 
 Assuming $k > 1$, only $z_1$ lies within $C$,
 
-![Poles (e.g. $k=1.1$)](images/16.4.1.svg){width=2in}
+![Poles (e.g. $k=1.1$)](images/16.4.1.svg)
 
 $$
 \begin{aligned}
@@ -315,7 +315,7 @@ $$
 
 Only $z_1$ lies within $C$,
 
-![Poles (e.g. $a=1.1$)](images/16.4.7.svg){width=2in}
+![Poles (e.g. $a=1.1$)](images/16.4.7.svg)
 
 $$
 \begin{aligned}
@@ -370,7 +370,7 @@ $$
 
 Only $z_1$ and $z_2$ lie within $C$,
 
-![Poles](images/16.4.9.svg){width=2in}
+![Poles](images/16.4.9.svg)
 
 $$
 \Res_{z = z_0} f(z) 
@@ -422,7 +422,7 @@ $$
 
 Only $z = i$ lies in the upper half contour.
 
-![Poles](images/16.4.11.svg){width=2in}
+![Poles](images/16.4.11.svg)
 
 $$
 \begin{aligned}
@@ -452,7 +452,47 @@ $$
 
 ## Solution
 
+$$
+\infint f(x) \ dx = 2 \pi i \sum \Res f(z)
+$$
 
+$f(z) = \frac{z^2}{z^6 + 1}$ has simple poles where
+
+$$
+z^6 + 1 = 0
+\implies z_n = \exp \braces{\frac{i\pi}{6}(1+2n)}, \text{ for } n = 0, 1, 2, 3, 4, 5
+$$
+
+Only $z_1$, $z_2$, and $z_3$ lie in the upper half contour.
+
+![Poles](images/16.4.15.svg)
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{z^2}{6z^5}
+= \frac{1}{6z^3}
+$$
+
+$$
+\Res_{z = z_n} f(z) 
+= \frac{1}{6 \exp \braces{\frac{i\pi}{6}(1+2n)}^3}
+= \frac{1}{6} \exp \braces{-\frac{i\pi}{2}(1+2n)}
+$$
+
+$$
+\Res_{z = z_0} f(z) = -\frac{i}{6}
+\quad
+\Res_{z = z_1} f(z) = \frac{i}{6}
+\quad
+\Res_{z = z_2} f(z) = -\frac{i}{6}
+$$
+
+$$
+\infint \frac{x^2}{x^6 + 1} \ dx 
+= 2 \pi i \parens{-\frac{i}{6} + \frac{i}{6} - \frac{i}{6}}
+= 2 \pi i \parens{-\frac{i}{6}}
+= \boxed{\frac{\pi}{3}}
+$$
 
 \newpage
 # Problem 16.4.17
