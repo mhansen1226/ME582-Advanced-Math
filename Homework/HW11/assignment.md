@@ -31,6 +31,7 @@ header-includes: |
   \newcommand{\infsum}[1][0]{\sum_{n=#1}^\infty}
   \newcommand{\inflim}{\lim_{n \to \infty}}
   \newcommand{\infint}{\int_{-\infty}^{\infty}}
+  \newcommand{\pv}{\text{pr. v. }}
 ---
 
 # Problem 16.3.15
@@ -568,7 +569,58 @@ $$
 
 ## Solution
 
+$$
+\infint f(x) \sin x \ dx = -2 \pi \sum \Im \Res \brackets{f(z) e^{iz}}
+$$
 
+$f(z) e^{iz} = \frac{e^{iz}}{\parens{z - 1} \parens{z^2 + 4}}$ has simple poles where
+
+$$
+z - 1 = 0
+\implies z_1 = 1
+$$
+$$
+z^2 + 4 = 0
+\implies z_{2,3} = \pm 2i
+$$
+
+$z_1 = 1$ lies on the real axis, $z_2 = 2i$ lies in the upper half plane.
+
+![Poles](images/16.4.21.svg)
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{e^{iz_0}}{\parens{\parens{z_0 - 1} \parens{z_0^2 + 4}}'}
+= \frac{e^{iz_0}}{\parens{z_0^3 - z_0^2 + 4z_0 - 4}'}
+= \frac{e^{iz_0}}{3z_0^2 - 2z_0 + 4}
+$$
+
+$$
+\Res_{z = 1} f(z) = \frac{e^i}{5}
+$$
+
+$$
+\Res_{z = 2i} f(z) = \frac{e^{-2}}{-4 (2+i)} = \frac{e^{-2} (i-2)}{20}
+$$
+
+$$
+\begin{aligned}
+\infint f(z) e^{iz} \ dz
+&= 2 \pi i \parens{\frac{e^{-2} (i-2)}{20}} + \pi i \parens{\frac{e^i}{5}} \\
+&= \frac{\pi i e^{-2} (i-2)}{10} + \frac{\pi i e^i}{5} \\
+&= \frac{\pi}{10} \brackets{\parens{-e^{-2} - 2ie^{-2}} + 2 \parens{\cos 1 + i \sin 1}} \\
+&= \frac{\pi}{10} \brackets{\parens{-e^{-2} - 2ie^{-2}} + 2i \parens{\cos 1 + i \sin 1}} \\
+&= \frac{\pi}{10} \brackets{-e^{-2} - 2ie^{-2} + 2i \cos 1 - 2 \sin 1} \\
+&= \frac{\pi}{10} \brackets{-\parens{e^{-2} + 2 \sin 1} + 2i \parens{\cos 1 - e^{-2}}} \\
+\end{aligned}
+$$
+
+The principal value of the original integral is the imaginary part
+
+$$
+\pv \infint \frac{\sin x}{\parens{x - 1} \parens{x^2 + 4}} \ dx
+= \boxed{\frac{\pi}{5} \parens{\cos 1 - e^{-2}}}
+$$
 
 \newpage
 # Problem 16.4.25

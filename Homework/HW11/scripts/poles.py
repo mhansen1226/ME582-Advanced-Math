@@ -172,10 +172,10 @@ plot_poles(
     "uhp",
 )
 plot_poles(
-    lambda n: [1, -1, 1j, -1j][n],
-    range(4),
+    lambda n: [1, 2j, -2j][n],
+    range(3),
     0j,
-    1.5,
-    "16.4.19",
+    2.5,
+    "16.4.21",
     "uhp",
 )
