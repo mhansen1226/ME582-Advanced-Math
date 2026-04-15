@@ -523,7 +523,39 @@ $$
 
 ## Solution
 
+$$
+\infint f(x) \ dx = 2 \pi i \sum \Res_{\text{upper half}} f(z) + \pi i \sum \Res_{z_0 \in \mathbb{R}} f(z)
+$$
 
+$f(z) = \frac{1}{z^4 - 1}$ has simple poles where
+
+$$
+z^4 - 1 = 0
+\implies z_n = \pm 1, \pm i
+$$
+
+$z_{1,2} = \pm 1$ lies on the real axis, $z_3 = i$ lies in the upper half plane.
+
+![Poles](images/16.4.19.svg)
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{1}{4z_0^3}
+$$
+
+$$
+\Res_{z = 1} f(z) = \frac{1}{4}
+\quad
+\Res_{z = -1} f(z) = -\frac{1}{4}
+\quad
+\Res_{z = i} f(z) = \frac{i}{4}
+$$
+
+$$
+\infint \frac{x^2}{x^6 + 1} \ dx 
+= 2 \pi i \parens{\frac{i}{4}} + \pi i \parens{\frac{1}{4} - \frac{1}{4}}
+= \boxed{-\frac{\pi}{2}}
+$$
 
 \newpage
 # Problem 16.4.21
