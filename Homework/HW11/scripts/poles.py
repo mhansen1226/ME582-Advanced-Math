@@ -179,3 +179,11 @@ plot_poles(
     "16.4.21",
     "uhp",
 )
+plot_poles(
+    lambda n: n,
+    range(-1, 2),
+    0j,
+    1.5,
+    "16.4.25",
+    "uhp",
+)

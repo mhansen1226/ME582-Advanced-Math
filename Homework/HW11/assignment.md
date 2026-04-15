@@ -630,3 +630,53 @@ Find the Cauchy principal value.
 $$
 \infint \frac{x+5}{x^3 - x} \ dx
 $$
+
+## Solution
+
+
+$f(z) = \frac{z+5}{z^3 - z}$ has simple poles where 
+
+$$
+z^3 - z = 0
+\implies z(z+1)(z-1) = 0
+\implies 
+\begin{cases}
+z_1 &= -1 \\
+z_2 &= 0 \\
+z_3 &= 1 \\
+\end{cases}
+$$
+
+All poles lie on the real axis
+
+![Poles](images/16.4.25.svg)
+
+$$
+\infint f(x) \ dx = \pi i \sum \Res_{z_0 \in \mathbb{R}} f(z)
+$$
+
+$$
+\Res_{z = z_0} f(z) 
+= \frac{z_0+5}{3z_0^2 - 1}
+$$
+
+$$
+\Res_{z = -1} f(z) 
+= 2
+$$
+
+$$
+\Res_{z = 0} f(z) 
+= -5
+$$
+
+$$
+\Res_{z = 1} f(z) 
+= 3
+$$
+
+$$
+\infint \frac{x+5}{x^3 - x} \ dx
+= \pi i \parens{2 - 5 + 3}
+= \boxed{0}
+$$
