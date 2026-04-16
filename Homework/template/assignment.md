@@ -30,6 +30,8 @@ header-includes: |
   \renewcommand{\vec}[1]{\mathbf{#1}}
   \newcommand{\infsum}[1][0]{\sum_{n=#1}^\infty}
   \newcommand{\inflim}{\lim_{n \to \infty}}
+  \newcommand{\infint}{\int_{-\infty}^{\infty}}
+  \newcommand{\pv}{\text{pr. v. }}
 ---
 
 # Problem X.X.X
