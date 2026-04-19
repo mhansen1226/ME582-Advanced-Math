@@ -80,7 +80,17 @@ $$
 
 ## Solution
 
+The region is an infinite strip bounded by $z_1 = 2i$ and $z_2 = 5i$, mapping to $w = iz$ gives another infinite strip bounded by
 
+$$
+w_1 = i z_1 = -2
+$$
+
+$$
+w_2 = i z_2 = -5
+$$
+
+![](images/17.1.13.svg)
 
 \newpage
 # Problem 17.1.15
