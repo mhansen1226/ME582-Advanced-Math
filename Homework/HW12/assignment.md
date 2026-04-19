@@ -47,7 +47,26 @@ $$
 
 ## Solution
 
+$$
+z = r e^{i \theta}
+$$
 
+$$
+\begin{aligned}
+w &= R e^{i \phi} \\
+z^2 &= r^2 e ^{2 i \theta}
+\end{aligned}
+$$
+
+$$
+R = r^2 = \frac{1}{4}
+$$
+
+$$
+\phi = 2 \theta \implies -\frac{\pi}{4} < \Arg w < \frac{\pi}{4}
+$$
+
+![](images/17.1.11.svg)
 
 \newpage
 # Problem 17.1.13
