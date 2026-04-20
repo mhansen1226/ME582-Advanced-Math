@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
 import numpy as np
+from config import get_subplots, savefig, z_w_plot
 from region import Sector
 
 
@@ -11,12 +11,9 @@ def main():
     )
     w_region = z_region.map_z_squared()
 
-    fig, (ax1, ax2) = plt.subplots(
-        1, 2, figsize=(8, 4), sharex=True, sharey=True, constrained_layout=True
-    )
-    z_region.plot(ax1, "b", "z")
-    w_region.plot(ax2, "r", "w")
-    fig.savefig("images/17.1.11.svg", format="svg", bbox_inches="tight")
+    fig, axs = get_subplots()
+    z_w_plot(axs, z_region, w_region)
+    savefig(fig, "17.1.11.svg")
 
 
 if __name__ == "__main__":

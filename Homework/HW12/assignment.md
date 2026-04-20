@@ -104,7 +104,32 @@ $$
 
 ## Solution
 
+The boundary of the region $z = x + iy$ has the equation
 
+$$
+\begin{aligned}
+\parens{x - \frac{1}{2}}^2 + y^2 &= \parens{\frac{1}{2}}^2 \\
+x^2 - x + \frac{1}{4} + y^2 &= \frac{1}{4} \\
+x^2 - x + y^2 &= 0 \\
+x^2 + y^2 &= x \implies \abs{z}^2 = \Re z
+\end{aligned}
+$$
+
+Applying this relation to $w = u + iv = \frac{1}{z}$ we can find the boundary of the mapping.
+
+$$
+\begin{aligned}
+\abs{\frac{1}{w}}^2 = \Re \frac{1}{w} \\
+\frac{1}{\abs{w}^2} = \Re \frac{1}{u + iv} \\
+\frac{1}{\abs{w}^2} = \Re \frac{u - iv}{u^2 + v^2} \\
+\frac{1}{\abs{w}^2} = \frac{u}{\abs{w}^2} \\
+u = 1 \\
+\end{aligned}
+$$
+
+This is a vertical line. Since $z_c = \frac{1}{2}$ is within the original region, then $w_c = \frac{1}{z_c} = 2$ which is on the right side of the boundary and therefore the mapped region is the half plane on the positive side of $u=1$
+
+![](images/17.1.15.svg)
 
 \newpage
 # Problem 17.1.17
@@ -118,7 +143,19 @@ $$
 
 ## Solution
 
+The region is an infinite vertical strip bounded by $z_1 = \Ln 2$ and $z_2 = \Ln 4$,
 
+$$
+\abs{w_1} = \abs{e^{z_1}} = \abs{e^{\Ln 2}} = 2
+$$
+
+$$
+\abs{w_2} = \abs{e^{z_2}} = \abs{e^{\Ln 4}} = 4
+$$
+
+The new boundary is two concentric circles.
+
+![](images/17.1.17.svg)
 
 \newpage
 # Problem 17.1.19
