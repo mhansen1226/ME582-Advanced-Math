@@ -206,7 +206,17 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+w &= \frac{i}{2z - 1} \\
+2z - 1 &= \frac{i}{w} \\
+z &= \frac{i}{2w} + \frac{1}{2} \\
+\end{aligned}
+$$
 
+$$
+\boxed{z(w) = \frac{i}{2w} + \frac{1}{2}}
+$$
 
 \newpage
 # Problem 17.2.13
@@ -219,7 +229,15 @@ $$
 
 ## Solution
 
-
+$$
+\begin{aligned}
+f(z) &= z \\
+w = 16 z^5 &= z \\
+16 z^5 - z &= 0 \\
+z \parens{16 z^4 - 1} &= 0
+\implies \boxed{z = 0, \ \pm \frac{1}{2}, \ \pm \frac{1}{2} i}
+\end{aligned}
+$$
 
 \newpage
 # Problem 17.2.15
