@@ -264,7 +264,7 @@ $$
 \newpage
 # Problem 17.2.19
 
-Find all LFTs with fixed point(s).
+Find all Linear Fractional Transformations (LFTs) with fixed point(s).
 
 $$
 z = \pm i
@@ -272,12 +272,34 @@ $$
 
 ## Solution
 
+$$
+w = \frac{az + b}{cz + d}
+$$
 
+$$
+w = z \implies cz^2 - (a - d)z - b = 0
+$$
+
+$$
+z = i: \quad ci^2 - (a - d)i - b = -(c + b) - (a - d)i = 0
+$$
+
+$$
+z = -i: \quad c(-i)^2 - (a - d)(-i) - b = -(c + b) + (a - d)i = 0
+$$
+
+From the real parts: $c = -b$
+
+From the imaginary parts: $a = d$
+
+$$
+\boxed{w = \frac{az + b}{a - bz}, \quad \forall a, b \in \mathbb{C}}
+$$
 
 \newpage
 # Problem 17.3.9
 
-Find the Linear Fractional Transformation (LFT) that maps the given three points onto the three given points in the respective order.
+Find the LFTs that maps the given three points onto the three given points in the respective order.
 
 $$
 1, \ i, \ -1 \text{ onto } i, \ -1, \ -i
