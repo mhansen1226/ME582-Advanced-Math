@@ -235,7 +235,7 @@ f(z) &= z \\
 w = 16 z^5 &= z \\
 16 z^5 - z &= 0 \\
 z \parens{16 z^4 - 1} &= 0
-\implies \boxed{z = 0, \ \pm \frac{1}{2}, \ \pm \frac{1}{2} i}
+&\implies \boxed{z = 0, \ \pm \frac{1}{2}, \ \pm \frac{1}{2} i}
 \end{aligned}
 $$
 
@@ -250,7 +250,16 @@ $$
 
 ## Solution
 
-
+$$
+\begin{aligned}
+f(z) &= z \\
+w = \frac{iz + 4}{2z - 5i} &= z \\
+iz + 4 &= 2z^2 - 5iz \\
+0 &= 2z^2 - 6iz - 4 \\
+0 &= z^2 - 3iz - 2
+&\implies \boxed{z = \frac{3i \pm i}{2} = i, 2i} \\
+\end{aligned}
+$$
 
 \newpage
 # Problem 17.2.19
