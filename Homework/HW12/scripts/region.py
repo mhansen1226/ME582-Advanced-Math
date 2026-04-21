@@ -5,6 +5,7 @@ from dataclasses import dataclass
 import matplotlib.pyplot as plt
 import numpy as np
 from config import FILL_ALPHA
+from matplotlib.patches import Rectangle as Rect
 
 
 @dataclass
@@ -134,3 +135,59 @@ class Annulus:
         ax.fill(verts.real, verts.imag, color, alpha=FILL_ALPHA)
         ax.plot(outer_circle.real, outer_circle.imag, color)
         ax.plot(inner_circle.real, inner_circle.imag, color)
+
+
+@dataclass
+class SectoredAnnulus:
+    r_min: float
+    r_max: float
+    theta_start: float
+    theta_end: float
+
+    def get_vertices(self, num_points: int = 100) -> np.ndarray:
+        theta = np.linspace(self.theta_start, self.theta_end, num_points)
+        arc_outer = self.r_max * np.exp(1j * theta)
+        arc_inner = self.r_min * np.exp(1j * theta[::-1])  # Reversed for fill
+        return np.concatenate((arc_outer, arc_inner, [arc_outer[0]]))
+
+    def plot(self, ax: plt.Axes, color: str, label: str):
+        verts = self.get_vertices()
+        ax.fill(verts.real, verts.imag, color, alpha=FILL_ALPHA)
+        ax.plot(verts.real, verts.imag, color)
+
+    def map_logarithm(self) -> Rectangle:
+        """Transformation: w = Ln z."""
+        return Rectangle(
+            u_min=np.log(self.r_min),
+            u_max=np.log(self.r_max),
+            v_min=self.theta_start,
+            v_max=self.theta_end,
+        )
+
+
+@dataclass
+class Rectangle:
+    u_min: float
+    u_max: float
+    v_min: float
+    v_max: float
+
+    def plot(self, ax: plt.Axes, color: str, label: str):
+        # Calculate width and height
+        width = self.u_max - self.u_min
+        height = self.v_max - self.v_min
+
+        # Create and add the rectangle patch
+        rect = Rect(
+            (self.u_min, self.v_min),
+            width,
+            height,
+            facecolor=color,
+            alpha=FILL_ALPHA,
+        )
+        ax.add_patch(rect)
+        ax.plot(
+            [self.u_min, self.u_max, self.u_max, self.u_min, self.u_min],
+            [self.v_min, self.v_min, self.v_max, self.v_max, self.v_min],
+            color=color,
+        )

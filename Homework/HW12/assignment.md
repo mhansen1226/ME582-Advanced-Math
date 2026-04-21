@@ -170,7 +170,30 @@ $$
 
 ## Solution
 
+The region is bounded by 4 borders that can be described in the form $z = r e^{i \theta}$. 
 
+Mapping to 
+$$
+\begin{aligned}
+w 
+&= \Ln z \\
+&= \ln \abs{z} + i \Arg z \\
+&= \ln r + i \theta \\
+&= u + i v
+\end{aligned}
+$$
+
+$$
+u = r 
+\implies \ln 1 < u < \ln 4
+$$
+
+$$
+v = \theta
+\implies \frac{\pi}{4} < v \leqq \frac{3\pi}{4}
+$$
+
+![](images/17.1.19.svg)
 
 \newpage
 # Problem 17.2.7
