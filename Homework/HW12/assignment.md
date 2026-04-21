@@ -307,7 +307,44 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+\frac{w - w_1}{w - w_3} \cdot \frac{w_2 - w_3}{w_2 - w_1}
+&= \frac{z - z_1}{z - z_3} \cdot \frac{z_2 - z_3}{z_2 - z_1} \\
+\frac{w - i}{w - (-i)} \cdot \frac{(-1) - (-i)}{(-1) - i}
+&= \frac{z - 1}{z - (-1)} \cdot \frac{i - (-1)}{i - 1} \\
+\frac{w - i}{w + i} \cdot \frac{1 - i}{1 + i}
+&= \frac{z - 1}{z + 1} \cdot \frac{i + 1}{i - 1} \\
+\end{aligned}
+$$
 
+$$
+\frac{1 - i}{1 + i} 
+= \frac{(1 - i)^2}{1^2 + i^2}
+= \frac{-2i}{2}
+= -i
+$$
+
+$$
+\frac{i + 1}{i - 1}
+= \frac{(i + 1)^2}{i^2 - 1^2}
+= \frac{2i}{-2}
+= -i
+$$
+
+$$
+\begin{aligned}
+\frac{w - i}{w + i} &= \frac{z - 1}{z + 1} \\
+(w - i)(z + 1) &= (z - 1)(w + i) \\
+wz + w - iz - i &= zw + iz - w - i \\
+2w &= 2iz \\
+w &= iz \\
+\end{aligned}
+$$
+
+$$
+\boxed{w = iz}
+$$
 
 \newpage
 # Problem 17.3.11
