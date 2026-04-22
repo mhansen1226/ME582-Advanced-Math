@@ -20,17 +20,12 @@ class Sector:
         arc = self.r * np.exp(1j * theta)
         return np.concatenate(([0], arc, [0]))
 
-    def plot(self, ax: plt.Axes, color: str, label: str):
+    def plot(self, ax: plt.Axes, color: str):
         """Renders this sector onto a given matplotlib axis."""
 
         verts = self.get_vertices()
         ax.fill(verts.real, verts.imag, color, alpha=FILL_ALPHA)
         ax.plot(verts.real, verts.imag, color)
-
-        ax.set_xlabel(f"Re(${label}$)")
-        ax.set_ylabel(f"Im(${label}$)")
-        ax.set_aspect("equal", "box")
-        ax.grid(True, which="both", linestyle="--", color="k", alpha=FILL_ALPHA)
 
     def map_z_squared(self) -> Sector:
         return Sector(
@@ -45,7 +40,7 @@ class Strip:
     v_min: float = -np.inf
     v_max: float = np.inf
 
-    def plot(self, ax: plt.Axes, color: str, label: str):
+    def plot(self, ax: plt.Axes, color: str):
 
         if np.isfinite(self.u_min) and np.isfinite(self.u_max):
             ax.axvspan(self.u_min, self.u_max, color=color, alpha=FILL_ALPHA)
@@ -55,11 +50,6 @@ class Strip:
             ax.axhspan(self.v_min, self.v_max, color=color, alpha=FILL_ALPHA)
             ax.axhline(self.v_min, color=color)
             ax.axhline(self.v_max, color=color)
-
-        ax.set_xlabel(f"Re(${label}$)")
-        ax.set_ylabel(f"Im(${label}$)")
-        ax.set_aspect("equal", "box")
-        ax.grid(True, which="both", linestyle="--", color="k", alpha=FILL_ALPHA)
 
     def map_i(self) -> Strip:
         return Strip(
@@ -82,7 +72,7 @@ class Circle:
         circle_points = self.center + self.r * np.exp(1j * theta)
         return circle_points
 
-    def plot(self, ax: plt.Axes, color: str, label: str):
+    def plot(self, ax: plt.Axes, color: str):
 
         verts = self.get_vertices()
         ax.fill(verts.real, verts.imag, color, alpha=FILL_ALPHA)
@@ -100,7 +90,7 @@ class HalfPlane:
     v_min: float = -np.inf
     v_max: float = np.inf
 
-    def plot(self, ax: plt.Axes, color: str, label: str):
+    def plot(self, ax: plt.Axes, color: str):
 
         limit = 100  # Use a large finite value or the axis limits to prevent transform errors
         u_start = self.u_min if np.isfinite(self.u_min) else -limit
@@ -123,7 +113,7 @@ class Annulus:
     r_min: float
     r_max: float
 
-    def plot(self, ax: plt.Axes, color: str, label: str):
+    def plot(self, ax: plt.Axes, color: str):
         theta_outer = np.linspace(0, 2 * np.pi, 100)
         outer_circle = self.r_max * np.exp(1j * theta_outer)
 
@@ -150,7 +140,7 @@ class SectoredAnnulus:
         arc_inner = self.r_min * np.exp(1j * theta[::-1])  # Reversed for fill
         return np.concatenate((arc_outer, arc_inner, [arc_outer[0]]))
 
-    def plot(self, ax: plt.Axes, color: str, label: str):
+    def plot(self, ax: plt.Axes, color: str):
         verts = self.get_vertices()
         ax.fill(verts.real, verts.imag, color, alpha=FILL_ALPHA)
         ax.plot(verts.real, verts.imag, color)
@@ -172,7 +162,7 @@ class Rectangle:
     v_min: float
     v_max: float
 
-    def plot(self, ax: plt.Axes, color: str, label: str):
+    def plot(self, ax: plt.Axes, color: str):
         # Calculate width and height
         width = self.u_max - self.u_min
         height = self.v_max - self.v_min
@@ -191,3 +181,32 @@ class Rectangle:
             [self.v_min, self.v_min, self.v_max, self.v_max, self.v_min],
             color=color,
         )
+
+    def map_exponential(self) -> Annulus | SectoredAnnulus:
+        """Transformation: w = e^z."""
+        r_min = np.exp(self.u_min)
+        r_max = np.exp(self.u_max)
+        if np.isclose(abs(self.v_max - self.v_min), 2 * np.pi):
+            return Annulus(r_min=r_min, r_max=r_max)
+        return SectoredAnnulus(
+            r_min=r_min,
+            r_max=r_max,
+            theta_start=self.v_min,
+            theta_end=self.v_max,
+        )
+
+
+@dataclass
+class Plane:
+    holes: list[tuple[float, float]]
+
+    def plot(self, ax: plt.Axes, color: str):
+        ax.set_facecolor(color)
+        ax.patch.set_alpha(FILL_ALPHA)
+        for hole in self.holes:
+            ax.plot(
+                *hole,
+                marker="o",
+                markerfacecolor="white",
+                markeredgecolor=color,
+            )

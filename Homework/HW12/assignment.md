@@ -357,7 +357,39 @@ $$
 
 ## Solution
 
+$$
+\begin{aligned}
+\frac{w - w_1}{w - w_3} \cdot \frac{w_2 - w_3}{w_2 - w_1}
+&= \frac{z - z_1}{z - z_3} \cdot \frac{z_2 - z_3}{z_2 - z_1} \\
+\frac{w - (-i)}{w - i} \cdot \frac{(-1) - i}{(-1) - (-i)}
+&= \frac{z - (-1)}{z - 1} \cdot \frac{0 - 1}{0 - (-1)} \\
+\frac{w + i}{w - i} \cdot \frac{-1 - i}{-1 + i}
+&= \frac{z + 1}{z - 1} \cdot \frac{1}{-1} \\
+\end{aligned}
+$$
 
+$$
+\frac{-1 - i}{-1 + i}
+= \frac{(-1 - i)^2}{(-1)^2 + i^2}
+= \frac{2i}{2}
+= i
+$$
+
+$$
+\begin{aligned}
+\frac{w + i}{w - i} \cdot i &= \frac{z + 1}{1 - z} \\
+(w + i)(1 - z) \cdot i &= (z + 1)(w - i) \\
+(w - wz + i - iz) \cdot i &= zw - iz + w - i \\
+iw - iwz - 1 + z &= zw - iz + w - i \\
+iw - iwz - w - zw &= - iz - i + 1 - z \\
+w (i - iz - 1 - z) &= - iz - i + 1 - z \\
+w &= \frac{-iz - i + 1 - z}{i - iz - 1 - z} \\
+\end{aligned}
+$$
+
+$$
+\boxed{w = \frac{-(1 + i) z + (1 - i)}{-(1 + i) z + (i - 1)}}
+$$
 
 \newpage
 # Problem 17.4.1
@@ -366,7 +398,15 @@ Find the image of $x = c = \text{const}$, $-\pi < y \leqq \pi$, under $w = e^z$.
 
 ## Solution
 
+$$
+z = x + iy = c + iy
+$$
 
+$$
+w = e^c e^{iy}
+$$
+
+![](images/17.4.1.svg)
 
 \newpage
 # Problem 17.4.3
@@ -380,7 +420,15 @@ $$
 
 ## Solution
 
+$$
+z = x + iy
+$$
 
+$$
+w = e^x e^{iy}
+$$
+
+![](images/17.4.3.svg)
 
 \newpage
 # Problem 17.4.5
@@ -394,7 +442,17 @@ $$
 
 ## Solution
 
+The initial region is an infinite strip between $0 \leqq y \leqq 2\pi$,
+$$
+z = x + iy
+$$
 
+The image fills the entire plane except at the center,
+$$
+w = e^x e^{iy}
+$$
+
+![](images/17.4.5.svg)
 
 \newpage
 # Problem 17.4.7
