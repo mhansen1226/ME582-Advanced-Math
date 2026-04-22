@@ -1,6 +1,6 @@
 import numpy as np
-from config import get_subplots, savefig, z_w_plot
 from line import LineSegment
+from plot import get_subplots, savefig, z_w_plot
 
 
 def main():

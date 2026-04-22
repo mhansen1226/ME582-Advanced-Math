@@ -1,16 +1,16 @@
 import numpy as np
 from plot import get_subplots, savefig, z_w_plot
-from region import Strip
+from region import Rectangle
 
 
 def main():
-    z_region = Strip(u_min=np.log(2), u_max=np.log(4))
-    w_region = z_region.map_exponential()
 
+    z_region = Rectangle(u_min=0, u_max=1, v_min=0, v_max=np.pi)
+    w_region = z_region.map_exponential()
     fig, axs = get_subplots()
 
     z_w_plot(axs, z_region, w_region)
-    savefig(fig, "17.1.17.svg")
+    savefig(fig, "17.4.7.svg")
 
 
 if __name__ == "__main__":

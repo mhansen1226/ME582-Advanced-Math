@@ -1,5 +1,5 @@
 import numpy as np
-from config import get_subplots, savefig, z_w_plot
+from plot import get_subplots, savefig, z_w_plot
 from region import Rectangle
 
 

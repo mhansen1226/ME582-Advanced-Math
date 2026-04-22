@@ -1,11 +1,19 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Callable
 
 import matplotlib.pyplot as plt
 import numpy as np
-from config import FILL_ALPHA
 from matplotlib.patches import Rectangle as Rect
+from plot import FILL_ALPHA
+
+
+def plot_wireframe(ax: plt.Axes, color: str, Z: np.ndarray):
+    for i in range(Z.shape[0]):
+        ax.plot(Z[i, :].real, Z[i, :].imag, color=color, linewidth=0.5)
+    for j in range(Z.shape[1]):
+        ax.plot(Z[:, j].real, Z[:, j].imag, color=color, linewidth=0.5)
 
 
 @dataclass
@@ -194,6 +202,50 @@ class Rectangle:
             theta_start=self.v_min,
             theta_end=self.v_max,
         )
+
+    def fill_region(self, ax: plt.Axes, color: str, f: Callable):
+        # 1. Define the grid points
+        u = np.linspace(self.u_min, self.u_max, 50)
+        v = np.linspace(self.v_min, self.v_max, 50)
+
+        # 2. Extract the boundary points specifically
+        # Bottom, Right, Top, Left paths
+        bottom = f(u + 1j * self.v_min)
+        right = f(self.u_max + 1j * v)
+        top = f(np.flip(u) + 1j * self.v_max)
+        left = f(self.u_min + 1j * np.flip(v))
+
+        # 3. Concatenate into a closed loop
+        boundary = np.concatenate([bottom, right, top, left])
+
+        # 4. Fill the polygon
+        ax.fill(
+            boundary.real,
+            boundary.imag,
+            color=color,
+            alpha=FILL_ALPHA,
+            edgecolor="none",
+        )
+
+    def plot_wireframe(self, ax: plt.Axes, color: str, N=20):
+        u = np.linspace(self.u_min, self.u_max, N)
+        v = np.linspace(self.v_min, self.v_max, N)
+        U, V = np.meshgrid(u, v)
+        Z = U + 1j * V
+        self.fill_region(ax, color, lambda z: z)
+        plot_wireframe(ax, color, Z)
+
+    def plot_mapping(self, ax: plt.Axes, color: str, f: Callable, N=20):
+        # 1. Create the grid in the Z-plane (u is Re(z), v is Im(z))
+        u = np.linspace(self.u_min, self.u_max, N)
+        v = np.linspace(self.v_min, self.v_max, N)
+        U, V = np.meshgrid(u, v)
+        Z = U + 1j * V
+
+        # 2. Apply the transformation
+        W = f(Z)
+        self.fill_region(ax, color, f)
+        plot_wireframe(ax, color, W)
 
 
 @dataclass

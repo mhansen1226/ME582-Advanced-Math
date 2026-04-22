@@ -466,7 +466,15 @@ $$
 
 ## Solution
 
+$$
+z = x + iy
+$$
 
+$$
+w = e^x e^{iy}
+$$
+
+![](images/17.4.7.svg)
 
 \newpage
 # Problem 17.4.11
@@ -480,7 +488,43 @@ $$
 
 ## Solution
 
+The region is bounded by 4 straight lines that form a rectangle. Mapping these per 17.4.(2) gives
 
+$$
+z = x + iy
+\quad \to \quad
+w = \sin x \cosh y + i \cos x \sinh y
+$$
+
+The left edge ($x = 0, y \in (0,2)$) maps to a segment on the imaginary axis
+$$
+z = iy 
+\quad \to \quad 
+w = i \sinh y
+$$
+
+The top edge ($x \in \parens{0, \frac{\pi}{2}}, y = 2$) maps to the upper right quadrant of an ellipse
+$$
+z = x + 2i 
+\quad \to \quad 
+w = \sin x \cosh 2 + i \cos x \sinh 2
+$$
+
+The right edge ($x = 2, y \in (0,2)$) maps to a segment on the real axis
+$$
+z = \frac{\pi}{2} + iy 
+\quad \to \quad 
+w = \cosh y
+$$
+
+The bottom edge ($x \in \parens{0, \frac{\pi}{2}}, y = 0$) maps to a segment on the real axis
+$$
+z = x
+\to 
+w = \sin x
+$$
+
+![](images/17.4.11.svg)
 
 \newpage
 # Problem 17.4.13
@@ -494,7 +538,44 @@ $$
 
 ## Solution
 
+The region is bounded by 4 straight lines that form a rectangle. Mapping these per 17.4.(2) gives
 
+$$
+z = x + iy
+\quad \to \quad
+w = \sin x \cosh y + i \cos x \sinh y
+$$
+
+The left edge ($x = 0, y \in (1,3)$) maps to a segment on the imaginary axis
+$$
+z = iy 
+\quad \to \quad 
+w = i \sinh y
+$$
+
+Similarly, the right edge ($x = 2\pi, y \in (1,3)$) maps to the same segment on the real axis
+$$
+z = 2\pi + iy 
+\quad \to \quad 
+w = \cancelto{0}{\sin 2 \pi} \cosh y + i \cancelto{1}{\cos 2 \pi} \sinh y
+= i \sinh y
+$$
+
+The top edge ($x \in (0, 2\pi), y = 3$) maps to a big ellipse
+$$
+z = x + 3i 
+\quad \to \quad 
+w = \sin x \cosh 3 + i \cos x \sinh 3
+$$
+
+The bottom edge ($x \in (0, 2\pi), y = 1$) maps to a small ellipse
+$$
+z = x + 1i 
+\quad \to \quad 
+w = \sin x \cosh 1 + i \cos x \sinh 1
+$$
+
+![](images/17.4.13.svg)
 
 \newpage
 # Problem 17.4.19
@@ -503,7 +584,23 @@ Find the images of the lines mapping $x = c = \text{const}$ under the mapping $w
 
 ## Solution
 
+Mapping per 17.4.(3) gives
 
+$$
+z = \parens{c + \frac{\pi}{2}} + iy
+\quad \to \quad
+\begin{aligned}
+w &= u + iv \\
+&= \sin \parens{c + \frac{\pi}{2}} \cosh y + i \cos \parens{c + \frac{\pi}{2}} \sinh y \\
+&= \cos c \cosh y - i \sin c \sinh y \\
+\end{aligned}
+$$
+
+$$
+\implies \frac{u^2}{\cos^2 c} - \frac{v^2}{\sin^2 c} = 1 \quad (\text{hyperbola centered at w=0})
+$$
+
+![](images/17.4.19.svg)
 
 \newpage
 # Problem 17.4.21
@@ -516,3 +613,41 @@ $$
 $$
 
 ## Solution
+
+The region is bounded by 4 straight lines that form a rectangle. Mapping these per 17.4.(2) gives
+
+$$
+z = x + iy + \frac{\pi}{2}
+\quad \to \quad
+w = \cos x \cosh y - i \sin x \sinh y
+$$
+
+The left edge ($x = 0, y \in (0,2)$) maps to a segment on the real axis
+$$
+z = iy + \frac{\pi}{2}
+\quad \to \quad 
+w = \cosh y
+$$
+
+The top edge ($x \in \parens{0, \frac{\pi}{2}}, y = 2$) maps to the lower right quadrant of an ellipse
+$$
+z = x + 2i + \frac{\pi}{2}
+\quad \to \quad 
+w = \cos x \cosh 2 - i \sin x \sinh 2
+$$
+
+The right edge ($x = 2, y \in (0,2)$) maps to a segment on the imaginary axis
+$$
+z = \frac{\pi}{2} + iy + \frac{\pi}{2}
+\quad \to \quad 
+w = -\sinh y
+$$
+
+The bottom edge ($x \in \parens{0, \frac{\pi}{2}}, y = 0$) maps to a segment on the real axis
+$$
+z = x + \frac{\pi}{2}
+\to 
+w = \cos x
+$$
+
+![](images/17.4.21.svg)
